@@ -275,10 +275,20 @@ function renderChips() {
   });
 }
 
+// The destination photo is only fetched once that destination is chosen, then cross-faded in.
 function stagePhoto() {
   const f = state.to && FEATURED_BY_CODE[state.to.code];
-  $$('.stage__img[data-dest]').forEach((img) => img.classList.toggle('is-on', !!f && img.dataset.dest === f.code));
-  $('.stage__img--base')?.classList.toggle('is-off', !!f);
+  const box = $('.stage__photo');
+  let img = f && $(`.stage__img[data-dest="${f.code}"]`, box);
+  if (f && !img) {
+    img = document.createElement('img');
+    Object.assign(img, { className: 'stage__img', alt: '', decoding: 'async', src: f.img });
+    img.dataset.dest = f.code;
+    box.append(img);
+  }
+  if (img && !img.complete) { img.addEventListener('load', stagePhoto, { once: true }); return; }
+  $$('.stage__img[data-dest]', box).forEach((i) => i.classList.toggle('is-on', i === img));
+  $('.stage__img--base')?.classList.toggle('is-off', !!img);
 }
 
 function fareLine() {

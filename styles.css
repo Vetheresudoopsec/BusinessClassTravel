@@ -291,7 +291,7 @@ html.cal-open { overflow: hidden; }
 
 /* advisor: the number as the large thing */
 .advisor { display: grid; gap: 1.5rem; }
-.advisor__phone { font-size: var(--step-display); letter-spacing: -0.03em; line-height: 1; text-decoration: none; font-variant-numeric: tabular-nums; color: var(--accent); justify-self: start; transition: color var(--t-hover) ease; }
+.advisor__phone { font-size: var(--step-display); letter-spacing: -0.03em; line-height: 1; text-decoration: none; font-variant-numeric: tabular-nums; color: var(--accent-press); justify-self: start; transition: color var(--t-hover) ease; }
 @media (hover: hover) and (pointer: fine) { .advisor__phone:hover { color: var(--ink); } }
 .advisor__list { display: grid; gap: 1.25rem 2rem; margin-top: 0.5rem; }
 .advisor__list li { max-width: 36ch; }

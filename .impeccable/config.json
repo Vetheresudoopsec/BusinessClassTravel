@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T09:57:05.601Z",
+        "reason": "claude: bone #e5e1d8 is the palette dealt by the design-taste-frontend draw (Bone, green, chocolate) and passes its inspector"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T09:57:05.618Z",
+        "reason": "claude: live padding measured 40-58px on .sheet and .why__inner; .cta's flush child is its intentional full-bleed photo"
+      }
+    ]
+  }
+}
