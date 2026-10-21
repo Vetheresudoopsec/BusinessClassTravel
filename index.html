@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BusinessClassTravel — Business class flights for less</title>
+<meta name="description" content="Unpublished business-class fares on the world's major airlines. Tell us your route and dates and an advisor sends you a real price, usually within the hour.">
+<meta name="theme-color" content="#e5e1d8">
+<link rel="preload" href="fonts/clash-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/clash-grotesk-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero-wing.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#quote">Skip to the quote form</a>
+
+<main class="page" id="main">
+
+  <header class="top">
+    <a class="wordmark" href="#main" aria-label="BusinessClassTravel, home">BusinessClassTravel</a>
+    <nav class="top__nav" aria-label="Sections">
+      <a class="link" href="#routes">Routes</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#faq">Questions</a>
+    </nav>
+    <a class="top__call button button--ink" href="tel:+18885550199">Call +1 (888) 555-0199</a>
+  </header>
+
+  <section class="intro" aria-labelledby="intro-title">
+    <h1 id="intro-title" class="display" data-rise style="--i:0">Business class, for less</h1>
+    <p class="lead" data-rise style="--i:1">We search the unpublished business-class fares airlines release only to agencies, and send you a real price, usually within the hour.</p>
+  </section>
+
+  <aside class="stage" aria-label="Quote request">
+    <div class="stage__photo">
+      <img class="stage__img stage__img--base" src="img/hero-wing.webp" width="1100" height="1461" alt="An aircraft wing above the clouds at sunset, seen from a cabin window" fetchpriority="high">
+      <img class="stage__img" data-dest="LHR" src="img/london.webp" width="1200" height="901" alt="" loading="lazy">
+      <img class="stage__img" data-dest="CDG" src="img/paris.webp" width="1200" height="769" alt="" loading="lazy">
+      <img class="stage__img" data-dest="FCO" src="img/rome.webp" width="1200" height="756" alt="" loading="lazy">
+      <img class="stage__img" data-dest="DXB" src="img/dubai.webp" width="1200" height="800" alt="" loading="lazy">
+      <img class="stage__img" data-dest="HND" src="img/tokyo.webp" width="1200" height="675" alt="" loading="lazy">
+      <img class="stage__img" data-dest="SIN" src="img/singapore.webp" width="1200" height="800" alt="" loading="lazy">
+    </div>
+
+    <form class="panel" id="quote" action="quote.php" method="post" novalidate data-trip="round" data-rise style="--i:1">
+      <div class="panel__form">
+        <div class="panel__head">
+          <h2 class="panel__title">Get your fare</h2>
+          <fieldset class="seg">
+            <legend class="sr-only">Trip type</legend>
+            <label><input type="radio" name="trip" value="round" checked><span>Round trip</span></label>
+            <label><input type="radio" name="trip" value="oneway"><span>One way</span></label>
+            <label><input type="radio" name="trip" value="multi"><span>Multi-city</span></label>
+          </fieldset>
+        </div>
+
+        <div class="route">
+          <div class="fld fld--from">
+            <label for="from">From</label>
+            <input id="from" name="from" type="text" autocomplete="off" placeholder="City or airport" required>
+            <input type="hidden" id="from-code" name="from_code">
+            <span class="err" id="err-from" aria-live="polite"></span>
+          </div>
+          <button type="button" class="swap" id="swap" aria-label="Swap origin and destination"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7h12m0 0-4-4m4 4-4 4M17 17H5m0 0 4-4m-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="fld fld--to">
+            <label for="to">To</label>
+            <input id="to" name="to" type="text" autocomplete="off" placeholder="City or airport" required>
+            <input type="hidden" id="to-code" name="to_code">
+            <span class="err" id="err-to" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="chips-row">
+          <span class="chips-row__label">Popular</span>
+          <div class="chips" id="chips"></div>
+          <button type="button" class="textbtn" id="locate">Use my location</button>
+        </div>
+
+        <div class="dates">
+          <div class="fld fld--date">
+            <label for="depart">Depart</label>
+            <input id="depart" name="depart" type="date" placeholder="Choose a date">
+            <input type="hidden" id="depart-iso" name="depart_date">
+            <span class="err" id="err-depart" aria-live="polite"></span>
+          </div>
+          <div class="fld fld--date fld--return">
+            <label for="ret">Return</label>
+            <input id="ret" name="return" type="date" placeholder="Choose a date">
+            <input type="hidden" id="ret-iso" name="return_date">
+          </div>
+          <button type="button" class="add-return" id="add-return">+ Add a return</button>
+        </div>
+        <div id="legs" class="legs"></div>
+
+        <div class="opts">
+          <div class="fld fld--select">
+            <label for="pax">Passengers</label>
+            <select id="pax" name="passengers">
+              <option value="1">1 adult</option><option value="2">2 adults</option><option value="3">3 adults</option>
+              <option value="4">4 adults</option><option value="5">5 adults</option><option value="6">6 adults</option>
+              <option value="7">7 adults</option><option value="8">8 adults</option><option value="9">9 or more</option>
+            </select>
+          </div>
+          <div class="fld fld--select">
+            <label for="cabin">Cabin</label>
+            <select id="cabin" name="cabin">
+              <option value="business">Business</option>
+              <option value="first">First</option>
+              <option value="premium">Premium economy</option>
+            </select>
+          </div>
+          <label class="check"><input type="checkbox" id="flex" name="flexible" checked><span>My dates can move ±3 days</span></label>
+          <label class="check"><input type="checkbox" id="later" name="dates_later"><span>I'll decide dates with my advisor</span></label>
+        </div>
+
+        <output class="fare" id="fare" for="from to cabin" aria-live="polite" data-state="empty">
+          <span class="fare__hint">Choose where you fly from and to, and the typical fare for that route shows here.</span>
+        </output>
+
+        <div class="contact">
+          <div class="fld">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <span class="err" id="err-name" aria-live="polite"></span>
+          </div>
+          <div class="fld">
+            <label for="contact">Email or phone</label>
+            <input id="contact" name="contact" type="text" autocomplete="email" inputmode="email" required>
+            <span class="err" id="err-contact" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="hp">Company website</label><input id="hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <button class="button button--go" id="send" type="submit">Get my fare</button>
+        <span class="err" id="err-send" aria-live="polite"></span>
+        <p class="panel__note">Free and without obligation. Rather talk? <a class="link-plain" href="tel:+18885550199">+1 (888) 555-0199</a></p>
+      </div>
+
+      <div class="done" id="done" hidden>
+        <h2 tabindex="-1">Request received</h2>
+        <p id="done-text">An advisor is on it and will be in touch shortly.</p>
+        <p>Something to add, like a preferred airline or a seat for a child? Call <a class="link-plain" href="tel:+18885550199">+1 (888) 555-0199</a> and give your name.</p>
+        <button type="button" class="button button--ink" id="again">Price another trip</button>
+      </div>
+
+      <div class="cal" id="cal" role="dialog" aria-modal="true" aria-labelledby="cal-title" hidden>
+        <div class="cal__box">
+          <div class="cal__head">
+            <p class="cal__title" id="cal-title">Choose dates</p>
+            <button type="button" class="cal__nav" id="cal-prev" aria-label="Previous month"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="cal__nav" id="cal-next" aria-label="Next month"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="cal__close" id="cal-close" aria-label="Close calendar"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+          </div>
+          <div class="cal__months" id="cal-months"></div>
+          <div class="cal__foot">
+            <button type="button" class="chip" data-quick="two-weeks">In two weeks</button>
+            <button type="button" class="chip" data-quick="next-month">Next month</button>
+            <button type="button" class="chip" data-quick="later">Decide later</button>
+            <button type="button" class="button button--ink cal__done" id="cal-done">Done</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </aside>
+
+  <ul class="promises" aria-label="What you get" data-rise style="--i:2">
+    <li><strong>Free quote</strong> No card and no obligation. You decide once you see the price.</li>
+    <li><strong>USD, taxes included</strong> The fare we quote is the total you pay per person.</li>
+    <li><strong>Ticketed by the airline</strong> The same seat and the same miles, managed in the airline's own app.</li>
+  </ul>
+
+  <section class="showcase" id="routes" aria-labelledby="routes-title">
+    <h2 class="head" id="routes-title" data-reveal>Routes from <span data-origin-city>New York</span></h2>
+    <div class="showcase__body">
+      <figure class="plate shutter" data-reveal>
+        <img id="sc-img" class="is-in" src="img/london.webp" width="1200" height="901" alt="Tower Bridge and the Thames at dusk, London" loading="lazy" decoding="async">
+      </figure>
+      <div class="showcase__text">
+        <div class="tabs" id="sc-tabs" role="tablist" aria-label="Destinations"></div>
+        <div id="sc-panel" role="tabpanel" class="sc-panel" data-reveal style="--i:1">
+          <h3 class="sc-title" id="sc-title">New York to London</h3>
+          <p id="sc-note">Heathrow and Gatwick, with lie-flat seats on almost every long-haul departure. Arrive overnight and be in Mayfair for breakfast.</p>
+          <dl class="compare">
+            <div><dt>Published fare from</dt><dd id="sc-pub">$3,890</dd></div>
+            <div><dt>With us from about</dt><dd id="sc-ours" class="compare__ours">$2,570</dd></div>
+            <div><dt>Example airlines</dt><dd id="sc-carriers">BA · VS · AA</dd></div>
+          </dl>
+          <div class="cells">
+            <button type="button" class="cell cell--ink" id="sc-fill">Price this route</button>
+            <a class="cell" href="#fares">All example fares</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fares" id="fares" aria-labelledby="fares-title">
+    <div class="sheet" data-reveal>
+      <h2 class="sheet__title" id="fares-title">Example fares from <span data-origin-city>New York</span></h2>
+      <p class="sheet__note">Round trip in business, per person, taxes included. Tap a route to price your dates.</p>
+      <div id="fare-groups" class="fare-groups">
+        <div class="fare-group"><h3 class="fare-group__name">Europe</h3><ul class="fare-rows">
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">London</span><span class="fare-row__price">$2,570</span><span class="fare-row__meta">LHR · published from $3,890 · about 34% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Paris</span><span class="fare-row__price">$2,540</span><span class="fare-row__meta">CDG · published from $4,170 · about 39% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Rome</span><span class="fare-row__price">$2,860</span><span class="fare-row__meta">FCO · published from $4,620 · about 38% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Frankfurt</span><span class="fare-row__price">$2,850</span><span class="fare-row__meta">FRA · published from $4,330 · about 34% less</span></a></li>
+        </ul></div>
+        <div class="fare-group"><h3 class="fare-group__name">Middle East and Africa</h3><ul class="fare-rows">
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Dubai</span><span class="fare-row__price">$4,080</span><span class="fare-row__meta">DXB · published from $6,280 · about 35% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Doha</span><span class="fare-row__price">$3,640</span><span class="fare-row__meta">DOH · published from $5,880 · about 38% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Tel Aviv</span><span class="fare-row__price">$3,650</span><span class="fare-row__meta">TLV · published from $5,700 · about 36% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Cairo</span><span class="fare-row__price">$3,730</span><span class="fare-row__meta">CAI · published from $5,660 · about 34% less</span></a></li>
+        </ul></div>
+        <div class="fare-group"><h3 class="fare-group__name">Asia and the Pacific</h3><ul class="fare-rows">
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Tokyo</span><span class="fare-row__price">$4,270</span><span class="fare-row__meta">HND · published from $6,480 · about 34% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Singapore</span><span class="fare-row__price">$5,100</span><span class="fare-row__meta">SIN · published from $7,960 · about 36% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Hong Kong</span><span class="fare-row__price">$4,600</span><span class="fare-row__meta">HKG · published from $6,980 · about 34% less</span></a></li>
+          <li><a class="fare-row" href="#quote"><span class="fare-row__name">Seoul</span><span class="fare-row__price">$4,250</span><span class="fare-row__meta">ICN · published from $6,450 · about 34% less</span></a></li>
+        </ul></div>
+      </div>
+      <p class="sheet__foot">Indicative fares for travel 30 to 60 days out with ±3 days of flexibility. Your advisor quotes today's price for your exact dates.</p>
+    </div>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="how__text" data-reveal>
+      <h2 class="head" id="how-title">How booking works</h2>
+      <p>There is no checkout on this site. The fares we sell can't be shown in a public search, so a person prices your trip and sends you the options. You only pay once you've chosen.</p>
+    </div>
+    <div class="slip" data-reveal style="--i:1">
+      <h3 class="slip__when">Now</h3>
+      <ul class="slip__rows">
+        <li><span>You send your route and dates</span><span class="nums">1 minute</span></li>
+      </ul>
+      <h3 class="slip__when">Within the hour</h3>
+      <ul class="slip__rows">
+        <li><span>Your advisor checks consolidator and published fares</span><span class="nums">30–60 min</span></li>
+        <li><span>You get two or three itineraries by email or text</span><span class="nums">Same hour</span></li>
+      </ul>
+      <h3 class="slip__when">When you're ready</h3>
+      <ul class="slip__rows">
+        <li><span>You choose a flight and pay through a secure link</span><span class="nums">5 minutes</span></li>
+        <li><span>The airline issues your e-ticket</span><span class="nums">Same day</span></li>
+      </ul>
+      <p class="slip__total"><span>Your ticket, in the airline's own app</span><span class="nums">Usually same day</span></p>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-labelledby="why-title">
+    <div class="why__inner">
+      <div class="why__text" data-reveal>
+        <h2 class="head" id="why-title">Why it costs less</h2>
+        <p>Airlines don't sell every business seat at the price you see online. A share of each cabin goes to consolidators at negotiated rates the airline agrees never to publish, so it can fill the cabin without lowering its public fare.</p>
+        <p>Those fares are real tickets on the same flights, but an agency can only offer them on request. We compare them with the published fares for your dates and send you whichever is lower.</p>
+      </div>
+      <figure class="why__photo shutter" data-reveal style="--i:1">
+        <img src="img/seat-detail.webp" width="1500" height="516" alt="A business-class seat with its screen and amenity kit, beside a cabin window" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="advisor" id="advisor" aria-labelledby="advisor-title">
+    <h2 class="head" id="advisor-title" data-reveal>Talk to an advisor</h2>
+    <a class="advisor__phone" href="tel:+18885550199" data-reveal style="--i:1">+1 (888) 555-0199</a>
+    <ul class="advisor__list" data-reveal style="--i:2">
+      <li><strong>Multi-city and open-jaw trips</strong> Fly into Rome and home from Paris, or add a stop in Tokyo, priced as one ticket.</li>
+      <li><strong>Last-minute departures</strong> Leaving tomorrow? Call rather than write, and we can ticket today.</li>
+      <li><strong>Families and small groups</strong> Seats together, children's fares and one advisor for everyone.</li>
+      <li><strong>After you book</strong> Changes, seat requests and disruptions go to the same person who sold you the ticket.</li>
+    </ul>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <h2 class="head" id="faq-title" data-reveal>Questions, answered</h2>
+    <div class="faq__text" data-reveal style="--i:1">
+      <p><strong>Is it the same ticket the airline sells?</strong> Yes. Your ticket is issued by the airline, appears in its app under your booking reference, and gets the same seat, lounge and baggage as any other business ticket.</p>
+      <p><strong>Will I earn miles and status?</strong> In most cases, yes. Accrual depends on the booking class, which your advisor tells you before you pay.</p>
+      <p><strong>Why can't I just book online?</strong> Consolidator fares are sold under contracts that keep them out of public searches. A short request is how we can show them to you.</p>
+      <p><strong>How quickly will I hear back?</strong> Usually within the hour, by email or text, whichever you left us. For travel in the next two days, please call.</p>
+      <p><strong>Can I change or cancel?</strong> That depends on the fare. Many allow date changes for the difference in fare; your advisor shows the rules for each option before you choose.</p>
+      <p><strong>How do I pay?</strong> By card through a secure payment link, once you've chosen an itinerary. Nothing is charged when you send a request.</p>
+      <p><strong>Do you sell first class and premium economy?</strong> Yes. Choose the cabin in the form, or ask for both and compare.</p>
+      <p><strong>Are prices really in dollars?</strong> Always. Every fare we quote is in US dollars per person with taxes and fees included.</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="cta" aria-labelledby="cta-title">
+  <img class="cta__img" src="img/clouds-sunset.webp" width="1920" height="1440" alt="Sunset over the clouds beyond an aircraft wing" loading="lazy" decoding="async">
+  <div class="cta__text" data-reveal>
+    <h2 class="cta__title" id="cta-title">Ask for your fare today</h2>
+    <p>Tell us where and when. An advisor replies with real options and real prices, and you pay nothing until you choose one.</p>
+    <a class="button button--paper" href="#quote" data-to-panel>Start my request</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__split">
+    <figure class="foot__photo">
+      <img src="img/cabin-seat.webp" width="1200" height="1168" alt="A business-class seat with a blue pillow beside two cabin windows" loading="lazy" decoding="async">
+    </figure>
+    <div class="foot__menu">
+      <p class="foot__brand">BusinessClassTravel</p>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="#quote" data-to-panel>Get your fare</a></li>
+          <li><a href="#routes">Routes</a></li>
+          <li><a href="#fares">Example fares</a></li>
+          <li><a href="#how">How booking works</a></li>
+          <li><a href="#faq">Questions</a></li>
+        </ul>
+      </nav>
+      <div class="foot__blocks">
+        <div><p class="foot__h">Call</p><p><a class="link-plain" href="tel:+18885550199">+1 (888) 555-0199</a><br>Advisors answer around the clock</p></div>
+        <div><p class="foot__h">Write</p><p><a class="link-plain" href="mailto:quotes@businessclasstravel.com">quotes@businessclasstravel.com</a></p></div>
+      </div>
+      <p class="foot__legal">All fares are in USD per person, round trip in business unless stated, with taxes and fees included. Example fares are indicative, based on travel 30 to 60 days out, and not guaranteed until ticketed. Seats are limited and fares change with availability. Airlines named are examples and do not imply endorsement.</p>
+      <p class="foot__credits">Photographs: <span id="credits">Norman Mithika (CC0, WordPress Photo Directory); GreenPanther1234 (CC BY 3.0); Quintin Soloviev (CC BY 4.0); Jeff Golenski (CC0, WordPress Photo Directory); Diliff (CC BY 3.0); Getfunky Paris (CC BY 2.0); Wilfredor (CC0); Lehtm25 (public domain); David Kernan (CC BY 4.0); CEphoto, Uwe Aranas (CC BY-SA 3.0); all via Wikimedia Commons unless noted.</span></p>
+      <p class="foot__legal">© 2026 BusinessClassTravel</p>
+    </div>
+  </div>
+  <p class="foot__name" aria-hidden="true">BusinessClassTravel</p>
+</footer>
+
+<div class="dock" id="dock">
+  <button type="button" class="button button--go" id="dock-quote">Get my fare</button>
+  <a class="button button--ink" href="tel:+18885550199" aria-label="Call an advisor">Call</a>
+</div>
+
+<script src="data/airports.js" defer></script>
+<script src="app.js" defer></script>
+<script src="motion.js" defer></script>
+</body>
+</html>
