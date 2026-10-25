@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BusinessClassTravel — Business class flights for less</title>
+<meta name="description" content="Unpublished business and first class fares for travellers across Asia Pacific. Tell us your trip and an advisor replies with a price, usually within the hour.">
+<meta name="theme-color" content="#7a1418">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#quote">Skip to the quote form</a>
+
+<header class="bar">
+  <a class="wordmark" href="#top">BusinessClassTravel</a>
+  <nav class="bar__nav" aria-label="Sections">
+    <a href="#how">How it works</a>
+    <a href="#faq">Questions</a>
+  </nav>
+  <a class="bar__call" href="tel:+18885550199"><span class="bar__call-long">+1 (888) 555-0199</span><span class="bar__call-short">Call</span></a>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__inner">
+      <h1 id="hero-title" class="hero__title" data-rise>Business class, for less</h1>
+      <p class="hero__lead" data-rise style="--i:1">Unpublished business and first class fares for travellers across Asia Pacific. Tell us your trip and an advisor replies, usually within the hour.</p>
+
+      <form class="quote" id="quote" action="quote.php" method="post" novalidate data-rise style="--i:2">
+        <div class="quote__form">
+          <div class="quote__top">
+            <fieldset class="seg">
+              <legend class="sr-only">Trip type</legend>
+              <label><input type="radio" name="trip" value="round" checked><span>Round trip</span></label>
+              <label><input type="radio" name="trip" value="oneway"><span>One way</span></label>
+            </fieldset>
+            <div class="quote__opts">
+              <label class="sr-only" for="pax">Passengers</label>
+              <select id="pax" name="passengers" class="pick">
+                <option value="1">1 passenger</option><option value="2">2 passengers</option><option value="3">3 passengers</option>
+                <option value="4">4 passengers</option><option value="5">5 passengers</option><option value="6">6 passengers</option>
+                <option value="7">7 passengers</option><option value="8">8 passengers</option><option value="9">9 or more</option>
+              </select>
+              <label class="sr-only" for="cabin">Cabin</label>
+              <select id="cabin" name="cabin" class="pick">
+                <option value="business">Business</option>
+                <option value="first">First</option>
+                <option value="premium">Premium economy</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="quote__trip">
+            <div class="route">
+              <div class="fld fld--from">
+                <label for="from">From</label>
+                <input id="from" name="from" type="text" autocomplete="off" placeholder="City or airport" required>
+                <input type="hidden" id="from-code" name="from_code">
+                <span class="err" id="err-from" aria-live="polite"></span>
+              </div>
+              <button type="button" class="swap" id="swap" aria-label="Swap from and to"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 7h12m0 0-4-4m4 4-4 4M17 17H5m0 0 4-4m-4 4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="fld fld--to">
+                <label for="to">To</label>
+                <input id="to" name="to" type="text" autocomplete="off" placeholder="City or airport" required>
+                <input type="hidden" id="to-code" name="to_code">
+                <span class="err" id="err-to" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="dates" id="dates">
+              <div class="fld fld--date">
+                <label for="depart">Depart</label>
+                <input id="depart" name="depart" type="date" placeholder="Add date">
+                <input type="hidden" id="depart-iso" name="depart_date">
+                <span class="err" id="err-depart" aria-live="polite"></span>
+              </div>
+              <div class="fld fld--date fld--return">
+                <label for="ret">Return</label>
+                <input id="ret" name="return" type="date" placeholder="Add date">
+                <input type="hidden" id="ret-iso" name="return_date">
+              </div>
+            </div>
+          </div>
+
+          <div class="quote__you">
+            <div class="fld">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <span class="err" id="err-name" aria-live="polite"></span>
+            </div>
+            <div class="fld">
+              <label for="contact">Email or phone</label>
+              <input id="contact" name="contact" type="text" autocomplete="email" required>
+              <span class="err" id="err-contact" aria-live="polite"></span>
+            </div>
+            <button class="button button--gold" id="send" type="submit">Request my quote</button>
+          </div>
+          <input type="hidden" id="flex-val" name="flexible" value="">
+          <div class="hp" aria-hidden="true"><label for="hp">Company website</label><input id="hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
+          <p class="quote__note">Free, with no obligation. <span class="err" id="err-send" aria-live="polite"></span></p>
+        </div>
+
+        <div class="done" id="done" hidden>
+          <h2 tabindex="-1">Request received</h2>
+          <p id="done-text">An advisor will be in touch shortly.</p>
+          <button type="button" class="button button--red" id="again">Plan another trip</button>
+        </div>
+
+        <div class="cal" id="cal" role="dialog" aria-modal="true" aria-labelledby="cal-title" hidden>
+          <div class="cal__scrim" data-cal-close></div>
+          <div class="cal__box" id="cal-box">
+            <div class="cal__grab" aria-hidden="true"><span></span></div>
+            <div class="cal__head">
+              <p class="cal__title" id="cal-title">Choose dates</p>
+              <button type="button" class="cal__nav" id="cal-prev" aria-label="Previous month"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="cal__nav" id="cal-next" aria-label="Next month"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+            <div class="cal__months" id="cal-months"></div>
+            <div class="cal__foot">
+              <label class="check"><input type="checkbox" id="flex"><span>My dates are flexible</span></label>
+              <button type="button" class="button button--red cal__done" id="cal-done">Done</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="why" aria-labelledby="why-title">
+    <div class="why__text" data-reveal>
+      <h2 id="why-title">Same seat. Same airline. Less to pay.</h2>
+      <p>Airlines release part of every business cabin to agencies at rates they never publish online. We hold those contracts, compare them with the public fare for your dates, and send you whichever is lower.</p>
+    </div>
+    <figure class="why__photo" data-reveal style="--i:1">
+      <img src="img/hero-wing.webp" width="1100" height="1461" alt="An aircraft wing above the clouds at sunset" loading="lazy" decoding="async">
+    </figure>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" data-reveal>How it works</h2>
+    <ol class="steps">
+      <li data-reveal style="--i:1"><h3>Tell us your trip</h3><p>Where, when and how many. It takes a minute.</p></li>
+      <li data-reveal style="--i:2"><h3>Get your options</h3><p>An advisor sends two or three itineraries by email or message.</p></li>
+      <li data-reveal style="--i:3"><h3>Book and fly</h3><p>Choose one, pay by secure link, and the airline issues your ticket.</p></li>
+    </ol>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" data-reveal>Questions</h2>
+    <div class="faq__list" data-reveal style="--i:1">
+      <details><summary>Is it the same ticket the airline sells?</summary><p>Yes. The airline issues your ticket, it appears in the airline's app under your booking reference, and you get the same seat, lounge and baggage allowance.</p></details>
+      <details><summary>Will I earn miles?</summary><p>In most cases, yes. Your advisor tells you the booking class, and what it earns, before you pay.</p></details>
+      <details><summary>Why can't I book online?</summary><p>These fares are sold under contracts that keep them out of public searches, so an advisor prices each trip by hand.</p></details>
+      <details><summary>What currency are quotes in?</summary><p>Every quote is in US dollars per person, with taxes and fees included.</p></details>
+      <details><summary>Is my request binding?</summary><p>No. Nothing is charged until you choose an itinerary and pay through a secure link.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__row">
+    <p class="foot__brand">BusinessClassTravel</p>
+    <p><a href="tel:+18885550199">+1 (888) 555-0199</a> · <a href="mailto:quotes@businessclasstravel.com">quotes@businessclasstravel.com</a></p>
+  </div>
+  <p class="foot__small">Quotes are in USD per person with taxes and fees included, and are not guaranteed until ticketed. Seats are limited and fares change with availability. Photograph by Norman Mithika (CC0, WordPress Photo Directory). © 2026 BusinessClassTravel</p>
+</footer>
+
+<script src="data/airports.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

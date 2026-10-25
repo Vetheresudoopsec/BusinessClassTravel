@@ -1,0 +1,8 @@
+# Business Class Travel
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cache/
+Disallow: /quote.php
+
+Sitemap: https://business-class-travel.com/sitemap.xml

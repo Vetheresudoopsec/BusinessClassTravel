@@ -1,0 +1,2453 @@
+{
+ "url": "Sentence.html",
+ "at": "2026-10-21T12:54:04.483Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.64,
+    0.65,
+    0.16,
+    0.24,
+    0.24,
+    0.93
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 26,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 5320,
+     "screens": 5.9,
+     "words": 477,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 2,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hk-day.webp",
+      "cabin-seat.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "chars": 32,
+     "lines": 2,
+     "size": 95,
+     "vw": 6.6,
+     "font": "Bricolage Grotesque",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 115,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "lines": 2,
+     "size": 95,
+     "font": "Bricolage Grotesque"
+    },
+    "headings": [
+     {
+      "text": "Business class, arranged for you",
+      "words": 5,
+      "chars": 32,
+      "lines": 2,
+      "size": 95,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 115,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "First, you send one sentence.",
+      "words": 5,
+      "chars": 29,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1717,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Then an advisor searches.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1966,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "You choose, in writing.",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.47,
+      "top": 2214,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The airline tickets you.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.47,
+      "top": 2400,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Why agency fares exist",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.79,
+      "top": 2729,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3277,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Is it the same ticket the airline sells?",
+      "words": 8,
+      "chars": 40,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3401,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What does a quote cost?",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3541,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Will I earn miles?",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3680,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Can my plans change later?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3820,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "How will I hear back?",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3959,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rather talk it through?",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 40.3,
+      "vw": 2.8,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 4218,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+1 (888) 555-0199",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 95,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 5101,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Bricolage Grotesque",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      18,
+      27,
+      40,
+      63,
+      95
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Bricolage Grotesque",
+      "size": 18,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 15.4
+     },
+     "measureChars": 91,
+     "max": {
+      "size": 95,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "text": "Business class,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f7",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.07,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f8f7",
+       "top": 0,
+       "hsl": {
+        "h": 120,
+        "s": 0.07,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 415,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#2f6b5a",
+       "top": 4510,
+       "hsl": {
+        "h": 163,
+        "s": 0.39,
+        "l": 0.3
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17221e",
+       "share": 0.67
+      },
+      {
+       "color": "#4e5e59",
+       "share": 0.16
+      },
+      {
+       "color": "#e7f0ea",
+       "share": 0.13
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#2f6b5a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#2f6b5a",
+      "hsl": {
+       "h": 163,
+       "s": 0.39,
+       "l": 0.3
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Send my request"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 28,
+     "squareMedia": 1,
+     "roundedMedia": 1,
+     "mediaRadius": 18,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.11
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 75,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "bricolage grotesque"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 5320,
+    "margins": {
+     "left": 37,
+     "right": 37
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 75,
+      "height": 300,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Business class,",
+       "size": 95,
+       "tag": "h1"
+      },
+      "left": 37,
+      "right": 617,
+      "textLeft": 37,
+      "textRight": 781,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "form.bk",
+      "tag": "form",
+      "top": 415,
+      "height": 412,
+      "words": 46,
+      "media": 0,
+      "middle": 12,
+      "heading": {
+       "text": "I would like a",
+       "size": 27,
+       "tag": "p"
+      },
+      "left": 75,
+      "right": 75,
+      "textLeft": 75,
+      "textRight": 107,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.band",
+      "tag": "figure",
+      "top": 826,
+      "height": 655,
+      "words": 7,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 37,
+      "right": 1071,
+      "textLeft": 37,
+      "textRight": 1071,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.grid.steps",
+      "tag": "section",
+      "top": 1661,
+      "height": 812,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "First, you send one sentence.",
+       "size": 63,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 132,
+      "textLeft": 37,
+      "textRight": 132,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.grid.about",
+      "tag": "section",
+      "top": 2673,
+      "height": 348,
+      "words": 69,
+      "media": 0,
+      "middle": 61,
+      "heading": {
+       "text": "Why agency fares exist",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 353,
+      "textLeft": 37,
+      "textRight": 353,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.grid.faq",
+      "tag": "section",
+      "top": 3221,
+      "height": 741,
+      "words": 87,
+      "media": 0,
+      "middle": 189,
+      "heading": {
+       "text": "Questions, answered",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 140,
+      "textLeft": 37,
+      "textRight": 140,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.grid.talk",
+      "tag": "section",
+      "top": 4162,
+      "height": 348,
+      "words": 32,
+      "media": 1,
+      "middle": 393,
+      "heading": {
+       "text": "Rather talk it through?",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 37,
+      "right": 67,
+      "textLeft": 37,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.end",
+      "tag": "footer",
+      "top": 4510,
+      "height": 810,
+      "words": 64,
+      "media": 0,
+      "middle": 217,
+      "heading": null,
+      "left": 37,
+      "right": 37,
+      "textLeft": 37,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 4596,
+      "height": 492
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Business class, arranged for you",
+      "size": 95,
+      "top": 115,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 37,
+      "n": 13
+     },
+     {
+      "x": 269,
+      "n": 5
+     },
+     {
+      "x": 848,
+      "n": 5
+     },
+     {
+      "x": 500,
+      "n": 2
+     },
+     {
+      "x": 732,
+      "n": 2
+     },
+     {
+      "x": 75,
+      "n": 1
+     },
+     {
+      "x": 1079,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.17,
+    "voidBox": {
+     "x": 840,
+     "y": 120,
+     "w": 600,
+     "h": 360
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.74,
+    0.28,
+    0.3,
+    0.2,
+    0.93
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 26,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5052,
+     "screens": 4.9,
+     "words": 471,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hk-day.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "chars": 32,
+     "lines": 2,
+     "size": 50.7,
+     "vw": 6.6,
+     "font": "Bricolage Grotesque",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 115,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "lines": 2,
+     "size": 50.7,
+     "font": "Bricolage Grotesque"
+    },
+    "headings": [
+     {
+      "text": "Business class, arranged for you",
+      "words": 5,
+      "chars": 32,
+      "lines": 2,
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 115,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "First, you send one sentence.",
+      "words": 5,
+      "chars": 29,
+      "lines": 2,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1360,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Then an advisor searches.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1550,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "You choose, in writing.",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.46,
+      "top": 1767,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The airline tickets you.",
+      "words": 4,
+      "chars": 24,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.46,
+      "top": 1923,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Why agency fares exist",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.78,
+      "top": 2223,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 2725,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Is it the same ticket the airline sells?",
+      "words": 8,
+      "chars": 40,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 2836,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What does a quote cost?",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 3004,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Will I earn miles?",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 3171,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Can my plans change later?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 3338,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "How will I hear back?",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 3533,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rather talk it through?",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 3821,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+1 (888) 555-0199",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 4843,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Bricolage Grotesque",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      18,
+      21,
+      28,
+      34,
+      51
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Bricolage Grotesque",
+      "size": 18,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 15.4
+     },
+     "measureChars": 57,
+     "max": {
+      "size": 50.7,
+      "vw": 6.6,
+      "font": "Bricolage Grotesque",
+      "text": "Business class,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f7",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.07,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f8f7",
+       "top": 0,
+       "hsl": {
+        "h": 120,
+        "s": 0.07,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 331,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#2f6b5a",
+       "top": 4130,
+       "hsl": {
+        "h": 163,
+        "s": 0.39,
+        "l": 0.3
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17221e",
+       "share": 0.67
+      },
+      {
+       "color": "#4e5e59",
+       "share": 0.16
+      },
+      {
+       "color": "#e7f0ea",
+       "share": 0.13
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#2f6b5a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#2f6b5a",
+      "hsl": {
+       "h": 163,
+       "s": 0.39,
+       "l": 0.3
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Send my request"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 28,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 75,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "bricolage grotesque"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5052,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 75,
+      "height": 216,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Business class,",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 239,
+      "textLeft": 20,
+      "textRight": 239,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "form.bk",
+      "tag": "form",
+      "top": 331,
+      "height": 405,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 40,
+      "right": 40,
+      "textLeft": 40,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.band",
+      "tag": "figure",
+      "top": 737,
+      "height": 388,
+      "words": 7,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 417,
+      "textLeft": 20,
+      "textRight": 417,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.grid.steps",
+      "tag": "section",
+      "top": 1304,
+      "height": 663,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "First, you send one sentence.",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 48,
+      "textLeft": 20,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.grid.about",
+      "tag": "section",
+      "top": 2167,
+      "height": 302,
+      "words": 65,
+      "media": 0,
+      "middle": 25,
+      "heading": {
+       "text": "Why agency fares exist",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 21,
+      "textLeft": 20,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.grid.faq",
+      "tag": "section",
+      "top": 2669,
+      "height": 895,
+      "words": 92,
+      "media": 0,
+      "middle": 100,
+      "heading": {
+       "text": "Questions, answered",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 27,
+      "textLeft": 20,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.grid.talk",
+      "tag": "section",
+      "top": 3765,
+      "height": 366,
+      "words": 32,
+      "media": 0,
+      "middle": 155,
+      "heading": {
+       "text": "Rather talk it through?",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.end",
+      "tag": "footer",
+      "top": 4130,
+      "height": 922,
+      "words": 64,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 4216,
+      "height": 620
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Business class, arranged for you",
+      "size": 51,
+      "top": 115,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 13
+     },
+     {
+      "x": 145,
+      "n": 5
+     },
+     {
+      "x": 459,
+      "n": 5
+     },
+     {
+      "x": 271,
+      "n": 2
+     },
+     {
+      "x": 396,
+      "n": 2
+     },
+     {
+      "x": 40,
+      "n": 1
+     },
+     {
+      "x": 584,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.76,
+    0.69,
+    0.44,
+    0.52,
+    0.41,
+    0.34,
+    0.93
+   ],
+   "motion": {
+    "elements": 26,
+    "css": 26,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5907,
+     "screens": 7,
+     "words": 471,
+     "img": 4,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hk-day.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "chars": 32,
+     "lines": 2,
+     "size": 46.8,
+     "vw": 12,
+     "font": "Bricolage Grotesque",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.94,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 115,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Business class, arranged for you",
+     "words": 5,
+     "lines": 2,
+     "size": 46.8,
+     "font": "Bricolage Grotesque"
+    },
+    "headings": [
+     {
+      "text": "Business class, arranged for you",
+      "words": 5,
+      "chars": 32,
+      "lines": 2,
+      "size": 46.8,
+      "vw": 12,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.94,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 115,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "First, you send one sentence.",
+      "words": 5,
+      "chars": 29,
+      "lines": 2,
+      "size": 32.8,
+      "vw": 8.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1771,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Then an advisor searches.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 32.8,
+      "vw": 8.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 1958,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "You choose, in writing.",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 32.8,
+      "vw": 8.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.8,
+      "top": 2173,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The airline tickets you.",
+      "words": 4,
+      "chars": 24,
+      "lines": 2,
+      "size": 32.8,
+      "vw": 8.4,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.74,
+      "top": 2360,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Why agency fares exist",
+      "words": 4,
+      "chars": 22,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 2719,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3505,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Is it the same ticket the airline sells?",
+      "words": 8,
+      "chars": 40,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3609,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What does a quote cost?",
+      "words": 5,
+      "chars": 23,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3826,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Will I earn miles?",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3986,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Can my plans change later?",
+      "words": 5,
+      "chars": 26,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4146,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "How will I hear back?",
+      "words": 5,
+      "chars": 21,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.025,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4334,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Rather talk it through?",
+      "words": 4,
+      "chars": 23,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "Bricolage Grotesque",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4677,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+1 (888) 555-0199",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36.7,
+      "vw": 9.4,
+      "font": "Bricolage Grotesque",
+      "weight": 500,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 5645,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Bricolage Grotesque",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      18,
+      21,
+      26,
+      33,
+      37,
+      47
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Bricolage Grotesque",
+      "size": 18,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 15.4
+     },
+     "measureChars": 34,
+     "max": {
+      "size": 46.8,
+      "vw": 12,
+      "font": "Bricolage Grotesque",
+      "text": "Business class,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f7f8f7",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 0.07,
+      "l": 0.97
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f7f8f7",
+       "top": 0,
+       "hsl": {
+        "h": 120,
+        "s": 0.07,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 395,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#2f6b5a",
+       "top": 5148,
+       "hsl": {
+        "h": 163,
+        "s": 0.39,
+        "l": 0.3
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#17221e",
+       "share": 0.67
+      },
+      {
+       "color": "#4e5e59",
+       "share": 0.16
+      },
+      {
+       "color": "#e7f0ea",
+       "share": 0.13
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.03
+      },
+      {
+       "color": "#2f6b5a",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#2f6b5a",
+      "hsl": {
+       "h": 163,
+       "s": 0.39,
+       "l": 0.3
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 0,
+     "radius": "pill",
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": []
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 28,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 75,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "bricolage grotesque"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5907,
+    "margins": {
+     "left": 16,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 75,
+      "height": 280,
+      "words": 29,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Business class,",
+       "size": 47,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 44,
+      "textLeft": 16,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "form.bk",
+      "tag": "form",
+      "top": 395,
+      "height": 825,
+      "words": 46,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 36,
+      "right": 36,
+      "textLeft": 36,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "figure.band",
+      "tag": "figure",
+      "top": 1220,
+      "height": 315,
+      "words": 7,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 43,
+      "textLeft": 16,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how.grid.steps",
+      "tag": "section",
+      "top": 1715,
+      "height": 748,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "First, you send one sentence.",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#why.grid.about",
+      "tag": "section",
+      "top": 2663,
+      "height": 586,
+      "words": 80,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why agency fares exist",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 19,
+      "textLeft": 16,
+      "textRight": 19,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.grid.faq",
+      "tag": "section",
+      "top": 3449,
+      "height": 972,
+      "words": 92,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions, answered",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 22,
+      "textLeft": 16,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.grid.talk",
+      "tag": "section",
+      "top": 4621,
+      "height": 526,
+      "words": 32,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Rather talk it through?",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 33,
+      "textLeft": 16,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.end",
+      "tag": "footer",
+      "top": 5148,
+      "height": 760,
+      "words": 64,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "+1 (888) 555-0199",
+       "size": 37,
+       "tag": "a"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 5312,
+      "height": 328
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Business class, arranged for you",
+      "size": 47,
+      "top": 115,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 22
+     },
+     {
+      "x": 36,
+      "n": 3
+     },
+     {
+      "x": 63,
+      "n": 2
+     },
+     {
+      "x": 86,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 29,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 2 picture(s) on the page (2 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 91 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "A 492px stretch at 4596px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  },
+  {
+   "level": "FAIL",
+   "id": "blank-gap",
+   "width": 768,
+   "message": "1 stretch(es) of the page hold nothing at all: 620px at 4216px (the screen is 1024px tall).",
+   "fix": "Close the gap: a section gap is 120–240px on desktop and 72–112px on a phone. Look for a min-height: 100vh on a short section, an empty grid row, a hidden element still holding its space, or a reveal that never fired. A deliberate rest is a placed picture or colour field, not nothing."
+  },
+  {
+   "level": "WARN",
+   "id": "first-action",
+   "width": 390,
+   "message": "No visible button in the first phone screen.",
+   "fix": "On a phone the first screen still holds the headline, the supporting sentence and the action; move navigation into one row or a menu so it does not push them down."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/desktop-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/desktop-page-01.jpg",
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/tablet-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/mobile-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/celadon/inspect/Sentence/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
