@@ -1,0 +1,22 @@
+---
+# cPanel Git Version Control: copies the live site into public_html on each deployment
+# (cPanel > Git Version Control > Manage > Pull or Deploy > Deploy HEAD Commit).
+#
+# Only the site itself is copied. Working folders (dev, tools, previous-design, .taste-skill)
+# and Git files stay in the repository folder, outside public_html.
+#
+# Before the first deployment, put your .env one folder above public_html (/home/<user>/.env),
+# copied from .env.example, with MAIL_TEST left empty. It is never deployed from Git.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    # Pages, styles, scripts and server rules
+    - /bin/cp index.html terms.html privacy.html accessibility.html 404.html $DEPLOYPATH
+    - /bin/cp styles.css app.js motion.js quote.php $DEPLOYPATH
+    - /bin/cp .htaccess robots.txt sitemap.xml $DEPLOYPATH
+    - /bin/cp favicon.ico favicon.svg apple-touch-icon.png $DEPLOYPATH
+    # Folders: location and photo endpoints, airport lists, images, phone library
+    - /bin/cp -R api data img vendor $DEPLOYPATH
+    # Writable folder for photo results, the request rate limit and test mail (blocked from the web by .htaccess)
+    - /bin/mkdir -p ${DEPLOYPATH}cache
+    - /bin/chmod 755 ${DEPLOYPATH}cache
