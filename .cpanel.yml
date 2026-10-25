@@ -1,15 +1,19 @@
 ---
-# cPanel Git Version Control: copies the live site into public_html on each deployment
+# cPanel Git Version Control: copies the live site into the domain's own folder on each deployment
 # (cPanel > Git Version Control > Manage > Pull or Deploy > Deploy HEAD Commit).
 #
+# DEPLOYPATH is the document root shown for the domain in cPanel > Domains. Other domains on the
+# account have their own folders and are never touched.
 # Only the site itself is copied. Working folders (dev, tools, previous-design, .taste-skill)
-# and Git files stay in the repository folder, outside public_html.
+# and Git files stay in the repository folder.
 #
-# Before the first deployment, put your .env one folder above public_html (/home/<user>/.env),
+# Before the first deployment, put your .env one folder above the site (/home/discoets/.env),
 # copied from .env.example, with MAIL_TEST left empty. It is never deployed from Git.
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/public_html/
+    - export DEPLOYPATH=/home/discoets/BusinessClassTravel.com/
+    # Stop rather than copy anywhere else if the folder isn't there
+    - /bin/test -d $DEPLOYPATH || exit 1
     # Pages, styles, scripts and server rules
     - /bin/cp index.html terms.html privacy.html accessibility.html 404.html $DEPLOYPATH
     - /bin/cp styles.css app.js motion.js quote.php $DEPLOYPATH
