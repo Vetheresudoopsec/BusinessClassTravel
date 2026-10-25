@@ -20,7 +20,7 @@ ErrorDocument 404 /404.html
 </FilesMatch>
 
 # Working folders that are not part of the site.
-RedirectMatch 404 "^/(dev|tools|previous-design|cache)(/|$)"
+RedirectMatch 404 "^/(dev|tools|previous-design|cache|html_private)(/|$)"
 RedirectMatch 404 "^/api/env\.php$"
 
 # Compress text files, including the 560 KB airport list (about a quarter of the size once compressed).

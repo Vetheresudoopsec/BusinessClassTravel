@@ -7,8 +7,9 @@
 # Only the site itself is copied. Working folders (dev, tools, previous-design, .taste-skill)
 # and Git files stay in the repository folder.
 #
-# Before the first deployment, put your .env one folder above the site (/home/discoets/.env),
-# copied from .env.example, with MAIL_TEST left empty. It is never deployed from Git.
+# Your .env goes in html_private/ inside the site folder
+# (/home/discoets/BusinessClassTravel.com/html_private/.env), copied from .env.example with
+# MAIL_TEST left empty. It is never deployed from Git, and deployments leave it alone.
 deployment:
   tasks:
     - export DEPLOYPATH=/home/discoets/BusinessClassTravel.com/
@@ -21,6 +22,10 @@ deployment:
     - /bin/cp favicon.ico favicon.svg apple-touch-icon.png $DEPLOYPATH
     # Folders: location and photo endpoints, airport lists, images, phone library
     - /bin/cp -R api data img vendor $DEPLOYPATH
+    # Private settings folder for .env, with its own lock in case the site's .htaccess is ever missing
+    - /bin/mkdir -p ${DEPLOYPATH}html_private
+    - /bin/cp html_private/.htaccess ${DEPLOYPATH}html_private/
+    - /bin/chmod 750 ${DEPLOYPATH}html_private
     # Writable folder for photo results, the request rate limit and test mail (blocked from the web by .htaccess)
     - /bin/mkdir -p ${DEPLOYPATH}cache
     - /bin/chmod 755 ${DEPLOYPATH}cache

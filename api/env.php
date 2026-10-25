@@ -1,12 +1,13 @@
 <?php
 /* Reads settings from a .env file (KEY=value lines). Real server environment variables win.
- * Looked for first one level above the site folder (outside public_html, where it can never be
- * downloaded), then in the site folder itself (protected by .htaccess). */
+ * Looked for first in html_private/ inside the site folder (the live site keeps it there; the
+ * folder is closed to the web by .htaccess), then one level above the site folder, then in the
+ * site folder itself (also protected by .htaccess). */
 function env($key, $default = '') {
   static $vars = null;
   if ($vars === null) {
     $vars = [];
-    foreach ([dirname(__DIR__, 2) . '/.env', dirname(__DIR__) . '/.env'] as $file) {
+    foreach ([dirname(__DIR__) . '/html_private/.env', dirname(__DIR__, 2) . '/.env', dirname(__DIR__) . '/.env'] as $file) {
       if (!is_readable($file)) continue;
       foreach (file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
         $line = trim($line);
