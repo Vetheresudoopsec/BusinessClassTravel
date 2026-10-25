@@ -20,6 +20,24 @@
         ],
         "createdAt": "2026-10-21T09:57:05.618Z",
         "reason": "claude: live padding measured 40-58px on .sheet and .why__inner; .cta's flush child is its intentional full-bleed photo"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-24T07:54:59.028Z",
+        "reason": "user confirmed: asked in an artifact comment to turn the airline section into a carousel; it pauses on hover and stops for reduced motion"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-24T07:54:59.044Z",
+        "reason": "user confirmed: the bordered field boxes inside the booking card copy the ANA booking block the user asked for"
       }
     ]
   }

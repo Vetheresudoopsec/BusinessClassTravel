@@ -1,60 +1,55 @@
-# Notes — BusinessClassTravel
+# Notes — BusinessClassTravel (board redesign, 2026-10-21)
+
+Previous page and notes are kept in .taste-skill/backup-prev/.
+
+## Brief, as read
+Airfare consolidator: unpublished business/first fares, priced by a human advisor on request, for travellers
+across Asia Pacific, quoted in USD. One action: send the quote form. Inspiration: TravelBusinessClass.com
+(published fare vs agency fare per route, search form on the first screen). User overrides: no Inter/Roboto/system
+sans, no purple, no split-screen hero, gradients or geometric patterns allowed on purpose, staggered load choreography.
 
 ## Inventory
-- Name: BusinessClassTravel, which names the cabin itself (fare codes J/C/D, lie-flat seats).
-- Product: unpublished/consolidator business fares, priced by a person on request. No checkout.
-- Constraint: consolidator fares can't be shown publicly, so a quote request is the only way in.
-- Numbers: USD, taxes included, ±3-day windows, reply "within the hour" (to confirm).
-- Printed things of its world: fare quote, e-ticket, itinerary.
-- Places: the routes themselves (JFK–LHR, LAX–HND, MIA–DXB …), seen from the window above the clouds.
+- Name: BusinessClassTravel; the cabin's booking code is J (also C, D, I, Z).
+- Constraint: agency (consolidator) fares are kept out of public search; only an advisor can price them.
+- Numbers: USD per person, taxes in; ±3 days; reply "within the hour"; +1 (888) 555-0199.
+- Base: Asia Pacific; fallback origin HKG; hubs HKG, SIN, SYD, HND.
+- Printed things: the departures board (split-flap), fare quote, e-ticket, boarding pass, seat map.
+- Object: the 1-2-1 reverse-herringbone business cabin — angled pods, a strong diagonal pattern.
+- Light: dusk at cruising altitude, wing against an amber horizon; harbour cities at night.
+- Colour of its world: board black, flap white, FIDS amber.
+
+## Argument
+1. Hero — Business class, for less. Proof: the quote form, right there; the wing at dusk.
+2. Fares — Agency fares are a third or more below published. Proof: example routes from the visitor's hub.
+3. Why — Airlines release part of the cabin to agencies at net rates; same seat, same ticket. Proof: seat map + photo.
+4. How — Four steps; never pay before choosing. Proof: the steps.
+5. Advisor — A person answers. Proof: call-back bar, phone.
+6. FAQ — Real objections answered.
+7. CTA + footer — Ask for your fare today; the name on flaps.
 
 ## Direction
-split-stage, seed 963085052. Redraws: type (Rokkitt slab, uppercase and industrial, clashed with "sleek modern, not stylised"), now Clash Grotesk.
-Photos: the dealt mountain set was not used; found travel photos instead.
+dense-tiles "The well-kept board", seed 1075229197. Redraw: section:about → about-photo-tile-facts (no team photos exist).
+Palette: dealt proportions kept (soot ground, white ink, one accent), lime swapped for departures-board amber — the subject's own colour.
+Gradients: allowed by the user's request — used twice on purpose: the night-sky name tile and the dawn tile in the close.
 
 ## Idea
-On this page, the quote request (the one thing a visitor came to do) becomes the half of the screen that never moves.
-Live thing: choosing From/To fills the panel's fare line (published vs. indicative consolidator fare in USD), and the sticky photo turns to the destination.
-
-## Adjustments to sheet
-- The hero blueprint's crossing wordmark and dark field were dropped (too stylised for this brief). The name returns at full width in the footer, which carries the scaling-wordmark move.
-- The slip has no zigzag edge or leaders, and the list sheet has no scallops, because the client asked for a calm, non-stylised look.
+On this page, the airport departures board — where the airline's published fare flips over to the agency fare — becomes the board of tiles the page is built from.
+Live thing: the fare board opens on departures from the visitor's own hub (from their time zone), switches hub by tab with the rows flipping in, and tapping a route fills the quote form.
+Signature: the board "refreshes" on load — tiles flip down in a diagonal stagger (animation-delay), the wing photo opens as a shutter.
 
 ## Copy deck
-H1: Business class, for less
-Lead: We search the unpublished business-class fares airlines release only to agencies, and send you a real price, usually within the hour.
-Promises: Free quote / Prices in USD, taxes in / Ticketed by the airline
-Panel h2: Get your fare · button "Get my fare"
-Showcase h2: Routes from {city}
-List h2: Example fares from {city}
-How h2: How booking works
+Bar: J mark · Fares · Why it costs less · How it works · Questions · Call +1 (888) 555-0199
+H1: Business class, / for less
+Lead: We find the business and first class fares airlines release only to agencies. An advisor sends you a real price.
+Form h2: Ask for a fare · button "Get my fare"
+Dark tile: Same airline, same seat, same ticket. Only the price changes.
+Amber tile: Most quotes arrive within the hour, by email or message.
+Fares h2: Departures from {city} · button "Ask for your fare"
 Why h2: Why it costs less
-Advisor h2: Talk to an advisor
+How h2: How booking works
+Advisor h2: Talk to an advisor · Call me back
 FAQ h2: Questions, answered
-CTA h2: Ask for your fare today
-Footer: name at full width.
+CTA h2: Ask for your fare today · button "Start my quote"
 
 ## Sample content to confirm
-Phone +1 (888) 555-0199 · quotes@businessclasstravel.com · "within the hour" · 24/7 advisors · fare formula (indicative) · example carriers · FAQ policy answers (payment, changes, miles).
-
-## Critique
-
-ROUND 1 (first full render)
-Seen in one second: a quote form on a sunset wing photo, with a large headline on the right.
-Problems: the "Request received" block rendered invisibly ([hidden] overridden by display:grid); the shutter photos never revealed (IntersectionObserver ignores a clip-path'd target); on the phone the panel started about 600px down.
-
-ROUND 2
-Fixed the above. Problems: the footer MIAT seat was cluttered (bag, red belt); the calendar overflowed the panel (December cut off); the tablet footer split was cramped.
-
-ROUND 3 (final)
-Seen in one second: "Business class, for less", and a form you can fill in right now.
-Idea (one sentence): the quote request is the half of the screen that never moves.
-Live thing: choosing a route fills the fare line (published vs. indicative USD) and turns the stage photo to the destination; tapping any route on the page fills the panel.
-Layout words by section: hero=split stage / routes=square plate + tabs / fares=printed sheet / how=slip / why=green field + wide photo / advisor=big number + 2-col list / faq=run-in paragraphs / cta=full-bleed photo / footer=photo half + menu half + full-width name
-Scores: design 7.5 · usability 8.5 · creativity 7 · content 7 → overall 7.65
-Caps applied: creativity ≤7 (a pinned quote form would also work for a competitor).
-Top three remaining:
-1. desktop-fold: a band of about 200px of empty ground between the lead and the promises on the right; acceptable as the page's one rest.
-2. desktop-page-02: the green "Why it costs less" block is text plus one strip photo; a real comparison of fares would make it stronger (needs real data from the client).
-3. The sticky stage photo stays the wing until a destination is chosen; per-section crossfades were not built, to keep the page calm and light.
-Defended WARNs: off-centre (the left text edge is the panel's; the stage photo itself reaches the 23px margin); no-footage (first-load speed was the priority for lead capture, and the page is about 95 KB).
+All example fares (published and agency), durations and carriers; "within the hour"; "24 hours a day"; phone and email; miles answer; change rules answer.
