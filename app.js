@@ -720,6 +720,8 @@ async function submit(e) {
   $('#err-send').textContent = '';
   try {
     await sendLead(lead);
+    lastLead = lead;
+    resetMore();
     $('#done-text').textContent = `Thank you, ${lead.name.split(' ')[0]}. A consultant is preparing fares from ${state.from.city} to ${state.to.city} and will reply to ${lead.email}.`;
     form.classList.add('is-done');
     $('#done').hidden = false;
@@ -728,6 +730,29 @@ async function submit(e) {
     $('#err-send').textContent = `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
   } finally {
     btn.disabled = false; btn.textContent = 'Request a Free Quote';
+  }
+}
+
+// After a quote request: a box for anything else the consultant should know, sent as a follow-up email.
+let lastLead = null;
+function resetMore() {
+  $('#more').hidden = false; $('#more').classList.remove('has-error');
+  $('#more-text').value = ''; $('#err-more').textContent = ''; $('#more-sent').hidden = true;
+}
+async function sendMore() {
+  const details = $('#more-text').value.trim();
+  if (!details) { $('#more').classList.add('has-error'); $('#err-more').textContent = 'Please add your details.'; $('#more-text').focus(); return; }
+  const btn = $('#more-send');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    await sendLead({ type: 'details', name: lastLead?.name || '', email: lastLead?.email || '', route: lastLead ? `${lastLead.from} to ${lastLead.to}` : '', details, page: location.href });
+    $('#more').hidden = true;
+    $('#more-sent').hidden = false;
+    $('#more-sent').focus();
+  } catch {
+    $('#err-more').textContent = `Your details could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
+  } finally {
+    btn.disabled = false; btn.textContent = 'Send details';
   }
 }
 
@@ -1007,6 +1032,8 @@ function init() {
   initPax();
   initPhone();
   form.addEventListener('submit', submit);
+  $('#more-send').addEventListener('click', sendMore);
+  $('#more-text').addEventListener('input', () => { $('#more').classList.remove('has-error'); $('#err-more').textContent = ''; });
   $('#again').addEventListener('click', () => { form.classList.remove('is-done'); $('#done').hidden = true; $('#to').focus(); });
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[data-from][data-to]');

@@ -175,6 +175,17 @@ p { text-wrap: pretty; }
 .done h2, .done h3 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem); font-weight: 600; letter-spacing: -0.02em; outline: none; }
 .done p { max-width: 34rem; color: var(--muted); }
 .done .button { margin-top: 0.75rem; }
+.more[hidden], .more__sent[hidden] { display: none; }
+.more { display: grid; gap: 0.5rem; width: min(100%, 34rem); margin-top: 1rem; text-align: left; }
+.more__label { font-size: 0.9375rem; font-weight: 600; color: var(--ink); }
+.more textarea { width: 100%; min-height: 7.5rem; padding: 0.75rem 0.875rem; border: 1px solid var(--field-line); border-radius: 2px; background: var(--white); font: inherit; font-size: 1rem; line-height: 1.5; color: var(--ink); resize: vertical; }
+.more textarea::placeholder { color: #6b7280; opacity: 1; }
+.more textarea:focus { border-color: var(--blue); outline: none; box-shadow: inset 0 0 0 1px var(--blue); }
+.more.has-error textarea { border-color: var(--error); }
+.more .button { justify-self: start; margin-top: 0.25rem; }
+.more__sent { color: var(--ink); font-weight: 600; outline: none; }
+.button--ghost { color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+@media (hover: hover) and (pointer: fine) { .button--ghost:hover { background: var(--blue-wash); } }
 .is-done > .quote__form, .is-done > .panel__form { display: none; }
 .quote.is-done .quote__head { display: none; }
 

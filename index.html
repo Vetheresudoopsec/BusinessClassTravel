@@ -279,7 +279,14 @@
       <div class="done" id="done" hidden>
         <h2 tabindex="-1">Thank You. Your Request Is with Us.</h2>
         <p id="done-text">A consultant will be in touch shortly.</p>
-        <button type="button" class="button button--blue" id="again">Plan another journey</button>
+        <div class="more" id="more">
+          <label class="more__label" for="more-text">Anything else we should know?</label>
+          <textarea id="more-text" name="details" rows="4" maxlength="2000" placeholder="Preferred airlines, seat or meal requests, frequent flyer numbers, your budget or how flexible your dates are"></textarea>
+          <span class="err" id="err-more" aria-live="polite"></span>
+          <button type="button" class="button button--blue" id="more-send">Send details</button>
+        </div>
+        <p class="more__sent" id="more-sent" tabindex="-1" hidden>Thank you. We’ve added these details to your request.</p>
+        <button type="button" class="button button--ghost" id="again">Plan another journey</button>
       </div>
 
       <div class="cal" id="cal" role="dialog" aria-modal="true" aria-labelledby="cal-title" hidden>

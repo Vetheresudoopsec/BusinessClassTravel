@@ -80,6 +80,21 @@ if ($type === 'corporate') {
     'Travellers a year' => $clean($data['travellers'] ?? '') ?: 'Not given',
   ];
   $replyTo = $validEmail;
+} elseif ($type === 'details') {
+  // Extra details sent from the thank-you panel, after a quote request.
+  $name    = $clean($data['name'] ?? '');
+  $details = trim(mb_substr(preg_replace("/\r\n?/", "\n", strip_tags((string)($data['details'] ?? ''))), 0, 2000));
+  if ($details === '' || $validEmail === '') reply(false, 'Please add your details.', $isJson);
+  $route   = $clean($data['route'] ?? '');
+  $subject = 'More details: ' . ($route ? "$route — " : '') . ($name ?: $validEmail);
+  $title   = 'More Details for a Quote Request';
+  $rows = [
+    'Name'    => $name ?: 'Not given',
+    'Email'   => $validEmail,
+    'Route'   => $route ?: 'Not given',
+    'Details' => $details,
+  ];
+  $replyTo = $validEmail;
 } elseif ($type === 'enquiry') {
   $name    = $clean($data['name'] ?? '');
   $contact = $clean($data['contact'] ?? '');
@@ -135,7 +150,7 @@ $page = filter_var($data['page'] ?? '', FILTER_VALIDATE_URL) ?: '';
 // Plain text and HTML versions of the same list, so it reads well in any mail client.
 $w = max(array_map('strlen', array_keys($rows))) + 2;
 $text = "$title\n\n";
-foreach ($rows as $k => $v) $text .= str_pad("$k:", $w) . "$v\n";
+foreach ($rows as $k => $v) $text .= str_pad("$k:", $w) . str_replace("\n", "\n" . str_repeat(' ', $w), $v) . "\n";
 $text .= "\nSent $sent" . ($page ? "\nFrom $page" : '') . "\nReply to this email to answer the customer directly.\n";
 
 $h = function ($v) { return htmlspecialchars($v, ENT_QUOTES, 'UTF-8'); };
@@ -144,7 +159,7 @@ $html = "<!doctype html><html><body style=\"margin:0;padding:24px;background:#f3
       . "<tr><td colspan=\"2\" style=\"padding:20px 24px 8px;font-size:20px;font-weight:600;color:#0f2a78\">{$h($title)}</td></tr>";
 foreach ($rows as $k => $v) {
   $cell = $k === 'Email' ? "<a href=\"mailto:{$h($v)}\" style=\"color:#0f2a78\">{$h($v)}</a>"
-        : ($k === 'Phone' ? "<a href=\"tel:{$h(preg_replace('/[^\d+]/', '', $v))}\" style=\"color:#0f2a78\">{$h($v)}</a>" : $h($v));
+        : ($k === 'Phone' ? "<a href=\"tel:{$h(preg_replace('/[^\d+]/', '', $v))}\" style=\"color:#0f2a78\">{$h($v)}</a>" : nl2br($h($v)));
   $html .= "<tr><td style=\"padding:8px 24px;border-top:1px solid #e3e8f2;color:#5b6577;width:34%;vertical-align:top\">{$h($k)}</td>"
          . "<td style=\"padding:8px 24px 8px 0;border-top:1px solid #e3e8f2;font-weight:600\">$cell</td></tr>";
 }
