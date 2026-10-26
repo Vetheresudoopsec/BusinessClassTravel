@@ -22,6 +22,10 @@ deployment:
     - /bin/cp favicon.ico favicon.svg apple-touch-icon.png $DEPLOYPATH
     # Folders: location and photo endpoints, airport lists, images, phone library
     - /bin/cp -R api data img vendor $DEPLOYPATH
+    # Fresh styles and scripts after every deployment: the pages ask for styles.css?v=dev and app.js?v=dev,
+    # and the live copies get this deployment's time instead, so browsers and Cloudflare can't serve old ones.
+    - export VERSION=$(/bin/date +%Y%m%d%H%M%S)
+    - /bin/sed -i "s/?v=dev\"/?v=${VERSION}\"/g" ${DEPLOYPATH}index.html ${DEPLOYPATH}terms.html ${DEPLOYPATH}privacy.html ${DEPLOYPATH}accessibility.html ${DEPLOYPATH}404.html
     # Private settings folder for .env, with its own lock in case the site's .htaccess is ever missing
     - /bin/mkdir -p ${DEPLOYPATH}html_private
     - /bin/cp html_private/.htaccess ${DEPLOYPATH}html_private/
