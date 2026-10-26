@@ -173,6 +173,14 @@ async function applyGeo() {
   try { const r = await fetch(CONFIG.geoEndpoint, { headers: { Accept: 'application/json' } }); if (r.ok) g = await r.json(); } catch {}
   if (!g?.country) return; // keep the time zone guess
   if (!touched.country && !$('#phone').value) setCountry(g.country);
+  // Only the country known: stand in its main airport (the first listed for it) for the visitor's position.
+  if (g.lat == null || g.lon == null) {
+    const name = COUNTRY[g.country]?.name || '';
+    // The browser's country names can run longer than ours ("Hong Kong SAR China"), so match the start.
+    const hub = AIRPORTS.find((a) => !a.extra && a.lat != null && a.country && name.startsWith(a.country));
+    if (!hub) return;
+    g.lat = hub.lat; g.lon = hub.lon;
+  }
   if (g.lat != null && g.lon != null) {
     const near = nearestAirport(g.lat, g.lon);
     if (near && near.code !== offerOrigin?.code) { offerOrigin = near; renderOffers(); }
