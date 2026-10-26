@@ -99,7 +99,9 @@ function nearestAirport(lat, lon) {
 }
 
 // Turns a text input into a combobox. onPick(airport) is called with the chosen airport.
-function airportField(input, onPick) {
+// Options: search(text) gives the suggestions (all airports by default); full: false skips loading the
+// full airport list; showAll lists every suggestion when the field is focused empty, like a dropdown.
+function airportField(input, onPick, { search: find = searchAirports, full = true, showAll = false } = {}) {
   const list = document.createElement('ul');
   list.className = 'suggest';
   list.id = input.id + '-list';
@@ -136,10 +138,15 @@ function airportField(input, onPick) {
   };
   const pick = (a) => { BY_CODE[a.code] ||= a; input.value = label(a); close(); onPick(a); };
 
-  const search = () => { items = searchAirports(input.value); active = items.length ? 0 : -1; render(); };
+  const search = () => {
+    if (document.activeElement !== input) return close(); // only the field being used shows its list
+    items = find(input.value); active = items.length && input.value ? 0 : -1; render();
+  };
   input.addEventListener('input', search);
   input.addEventListener('focus', () => {
     input.select();
+    if (showAll && !input.value) search();
+    if (!full) return;
     // Fetch the full list once; if the visitor is already typing when it lands, refresh their results.
     loadFullAirportList().then(() => { if (document.activeElement === input && input.value && input.value !== label(BY_CODE[input.value.match(/\(([A-Z]{3})\)$/)?.[1]])) search(); });
   });
@@ -878,28 +885,46 @@ function initFares() {
   shuffled.forEach((r) => body.append(r));
   const rows = $$('#fare-rows tr');
   if (!rows.length) return;
-  const fill = (select, key) => {
+  // From and To work like the booking card: type a city or code, or pick one of the cities in the list.
+  const places = (side) => {
     const seen = new Map();
-    rows.forEach((r) => seen.set(r.dataset[key], r.dataset[key + 'City']));
-    [...seen].sort((x, y) => x[1].localeCompare(y[1])).forEach(([code, city]) => select.add(new Option(`${city} (${code})`, code)));
+    rows.forEach((r) => seen.set(r.dataset[side], { code: r.dataset[side], city: r.dataset[side + 'City'], country: BY_CODE[r.dataset[side]]?.country || '' }));
+    return [...seen.values()].sort((x, y) => x.city.localeCompare(y.city));
   };
-  fill($('#f-from'), 'from');
-  fill($('#f-to'), 'to');
+  const norm = (v) => v.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
+  // A picked place ("Hong Kong (HKG)") matches its code exactly; typed text matches any city or code containing every word.
+  const test = (q) => {
+    const code = q.match(/\(([A-Z]{3})\)$/)?.[1];
+    if (code) return (c) => c === code;
+    const words = norm(q).split(/[\s,]+/).filter(Boolean);
+    return (c, city) => words.every((w) => norm(`${city} ${c}`).includes(w));
+  };
+  const suggest = (side) => {
+    const all = places(side);
+    return (q) => {
+      if (!q.trim()) return all;
+      const ok = test(q), n = norm(q);
+      return all.filter((p) => ok(p.code, p.city))
+        .sort((x, y) => (norm(y.code) === n) - (norm(x.code) === n) || norm(y.city).startsWith(n) - norm(x.city).startsWith(n));
+    };
+  };
   const apply = () => {
-    const f = $('#f-from').value, t = $('#f-to').value;
-    const budget = Number($('#f-budget').value.replace(/[^\d.]/g, '')) || 0;
+    const f = $('#f-from').value.trim(), t = $('#f-to').value.trim();
+    const fromOk = test(f), toOk = test(t);
     let shown = 0;
     rows.forEach((r) => {
-      const price = Number(r.dataset.price) || 0; // rows without a price yet are never hidden by the budget
-      const ok = (!f || r.dataset.from === f) && (!t || r.dataset.to === t) && (!budget || !price || price <= budget);
+      const ok = (!f || fromOk(r.dataset.from, r.dataset.fromCity)) && (!t || toOk(r.dataset.to, r.dataset.toCity));
       r.hidden = !ok;
       if (ok) shown++;
     });
     $('#fares-empty').hidden = shown > 0;
     $('#fares-count').textContent = shown ? `Showing ${shown} of ${rows.length} fares` : '';
   };
-  ['f-from', 'f-to'].forEach((id) => $(`#${id}`).addEventListener('change', apply));
-  $('#f-budget').addEventListener('input', apply);
+  ['from', 'to'].forEach((side) => {
+    const input = $(`#f-${side}`);
+    airportField(input, apply, { search: suggest(side), full: false, showAll: true });
+    input.addEventListener('input', apply);
+  });
   apply();
 }
 
