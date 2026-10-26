@@ -708,6 +708,7 @@ async function submit(e) {
   }
   const lead = {
     type: 'booking', trip: state.trip, from: state.from.code, to: state.to.code, fromLabel: place(state.from), toLabel: place(state.to),
+    fromCity: state.from.city, toCity: state.to.city,
     depart: state.depart ? iso(state.depart) : null, return: state.ret ? iso(state.ret) : null,
     flexible: $('#flex').checked, legs: state.trip === 'multi' ? $('#legs').value.trim() : '',
     adults: pax.adults, children: pax.children, passengers: pax.adults + pax.children, cabin: $('#cabin').value,

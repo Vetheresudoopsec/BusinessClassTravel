@@ -21,7 +21,7 @@ ErrorDocument 404 /404.html
 
 # Working folders that are not part of the site.
 RedirectMatch 404 "^/(dev|tools|previous-design|cache|html_private)(/|$)"
-RedirectMatch 404 "^/api/env\.php$"
+RedirectMatch 404 "^/api/(env|mail-confirmation)\.php$"
 
 # Compress text files, including the 560 KB airport list (about a quarter of the size once compressed).
 <IfModule mod_deflate.c>

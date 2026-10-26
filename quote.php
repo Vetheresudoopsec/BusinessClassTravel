@@ -3,7 +3,8 @@
  *
  * Handles the three forms on the home page: the booking card (type "booking"),
  * the corporate account form ("corporate") and the enquiry form ("enquiry"),
- * and emails every detail the visitor chose to the sales inbox.
+ * and emails every detail the visitor chose to the sales inbox. A quote request also
+ * sends the customer a confirmation email (api/mail-confirmation.php).
  *
  * Mail goes out through PHP's mail(), which HostGator delivers. For it to land in the inbox,
  * the domain in $FROM needs a mailbox or an SPF record in cPanel (Email Deliverability).
@@ -12,6 +13,7 @@
  * Accepts the JSON the page sends, and a plain form post when JavaScript is off.
  */
 require __DIR__ . '/api/env.php';
+require __DIR__ . '/api/mail-confirmation.php';
 
 $RECIPIENT = 'sales@business-class-travel.com';
 $FROM      = 'no-reply@business-class-travel.com';
@@ -141,6 +143,12 @@ if ($type === 'corporate') {
     'Passengers' => $adults . ' adult' . ($adults === 1 ? '' : 's') . ($children ? ", $children child" . ($children === 1 ? '' : 'ren') : ''),
   ];
   $replyTo = $validEmail;
+  $confirm = [
+    'fromCode' => $from, 'fromCity' => $clean($data['fromCity'] ?? ''),
+    'toCode'   => $to,   'toCity'   => $clean($data['toCity'] ?? ''),
+    'depart'   => $clean($depart), 'return' => $clean($return), 'trip' => $trip,
+    'cabin'    => $cabin, 'adults' => $adults, 'children' => $children, 'flexible' => $flex,
+  ];
 }
 
 $rows = array_filter($rows, function ($v) { return $v !== null; });
@@ -167,20 +175,29 @@ $html .= "<tr><td colspan=\"2\" style=\"padding:16px 24px 20px;border-top:1px so
        . ($page ? " from <a href=\"{$h($page)}\" style=\"color:#5b6577\">{$h($page)}</a>" : '')
        . ". Reply to this email to answer the customer directly.</td></tr></table></body></html>";
 
-$boundary = 'bct-' . bin2hex(random_bytes(8));
-$body = "--$boundary\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n$text\r\n"
-      . "--$boundary\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n$html\r\n--$boundary--\r\n";
-$headers = "From: Business Class Travel <$FROM>\r\nReply-To: $replyTo\r\nMIME-Version: 1.0\r\n"
-         . "Content-Type: multipart/alternative; boundary=\"$boundary\"";
-$encSubject = mb_encode_mimeheader($subject, 'UTF-8', 'Q');
+// Sends one email as plain text plus HTML. With MAIL_TEST=1 in .env it is saved to cache/mail/ instead.
+function deliver($to, $subject, $text, $html, $replyTo, $tag) {
+  global $FROM;
+  $boundary = 'bct-' . bin2hex(random_bytes(8));
+  $body = "--$boundary\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n$text\r\n"
+        . "--$boundary\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n$html\r\n--$boundary--\r\n";
+  $headers = "From: Business Class Travel <$FROM>\r\nReply-To: $replyTo\r\nMIME-Version: 1.0\r\n"
+           . "Content-Type: multipart/alternative; boundary=\"$boundary\"";
+  $encSubject = mb_encode_mimeheader($subject, 'UTF-8', 'Q');
+  if (env('MAIL_TEST') === '1') {
+    $dir = __DIR__ . '/cache/mail';
+    return (is_dir($dir) || @mkdir($dir, 0755, true))
+        && file_put_contents("$dir/" . gmdate('Ymd-His') . "-$tag.eml", "To: $to\r\nSubject: $encSubject\r\n$headers\r\n\r\n$body") !== false;
+  }
+  return mail($to, $encSubject, $body, $headers, "-f$FROM");
+}
 
-if (env('MAIL_TEST') === '1') {
-  // Development: keep the message on disk instead of sending it.
-  $dir = __DIR__ . '/cache/mail';
-  $ok = (is_dir($dir) || @mkdir($dir, 0755, true))
-     && file_put_contents("$dir/" . gmdate('Ymd-His') . "-$type.eml", "To: $RECIPIENT\r\nSubject: $encSubject\r\n$headers\r\n\r\n$body") !== false;
-} else {
-  $ok = mail($RECIPIENT, $encSubject, $body, $headers, "-f$FROM");
+$ok = deliver($RECIPIENT, $subject, $text, $html, $replyTo, $type);
+
+// The customer's confirmation. Replies go to the sales inbox. If it fails, the request still stands.
+if ($ok && isset($confirm)) {
+  [$cSubject, $cText, $cHtml] = quote_confirmation($confirm);
+  deliver($validEmail, $cSubject, $cText, $cHtml, $RECIPIENT, 'confirmation');
 }
 
 reply($ok, $ok ? 'A consultant will be in touch shortly.' : "Your request could not be sent. Please call us on $PHONE.", $isJson);
