@@ -46,7 +46,17 @@
     "First Class flights",
     "Corporate travel",
     "Group travel"
-   ]
+   ],
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "101 6th Ave, 9th Floor",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10013",
+    "addressCountry": "US"
+   },
+   "email": "sales@business-class-travel.com",
+   "foundingDate": "1998"
   },
   {
    "@type": "WebSite",
@@ -64,10 +74,10 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "How Can You Offer Fares Below the Airline’s Own Price?",
+     "name": "How Do You Offer Fares Below the Airline’s Published Price?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Airlines release a share of their Business and First Class seats to agencies like ours at negotiated contract rates, which are not published online. We quote you from those rates, so you fly the same seat on the same flight for less."
+      "text": "Airlines price their seats dynamically. The same Business Class seat can sell at several fare levels, depending on inventory and timing. Since 1998, our specialists have arranged long-haul journeys for corporate executives, cruise line engineers, international law firms, small business owners and seniors travelling around the world. We compare fares across the major airlines that fly your route. We work only with airlines whose Business Class offers a fully flat bed, priority check-in and lounge access, including Emirates, Qatar Airways, Singapore Airlines, Japan Airlines, Cathay Pacific, Lufthansa, British Airways, Air France, KLM, All Nippon Airways, EVA Air, Thai Airways, Air Canada, Qantas, Virgin Atlantic and South African Airways. You save on the fare, never on the comfort."
      }
     },
     {
@@ -203,7 +213,7 @@
             </div>
             <input type="hidden" id="pax" name="passengers" value="1">
           </div>
-          <label class="check check--opt"><input type="checkbox" id="flex"><span>Flexible dates</span></label>
+          <label class="check check--box"><input type="checkbox" id="flex"><span>Flexible dates</span></label>
           <p class="quote__fee">No booking fees</p>
         </div>
 
@@ -244,10 +254,17 @@
         </div>
 
         <div class="quote__you">
-          <div class="fld">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
-            <span class="err" id="err-name" aria-live="polite"></span>
+          <div class="names">
+            <div class="fld">
+              <label for="first-name">First name</label>
+              <input id="first-name" name="first_name" type="text" autocomplete="given-name" placeholder="e.g. Alex" required>
+              <span class="err" id="err-first-name" aria-live="polite"></span>
+            </div>
+            <div class="fld">
+              <label for="last-name">Last name</label>
+              <input id="last-name" name="last_name" type="text" autocomplete="family-name" placeholder="e.g. Chan" required>
+              <span class="err" id="err-last-name" aria-live="polite"></span>
+            </div>
           </div>
           <div class="fld">
             <label for="email">Email</label>
@@ -302,7 +319,7 @@
           <div class="cal__months" id="cal-months"></div>
           <p class="cal__key" aria-hidden="true"><span><i class="mark mark--out"></i>Departure</span><span class="cal__key-ret"><i class="mark mark--back"></i>Return</span><span class="cal__key-flex"><i class="mark mark--flex"></i>Also possible</span></p>
           <div class="cal__foot">
-            <label class="check"><input type="checkbox" id="cal-flex"><span>Flexible by 3 days</span></label>
+            <label class="check check--box"><input type="checkbox" id="cal-flex"><span>Flexible by 3 days</span></label>
             <button type="button" class="button button--blue cal__done" id="cal-done">Done</button>
           </div>
         </div>
@@ -544,8 +561,11 @@
       </div>
       <div class="faq__list" data-reveal style="--i:1">
         <details>
-          <summary>How Can You Offer Fares Below the Airline’s Own Price?</summary>
-          <p>Airlines release a share of their Business and First Class seats to agencies like ours at negotiated contract rates, which are not published online. We quote you from those rates, so you fly the same seat on the same flight for less.</p>
+          <summary>How Do You Offer Fares Below the Airline’s Published Price?</summary>
+          <p>Airlines price their seats dynamically. The same Business Class seat can sell at several fare levels, depending on inventory and timing.</p>
+          <p>Since 1998, our specialists have arranged long-haul journeys for corporate executives, cruise line engineers, international law firms, small business owners and seniors travelling around the world.</p>
+          <p>We compare fares across the major airlines that fly your route. We work only with airlines whose Business Class offers a fully flat bed, priority check-in and lounge access, including Emirates, Qatar Airways, Singapore Airlines, Japan Airlines, Cathay Pacific, Lufthansa, British Airways, Air France, KLM, All Nippon Airways, EVA Air, Thai Airways, Air Canada, Qantas, Virgin Atlantic and South African Airways.</p>
+          <p>You save on the fare, never on the comfort.</p>
         </details>
         <details>
           <summary>How Quickly Will I Hear Back?</summary>
@@ -583,12 +603,18 @@
     <div class="wrap about__in" data-reveal>
       <div class="about__head">
         <p class="eyebrow">About us</p>
-        <h2 id="about-title">A Decade at the Front of the Cabin</h2>
+        <h2 id="about-title">Business Class Travel Deals from Hong Kong and Singapore</h2>
+        <p class="about__sub">Premium comfort, at a fare below the airline’s own.</p>
       </div>
       <div class="about__body">
-        <p>For ten years, Business Class Travel has arranged Business and First Class journeys across Asia Pacific, for travellers who expect the finest seat on the aircraft at a fare well below the one the airline publishes.</p>
-        <p>Hong Kong and Singapore are at the heart of our work. Our consultants know these two great hubs intimately: the carriers that connect them to the world, the Business Class cabins worth choosing, and the moments when the best fares appear.</p>
-        <p>Long-standing relationships with the region’s leading airlines give us access to negotiated fares that are never offered to the public. Every ticket is issued directly by the airline, and each journey is looked after by a single consultant, from your first quote to the moment you land.</p>
+        <p>Since 1998, our Business Class specialists have helped travellers in Hong Kong, Singapore and around the world enjoy the comfort of a premium cabin, at a fare below the airline’s published price and with no compromise on service.</p>
+        <p>Hong Kong and Singapore are at the heart of our work. Our consultants know these two hubs intimately: the carriers that connect them to the world, the Business Class cabins worth choosing, and the moments when fares fall.</p>
+        <p>Over almost 30 years, we have arranged journeys for Fortune 500 executives, bankers and financiers, international law firms, healthcare professionals, private clients, small business owners and retirees.</p>
+        <p>Every traveller is different. We match each fare to your preferences, your schedule and your budget.</p>
+        <p>We arrange Business Class fares on major international airlines, including Emirates, Qatar Airways, Singapore Airlines, Lufthansa, British Airways, Cathay Pacific, Japan Airlines, All Nippon Airways, Iberia, Austrian Airlines, SAS, Thai Airways, EVA Air, SWISS, Air France, KLM, Qantas, Virgin Atlantic, South African Airways, Air Canada and Korean Air.</p>
+        <p>Whether you are flying to an important meeting, visiting family overseas or setting off on a well-earned retirement journey, your consultant tailors the fare to your trip.</p>
+        <p>Every ticket is issued directly by the airline, and a single consultant looks after you from your first quote to the moment you land.</p>
+        <p>Our aim is simple: a long-haul journey in genuine comfort, with attentive service and a fare that makes sense.</p>
       </div>
     </div>
   </section>
@@ -609,7 +635,7 @@
       </nav>
     </div>
     <div class="foot__small">
-      <span><a href="tel:+13052446463">305-244-6463</a></span>
+      <span>101 6th Ave, 9th Floor, New York, New York 10013 · <a href="tel:+13052446463">305-244-6463</a></span>
     </div>
   </div>
 </footer>

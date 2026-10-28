@@ -112,7 +112,8 @@ if ($type === 'corporate') {
 } else {
   $from  = $clean($data['from'] ?? $data['from_code'] ?? '');
   $to    = $clean($data['to'] ?? $data['to_code'] ?? '');
-  $name  = $clean($data['name'] ?? '');
+  // First and last name arrive separately; the page also joins them into "name".
+  $name  = $clean($data['name'] ?? '') ?: trim($clean($data['firstName'] ?? $data['first_name'] ?? '') . ' ' . $clean($data['lastName'] ?? $data['last_name'] ?? ''));
   $phone = $clean($data['phone'] ?? '');
   if ($phone === '' && !empty($data['phone_e164'])) $phone = $clean($data['phone_e164']);
   $adults   = max(1, (int)($data['adults'] ?? $data['passengers'] ?? 1));

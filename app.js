@@ -685,15 +685,14 @@ function validate() {
   if (!state.depart && !flex) errors.depart = 'Please choose a date.';
   if (state.trip === 'round' && state.depart && !state.ret && !flex) errors.ret = 'Please choose a date.';
   if (state.trip === 'multi' && !$('#legs').value.trim()) errors.legs = 'Please add your other flights.';
-  const name = $('#name').value.trim();
-  if (!name) errors.name = 'Please add your name.';
-  else if (name.replace(/[^\p{L}]/gu, '').length < 2) errors.name = 'Please add your full name.';
+  if (!/\p{L}/u.test($('#first-name').value)) errors['first-name'] = 'Please add your first name.';
+  if (!/\p{L}/u.test($('#last-name').value)) errors['last-name'] = 'Please add your last name.';
   const email = $('#email').value.trim(), tel = $('#phone').value.trim();
   if (!email) errors.email = 'Please add your email address.';
   else if (!isEmail(email)) errors.email = 'Please check your email address.';
   if (!tel) errors.phone = 'Please add your phone number.';
   else if (!isPhone(tel)) errors.phone = `Please check the number. It doesn’t match the format for ${COUNTRY[phone.country]?.name || 'the selected country'}.`;
-  ['from', 'to', 'depart', 'ret', 'legs', 'name', 'email', 'phone'].forEach(clearErr);
+  ['from', 'to', 'depart', 'ret', 'legs', 'first-name', 'last-name', 'email', 'phone'].forEach(clearErr);
   for (const [k, msg] of Object.entries(errors)) showErr(k, msg);
   return errors;
 }
@@ -723,7 +722,8 @@ async function submit(e) {
     depart: state.depart ? iso(state.depart) : null, return: state.ret ? iso(state.ret) : null,
     flexible: $('#flex').checked, legs: state.trip === 'multi' ? $('#legs').value.trim() : '',
     adults: pax.adults, children: pax.children, passengers: pax.adults + pax.children, cabin: $('#cabin').value,
-    name: $('#name').value.trim(), email: $('#email').value.trim(),
+    firstName: $('#first-name').value.trim(), lastName: $('#last-name').value.trim(),
+    name: `${$('#first-name').value.trim()} ${$('#last-name').value.trim()}`, email: $('#email').value.trim(),
     phone: PN.parsePhoneNumberFromString($('#phone-e164').value || '')?.formatInternational() || $('#phone').value.trim(), phoneCountry: phone.country,
     page: location.href, at: new Date().toISOString(),
   };
@@ -1044,7 +1044,7 @@ function init() {
   $('#trip').addEventListener('change', (e) => setTrip(e.target.value));
   ['cabin', 'flex'].forEach((id) => $(`#${id}`).addEventListener('change', sync));
   $('#cal-flex').addEventListener('change', (e) => { $('#flex').checked = e.target.checked; sync(); });
-  ['name', 'email', 'legs'].forEach((id) => $(`#${id}`).addEventListener('input', () => clearErr(id)));
+  ['first-name', 'last-name', 'email', 'legs'].forEach((id) => $(`#${id}`).addEventListener('input', () => clearErr(id)));
   initPax();
   initPhone();
   form.addEventListener('submit', submit);

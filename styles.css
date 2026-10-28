@@ -145,6 +145,7 @@ p { text-wrap: pretty; }
 .quote__fee { margin-left: auto; font-size: 0.875rem; color: var(--muted); }
 
 .quote__trip, .quote__you { display: grid; gap: 0.75rem; }
+.names { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
 .dates { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 .quote[data-trip="oneway"] .fld--return, .quote[data-trip="multi"] .fld--return { display: none; }
 .quote[data-trip="oneway"] .dates, .quote[data-trip="multi"] .dates { grid-template-columns: 1fr; }
@@ -242,6 +243,12 @@ p { text-wrap: pretty; }
 .check input::after { content: ''; position: absolute; top: 0.1875rem; left: 0.1875rem; width: 1.25rem; height: 1.25rem; border-radius: 50%; background: var(--white); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); transition: transform 260ms var(--ease-out); }
 .check input:checked { background: var(--blue); }
 .check input:checked::after { transform: translateX(1.125rem); }
+/* Flexible dates: a plain square checkbox with a tick, not a switch. */
+.check--box input { width: 1.25rem; height: 1.25rem; border-radius: 2px; background: var(--white); box-shadow: inset 0 0 0 1.5px var(--blue); }
+.check--box input::after { top: 0.2rem; left: 0.4rem; width: 0.3rem; height: 0.6rem; border-radius: 0; background: none; box-shadow: none; border: solid var(--white); border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0); transition: transform 120ms ease-out; }
+.check--box input:checked { background: var(--blue); }
+.check--box input:checked::after { transform: rotate(45deg) scale(1); }
+.check--box { min-height: 2.75rem; }
 html.cal-open { overflow: hidden; }
 
 /* ---------- partner airlines: a slow, pausable strip ---------- */
@@ -376,6 +383,7 @@ html.cal-open { overflow: hidden; }
 .about__in { display: flex; flex-wrap: wrap; gap: 1.5rem 4rem; }
 .about__head { flex: 1 1 18rem; display: grid; gap: 0.75rem; align-content: start; }
 .about__head h2 { font-size: clamp(1.875rem, 1.2rem + 2.2vw, 2.875rem); max-width: 22rem; }
+.about__sub { font-size: 1.0625rem; line-height: 1.5; color: var(--muted); max-width: 22rem; }
 .about__body { flex: 2 1 32rem; display: grid; gap: 1.25rem; max-width: 46rem; }
 .about__body p { font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem); line-height: 1.6; color: var(--body); }
 .about__body p:first-child { font-size: clamp(1.1875rem, 1.05rem + 0.5vw, 1.4375rem); line-height: 1.5; color: var(--ink); letter-spacing: -0.01em; }
@@ -416,10 +424,13 @@ html.cal-open { overflow: hidden; }
   .cal__grab { display: none; }
   .quote__trip { grid-template-columns: 1fr 1fr; }
   .quote__trip .dates, .fld--legs { grid-column: 1 / -1; }
-  .quote__you { grid-template-columns: repeat(3, 1fr); }
+  .quote__you { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .names { grid-column: 1 / -1; }
 }
 @media (min-width: 64em) {
   .quote__trip { grid-template-columns: 3fr 3fr 4fr; }
+  .quote__you { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .names { display: contents; }
   .quote__trip .dates { grid-column: auto; }
 }
 @media (max-width: 30em) {

@@ -40,7 +40,8 @@ function quote_confirmation(array $q) {
   $text .= "\nBEFORE YOU HEAR FROM US\n$about\n\n"
          . "Add travel details: reply to this email, or write to $sales\n"
          . "Call us: $phone\n\n"
-         . "Business Class Travel · $sales · Terms of Service: $site/terms.html\n"
+         . "Business Class Travel · 101 6th Ave, 9th Floor, New York, New York 10013\n"
+         . "$sales · Terms of Service: $site/terms.html\n"
          . "You are receiving this email because you requested a quote at business-class-travel.com. Fares are subject to availability until ticketed.\n";
 
   // Six details in a grid of three columns.
@@ -116,7 +117,7 @@ function quote_confirmation(array $q) {
 
     // Footer
     . '<tr><td class="px" style="padding:24px 40px 32px;border-top:1px solid #E3E8F2;font-family:' . $font . '">'
-    . '<p style="margin:0 0 16px;font-size:13px;line-height:21px;color:#5B6577">Business Class Travel &middot; '
+    . '<p style="margin:0 0 16px;font-size:13px;line-height:21px;color:#5B6577">Business Class Travel &middot; 101 6th Ave, 9th Floor, New York, New York 10013<br>'
     . '<a href="mailto:' . $sales . '" style="color:#5B6577">' . $sales . '</a> &middot; '
     . '<a href="' . $site . '/terms.html" style="color:#5B6577">Terms of Service</a></p>'
     . '<p style="margin:0;font-size:12px;line-height:19px;color:#5B6577">You are receiving this email because you requested a quote at business-class-travel.com. Fares are subject to availability until ticketed.</p>'
