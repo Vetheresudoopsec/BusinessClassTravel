@@ -34,6 +34,7 @@ const store = {
 };
 const label = (a) => (a ? `${a.city} (${a.code})` : '');
 const DAY = 86400000;
+const FLEX_DAYS = 3; // "Flexible dates" means up to this many days either side
 const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
 const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const fromIso = (s) => { if (!s) return null; const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
@@ -255,6 +256,9 @@ const cal = {
     const count = wide() ? 2 : 1;
     const today = startOfDay(new Date());
     const minDate = this.mode === 'return' && state.depart ? state.depart : today;
+    const flex = $('#flex').checked;
+    this.el.classList.toggle('is-flex', flex);
+    this.el.classList.toggle('is-oneway', state.trip !== 'round');
     this.title.textContent = this.mode === 'return' ? 'Choose your return' : state.trip === 'round' ? 'Choose departure, then return' : 'Choose departure';
     this.months.innerHTML = '';
     for (let m = 0; m < count; m++) {
@@ -277,8 +281,11 @@ const cal = {
         b.setAttribute('aria-label', date.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
         if (date < minDate) b.disabled = true;
         if (t === +today) b.classList.add('is-today');
-        if (state.depart && t === +state.depart) { b.classList.add('is-start'); b.setAttribute('aria-pressed', 'true'); if (state.ret) b.classList.add('has-end'); }
-        if (state.ret && t === +state.ret) { b.classList.add('is-end'); b.setAttribute('aria-pressed', 'true'); }
+        if (state.depart && t === +state.depart) { b.classList.add('is-start'); b.setAttribute('aria-pressed', 'true'); b.setAttribute('aria-label', `Departure, ${b.getAttribute('aria-label')}`); if (state.ret) b.classList.add('has-end'); }
+        if (state.ret && t === +state.ret) { b.classList.add('is-end'); b.setAttribute('aria-pressed', 'true'); b.setAttribute('aria-label', `Return, ${b.getAttribute('aria-label')}`); }
+        // Flexible: the days either side of each chosen date the visitor would also accept.
+        const near = (c) => c && t !== +c && Math.abs(Math.round((t - +c) / DAY)) <= FLEX_DAYS;
+        if (flex && !b.disabled && (near(state.depart) || near(state.ret))) b.classList.add('is-flex');
         if (state.depart && state.ret && t > +state.depart && t < +state.ret) b.classList.add('is-between');
         grid.append(b);
       }
@@ -646,6 +653,10 @@ function sync() {
   $('#depart-iso').value = state.depart ? iso(state.depart) : '';
   $('#ret-iso').value = state.ret ? iso(state.ret) : '';
   $('#flex-val').value = $('#flex').checked ? 'yes' : '';
+  // One choice, two switches: the card's and the calendar's.
+  $('#cal-flex').checked = $('#flex').checked;
+  form.classList.toggle('is-flex', $('#flex').checked);
+  if (cal.isOpen) cal.render();
   if (state.from) clearErr('from');
   if (state.to) clearErr('to');
   if (state.depart || $('#flex').checked) clearErr('depart');
@@ -847,13 +858,13 @@ function renderOffers(origin = offerOrigin) {
       ? `<img src="img/${file}.webp" width="${w}" height="${h}" alt="${esc(alt)}" loading="lazy" decoding="async" style="object-position:${pos}">`
       : `<img src="https://picsum.photos/id/${CITYSCAPES[[...d.to].reduce((n, c) => n + c.charCodeAt(0), 0) % CITYSCAPES.length]}/800/450" width="800" height="450" alt="" loading="lazy" decoding="async" data-city="${esc(d.toCity)}">`;
     const airline = cells[2].textContent.trim(), cabin = cells[3].querySelector('strong')?.textContent.trim() || 'Business';
-    const price = cells[5].querySelector('b')?.textContent.trim() || '';
+    const price = Number(d.price) ? usd(Number(d.price)) : '';
     const cabinLink = /first/i.test(cabin) ? ' data-cabin="first"' : '';
     return `<article class="card" data-reveal style="--i:${i + 1}">
       <div class="card__img">${img}${d.saving ? `<span class="card__tag">Save ${esc(d.saving)}</span>` : ''}</div>
       <div class="card__route"><span><b>${esc(d.from)}</b>${esc(d.fromCity)}</span>${PLANE}<span class="to"><b>${esc(d.to)}</b>${esc(d.toCity)}</span></div>
       <p class="card__meta" title="${esc(`${airline} · ${cabin} Class`)}">${esc(airline)} · ${esc(cabin)} Class</p>
-      <div class="card__foot"><p class="card__price">${esc(price)}</p><a class="button button--blue" href="#quote" data-from="${esc(d.from)}" data-to="${esc(d.to)}"${cabinLink}>Check availability <span class="sr-only">from ${esc(d.fromCity)} to ${esc(d.toCity)}</span></a></div>
+      <div class="card__foot"><p class="card__price">${price}</p><a class="button button--blue" href="#quote" data-from="${esc(d.from)}" data-to="${esc(d.to)}"${cabinLink}>Check availability <span class="sr-only">from ${esc(d.fromCity)} to ${esc(d.toCity)}</span></a></div>
     </article>`;
   }).join('');
   $$('img[data-city]', box).forEach(photoFor);
@@ -887,6 +898,9 @@ function photoFor(img) {
 }
 
 /* ---------- fare list ---------- */
+// Every fare is in US dollars: "$2,300 USD", the currency set smaller.
+const usd = (n) => `$${n.toLocaleString('en-US')}<small class="cur"> USD</small>`;
+
 // Demo mode: today's selection, prices and "Checked" dates. Seeded by the date, so every visitor sees
 // the same list all day and a different one tomorrow.
 function demoFares(body, rand) {
@@ -898,7 +912,7 @@ function demoFares(body, rand) {
     const step = rand() < 0.5 ? 100 : 200;
     const price = Math.max(500, base + (rand() < 0.5 ? -step : step));
     r.dataset.price = price;
-    r.querySelector('.price b').textContent = `$${price.toLocaleString('en-US')}`;
+    r.querySelector('.price b').innerHTML = usd(price);
     const checked = new Date(+today - Math.floor(rand() * 30) * DAY);
     const mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][checked.getMonth()];
     r.querySelector('.price span:last-child').textContent = `Checked ${checked.getDate()} ${mon} ${checked.getFullYear()}`;
@@ -1029,6 +1043,7 @@ function init() {
 
   $('#trip').addEventListener('change', (e) => setTrip(e.target.value));
   ['cabin', 'flex'].forEach((id) => $(`#${id}`).addEventListener('change', sync));
+  $('#cal-flex').addEventListener('change', (e) => { $('#flex').checked = e.target.checked; sync(); });
   ['name', 'email', 'legs'].forEach((id) => $(`#${id}`).addEventListener('input', () => clearErr(id)));
   initPax();
   initPhone();

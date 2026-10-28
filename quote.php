@@ -138,7 +138,7 @@ if ($type === 'corporate') {
     'Departure'  => $depart ? $day($depart) : ($flex ? 'Flexible' : 'Not given'),
     'Return'     => $trip !== 'round' ? 'None' : ($return ? $day($return) : ($flex ? 'Flexible' : 'Not given')),
     'Other legs' => $trip === 'multi' ? ($clean($data['legs'] ?? '') ?: 'Not given') : null,
-    'Flexible'   => $flex ? 'Yes, a few days either way' : 'No, these dates only',
+    'Flexible'   => $flex ? 'Yes, up to 3 days either way' : 'No, these dates only',
     'Cabin'      => $cabin,
     'Passengers' => $adults . ' adult' . ($adults === 1 ? '' : 's') . ($children ? ", $children child" . ($children === 1 ? '' : 'ren') : ''),
   ];

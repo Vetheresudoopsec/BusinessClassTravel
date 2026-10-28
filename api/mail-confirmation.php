@@ -24,7 +24,7 @@ function quote_confirmation(array $q) {
     'Cabin'      => preg_replace('/ Class$/', '', $q['cabin']),
     'Passengers' => $q['adults'] . ' adult' . ($q['adults'] === 1 ? '' : 's')
                   . ($q['children'] ? ', ' . $q['children'] . ' child' . ($q['children'] === 1 ? '' : 'ren') : ''),
-    'Dates'      => $q['flexible'] ? 'Flexible' : 'Fixed',
+    'Dates'      => $q['flexible'] ? '± 3 days' : 'Fixed',
     'Trip'       => $trips[$q['trip']] ?? 'Round trip',
   ];
   $about = 'Your quote is free, carries no obligation and includes every tax and fee for every passenger, with no booking fees added. '

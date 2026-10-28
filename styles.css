@@ -222,7 +222,19 @@ p { text-wrap: pretty; }
 .day.is-between { background: var(--blue-wash); }
 .day.is-start.has-end { background: linear-gradient(90deg, transparent 50%, var(--blue-wash) 50%); }
 .day.is-end { background: linear-gradient(90deg, var(--blue-wash) 50%, transparent 50%); }
-.day.is-start span, .day.is-end span { background: var(--blue); color: var(--white); font-weight: 600; }
+/* Departure: solid. Return: outlined. Flexible: a dashed outline on the days either side. */
+.day.is-start span { background: var(--blue); color: var(--white); font-weight: 600; }
+.day.is-end span { background: var(--white); color: var(--blue); font-weight: 700; box-shadow: inset 0 0 0 2px var(--blue); }
+.day.is-flex span { outline: 1.5px dashed var(--blue); outline-offset: -4px; }
+.mark { display: inline-block; flex: none; width: 0.75rem; height: 0.75rem; margin-right: 0.4rem; border-radius: 1px; vertical-align: -0.05em; }
+.mark--out { background: var(--blue); }
+.mark--back { background: var(--white); box-shadow: inset 0 0 0 2px var(--blue); }
+.mark--flex { outline: 1.5px dashed var(--blue); outline-offset: -2px; }
+.cal__key { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 1rem 0 0; font-size: 0.8125rem; color: var(--muted); }
+.cal__key span { display: inline-flex; align-items: center; }
+.cal:not(.is-flex) .cal__key-flex, .cal.is-oneway .cal__key-ret { display: none; }
+.fld__tag { display: none; font-size: 0.8125rem; font-weight: 500; color: var(--muted); }
+.quote.is-flex .fld__tag { display: block; margin-top: 0.125rem; white-space: nowrap; }
 @media (hover: hover) and (pointer: fine) { .day:not(:disabled):not(.is-start):not(.is-end):hover span { background: var(--blue-wash); } }
 .cal__foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
 .check { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9375rem; cursor: pointer; }
@@ -301,6 +313,7 @@ html.cal-open { overflow: hidden; }
 .fare-table .price span, .fare-table .price b { display: block; line-height: 1.3; }
 .fare-table .price span { font-size: 0.8125rem; }
 .fare-table .price b { font-size: 1.25rem; color: var(--blue); letter-spacing: -0.01em; }
+.cur { font-size: 0.6em; font-weight: 600; letter-spacing: 0.04em; }
 .fare-table tr[hidden] { display: none; }
 .fares__empty { padding: 1.75rem 1.25rem; border-top: 1px solid #e8ecf3; color: var(--muted); }
 .fares__empty a { color: var(--blue); font-weight: 600; }
