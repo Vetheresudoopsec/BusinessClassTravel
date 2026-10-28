@@ -625,6 +625,11 @@ function initPhone() {
 /* ---------- booking card ---------- */
 const fromField = airportField($('#from'), (a) => { touched.from = true; state.from = a; sync(); if (!state.to) $('#to').focus(); });
 const toField = airportField($('#to'), (a) => { state.to = a; sync(); if (!state.depart) setTimeout(() => cal.open('depart'), 120); });
+// Only an airport picked from the list counts: editing the text drops the earlier pick until a new one is made.
+['from', 'to'].forEach((key) => $(`#${key}`).addEventListener('input', (e) => {
+  if (key === 'from') touched.from = true;
+  if (state[key] && e.target.value !== label(state[key])) { state[key] = null; sync(); }
+}));
 
 function setTrip(trip) {
   state.trip = trip;
@@ -678,8 +683,8 @@ const isPhone = (v, country = phone.country) => (PN ? PN.isValidPhoneNumber(v, v
 
 function validate() {
   const errors = {};
-  if (!state.from) errors.from = 'Please choose a departure city.';
-  if (!state.to) errors.to = 'Please choose a destination.';
+  if (!state.from) errors.from = $('#from').value.trim() ? 'Please choose your departure city from the list.' : 'Please choose a departure city.';
+  if (!state.to) errors.to = $('#to').value.trim() ? 'Please choose your destination from the list.' : 'Please choose a destination.';
   if (state.from && state.to && state.from.code === state.to.code) errors.to = 'Please choose a different destination.';
   const flex = $('#flex').checked;
   if (!state.depart && !flex) errors.depart = 'Please choose a date.';

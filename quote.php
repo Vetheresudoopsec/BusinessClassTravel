@@ -121,6 +121,18 @@ if ($type === 'corporate') {
   if ($from === '' || $to === '' || $name === '' || $validEmail === '' || $phone === '') {
     reply(false, 'Please give your route, your name, your email address and your phone number.', $isJson);
   }
+  // The page sends airport codes picked from its list: anything else is not a real route.
+  $code = function ($v, $hidden) use ($clean) {
+    foreach ([$clean($hidden ?? ''), $v] as $c) {
+      if (preg_match('/^[A-Za-z]{3}$/', $c)) return strtoupper($c);
+      if (preg_match('/\(([A-Z]{3})\)\s*$/', $c, $m)) return $m[1]; // "Hong Kong (HKG)"
+    }
+    return '';
+  };
+  $from = $code($from, $data['from_code'] ?? ''); $to = $code($to, $data['to_code'] ?? '');
+  if (!preg_match('/^[A-Z]{3}$/', $from) || !preg_match('/^[A-Z]{3}$/', $to) || $from === $to) {
+    reply(false, 'Please choose your departure city and destination from the list.', $isJson);
+  }
   $trip   = $clean($data['trip'] ?? 'round');
   $trips  = ['round' => 'Round trip', 'oneway' => 'One way', 'multi' => 'Multi-city'];
   $cabin  = $clean($data['cabin'] ?? 'business') === 'first' ? 'First Class' : 'Business Class';
