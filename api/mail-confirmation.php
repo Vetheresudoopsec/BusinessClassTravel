@@ -28,7 +28,7 @@ function quote_confirmation(array $q) {
     'Trip'       => $trips[$q['trip']] ?? 'Round trip',
   ];
   $about = 'Your quote is free, carries no obligation and includes every tax and fee for every passenger, with no booking fees added. '
-         . 'Once sent, it remains valid for 14 days, subject to seat availability. Nothing is booked until you confirm.';
+         . 'Nothing is booked until you confirm.';
 
   $subject = "Your quote request: $fromCity to $toCity";
 
