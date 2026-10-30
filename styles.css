@@ -86,12 +86,14 @@ p { text-wrap: pretty; }
 /* No z-index here: the calendar inside the card is fixed and must be able to rise above the header. */
 .quote, .partners { position: relative; }
 
-.quote { max-width: var(--max); margin: 0 auto; background: var(--white); color: var(--ink); border-radius: 4px; box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.5); }
+.quote { max-width: var(--max); margin: 0 auto; color: var(--ink); border-radius: 4px; box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.5); }
 /* Banner: the discount as a small blue tag above the heading. */
-.quote__head { display: flex; flex-direction: column; align-items: flex-start; gap: 0.625rem; padding: clamp(1.25rem, 2.6vw, 1.875rem) clamp(1.25rem, 2.4vw, 2rem); background: var(--blue-wash); border-bottom: 1px solid #dce2ee; border-radius: 4px 4px 0 0; }
+.quote__head { display: flex; flex-direction: column; align-items: flex-start; gap: 0.625rem; padding: clamp(1.25rem, 2.6vw, 1.875rem) clamp(1.25rem, 2.4vw, 2rem); background: rgba(238, 242, 249, 0.8); -webkit-backdrop-filter: saturate(160%) blur(16px); backdrop-filter: saturate(160%) blur(16px); border-bottom: 1px solid #dce2ee; border-radius: 4px 4px 0 0; }
 .quote__tag { padding: 0.375rem 0.75rem; background: var(--blue); color: var(--white); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; border-radius: 2px; }
 .quote__head h1 { font-size: clamp(1.625rem, 1.1rem + 1.8vw, 2.5rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); }
-.quote__form { display: grid; gap: 1.25rem; padding: 1.5rem clamp(1.25rem, 2.4vw, 2rem) 2rem; }
+.quote__form { display: grid; gap: 1.25rem; padding: 1.5rem clamp(1.25rem, 2.4vw, 2rem) 2rem; background: var(--white); border-radius: 0 0 4px 4px; }
+/* The banner is see-through over the photo, so the card's white sits on the form and the thank-you panel instead. */
+.quote > .done { background: var(--white); border-radius: 4px; }
 
 .quote__opts { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
 .pick { position: relative; display: flex; align-items: center; min-height: 2.75rem; border: 1px solid var(--blue); border-radius: 2px; color: var(--blue); }
