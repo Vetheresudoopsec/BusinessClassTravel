@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18547802976"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18547802976');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You — Business Class Travel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css?v=dev">
+</head>
+<body>
+<header class="bar">
+  <div class="bar__in">
+    <a class="logo" href="/" aria-label="Business Class Travel home">
+      <span class="logo__row">
+        <svg class="logo__fin" viewBox="0 0 48 60" width="27" height="34" aria-hidden="true"><defs><clipPath id="logo-fin"><path d="M2 60L22 0h20l-9 60z"/></clipPath></defs><path d="M2 60L22 0h20l-9 60z" fill="#0F2A78"/><g clip-path="url(#logo-fin)"><rect y="20" width="48" height="5" fill="#fff"/><rect y="29" width="48" height="2.5" fill="#8FA8E0"/></g></svg>
+        <span class="logo__word"><b>BusinessClass</b> Travel</span>
+      </span>
+      <span class="logo__line" aria-hidden="true"></span>
+    </a>
+    <a class="bar__call" href="tel:+13052446463">305-244-6463</a>
+  </div>
+</header>
+
+<main class="thanks" aria-labelledby="thanks-title">
+  <section class="thanks__panel">
+    <h1 id="thanks-title" tabindex="-1">Thank You for Your Request</h1>
+    <p id="thanks-text">A consultant is preparing Business Class fares for your journey. You will hear from us within 24 hours.</p>
+    <a class="button button--white" href="tel:+13052446463">Call 305-244-6463</a>
+  </section>
+
+  <section class="thanks__main">
+    <div class="thanks__summary" id="summary" hidden>
+      <h2 class="thanks__label">Your Request</h2>
+      <dl class="thanks__list">
+        <dt>Route</dt><dd id="sum-route"></dd>
+        <dt>Dates</dt><dd id="sum-dates"></dd>
+        <dt>Cabin</dt><dd id="sum-cabin"></dd>
+        <dt>Passengers</dt><dd id="sum-pax"></dd>
+      </dl>
+    </div>
+
+    <div class="thanks__more" id="more" hidden>
+      <h2>Anything Else We Should Know?</h2>
+      <label for="more-text">Preferred airlines, seat or meal requests, frequent flyer numbers, your budget or how flexible your dates are.</label>
+      <textarea id="more-text" rows="5" maxlength="2000"></textarea>
+      <span class="err" id="err-more" aria-live="polite"></span>
+      <div class="thanks__actions">
+        <button type="button" class="button button--blue" id="more-send">Send details</button>
+        <a class="button button--ghost" href="/#quote">Plan another journey</a>
+      </div>
+    </div>
+    <p class="thanks__sent" id="more-sent" tabindex="-1" hidden>Thank you. We’ve added these details to your request.</p>
+    <p class="thanks__again" id="again" hidden><a class="button button--ghost" href="/#quote">Plan another journey</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <a class="logo" href="/" aria-label="Business Class Travel home">
+        <span class="logo__row">
+          <svg class="logo__fin" viewBox="0 0 48 60" width="27" height="34" aria-hidden="true"><defs><clipPath id="foot-fin"><path d="M2 60L22 0h20l-9 60z"/></clipPath></defs><path d="M2 60L22 0h20l-9 60z" fill="#0F2A78"/><g clip-path="url(#foot-fin)"><rect y="20" width="48" height="5" fill="#fff"/><rect y="29" width="48" height="2.5" fill="#8FA8E0"/></g></svg>
+          <span class="logo__word"><b>BusinessClass</b> Travel</span>
+        </span>
+        <span class="logo__line" aria-hidden="true"></span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="/#deals">Fare offers</a><a href="/#corporate">Corporate travel</a><a href="/#enquire">Contact</a><a href="/terms.html">Terms of Service</a><a href="/privacy.html">Privacy Policy</a><a href="/accessibility.html">Accessibility</a>
+      </nav>
+    </div>
+    <div class="foot__small">
+      <span>101 6th Ave, 9th Floor, New York, New York 10013 · <a href="tel:+13052446463">305-244-6463</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/thank-you.js?v=dev" defer></script>
+</body>
+</html>

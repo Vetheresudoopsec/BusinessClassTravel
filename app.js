@@ -737,39 +737,20 @@ async function submit(e) {
   $('#err-send').textContent = '';
   try {
     await sendLead(lead);
-    lastLead = lead;
-    resetMore();
-    $('#done-text').textContent = `Thank you, ${lead.name.split(' ')[0]}. A consultant is preparing fares from ${state.from.city} to ${state.to.city} and will reply to ${lead.email}.`;
-    form.classList.add('is-done');
-    $('#done').hidden = false;
-    $('#done h2').focus();
+    // The thank-you page shows this request back and takes extra details; it is kept for this tab only.
+    try {
+      sessionStorage.setItem('bct-last-quote', JSON.stringify({
+        firstName: lead.firstName, name: lead.name, email: lead.email, trip: lead.trip, cabin: lead.cabin,
+        from: lead.from, fromCity: lead.fromCity, to: lead.to, toCity: lead.toCity,
+        depart: lead.depart, return: lead.return, flexible: lead.flexible, adults: lead.adults, children: lead.children,
+      }));
+    } catch {}
+    location.href = 'thank-you.html';
+    return;
   } catch {
     $('#err-send').textContent = `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
   } finally {
     btn.disabled = false; btn.textContent = 'Request a Free Quote';
-  }
-}
-
-// After a quote request: a box for anything else the consultant should know, sent as a follow-up email.
-let lastLead = null;
-function resetMore() {
-  $('#more').hidden = false; $('#more').classList.remove('has-error');
-  $('#more-text').value = ''; $('#err-more').textContent = ''; $('#more-sent').hidden = true;
-}
-async function sendMore() {
-  const details = $('#more-text').value.trim();
-  if (!details) { $('#more').classList.add('has-error'); $('#err-more').textContent = 'Please add your details.'; $('#more-text').focus(); return; }
-  const btn = $('#more-send');
-  btn.disabled = true; btn.textContent = 'Sending…';
-  try {
-    await sendLead({ type: 'details', name: lastLead?.name || '', email: lastLead?.email || '', route: lastLead ? `${lastLead.from} to ${lastLead.to}` : '', details, page: location.href });
-    $('#more').hidden = true;
-    $('#more-sent').hidden = false;
-    $('#more-sent').focus();
-  } catch {
-    $('#err-more').textContent = `Your details could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
-  } finally {
-    btn.disabled = false; btn.textContent = 'Send details';
   }
 }
 
@@ -781,7 +762,6 @@ function useRoute(link) {
   state.from = a; state.to = b;
   fromField.set(a); toField.set(b);
   if (link.dataset.cabin) $('#cabin').value = link.dataset.cabin;
-  form.classList.remove('is-done'); $('#done').hidden = true;
   sync();
   $('#quote').scrollIntoView({ behavior: Spring.reduced.matches ? 'auto' : 'smooth', block: 'start' });
   setTimeout(() => $('#depart').focus({ preventScroll: true }), Spring.reduced.matches ? 0 : 450);
@@ -1053,9 +1033,6 @@ function init() {
   initPax();
   initPhone();
   form.addEventListener('submit', submit);
-  $('#more-send').addEventListener('click', sendMore);
-  $('#more-text').addEventListener('input', () => { $('#more').classList.remove('has-error'); $('#err-more').textContent = ''; });
-  $('#again').addEventListener('click', () => { form.classList.remove('is-done'); $('#done').hidden = true; $('#to').focus(); });
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[data-from][data-to]');
     if (link) { e.preventDefault(); useRoute(link); }

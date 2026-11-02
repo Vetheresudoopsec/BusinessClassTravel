@@ -24,6 +24,9 @@ $isJson = stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false;
 $data   = $isJson ? (json_decode(file_get_contents('php://input'), true) ?: []) : $_POST;
 
 function reply($ok, $message, $isJson) {
+  global $type;
+  // A quote request sent without JavaScript goes to the same thank-you page the form opens.
+  if ($ok && !$isJson && ($type ?? '') === 'booking') { header('Location: thank-you.html', true, 303); exit; }
   http_response_code($ok ? 200 : 400);
   if ($isJson) { header('Content-Type: application/json'); echo json_encode(['ok' => $ok, 'message' => $message]); exit; }
   header('Content-Type: text/html; charset=utf-8');

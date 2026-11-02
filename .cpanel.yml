@@ -16,8 +16,8 @@ deployment:
     # Stop rather than copy anywhere else if the folder isn't there
     - /bin/test -d $DEPLOYPATH || exit 1
     # Pages, styles, scripts and server rules
-    - /bin/cp index.html terms.html privacy.html accessibility.html 404.html $DEPLOYPATH
-    - /bin/cp styles.css app.js motion.js quote.php $DEPLOYPATH
+    - /bin/cp index.html terms.html privacy.html accessibility.html 404.html thank-you.html $DEPLOYPATH
+    - /bin/cp styles.css app.js motion.js thank-you.js quote.php $DEPLOYPATH
     - /bin/cp .htaccess robots.txt sitemap.xml $DEPLOYPATH
     - /bin/cp favicon.ico favicon.svg apple-touch-icon.png $DEPLOYPATH
     # Folders: location and photo endpoints, airport lists, images, phone library
@@ -25,7 +25,7 @@ deployment:
     # Fresh styles and scripts after every deployment: the pages ask for styles.css?v=dev and app.js?v=dev,
     # and the live copies get this deployment's time instead, so browsers and Cloudflare can't serve old ones.
     - export VERSION=$(/bin/date +%Y%m%d%H%M%S)
-    - /bin/sed -i "s/?v=dev\"/?v=${VERSION}\"/g" ${DEPLOYPATH}index.html ${DEPLOYPATH}terms.html ${DEPLOYPATH}privacy.html ${DEPLOYPATH}accessibility.html ${DEPLOYPATH}404.html
+    - /bin/sed -i "s/?v=dev\"/?v=${VERSION}\"/g" ${DEPLOYPATH}index.html ${DEPLOYPATH}terms.html ${DEPLOYPATH}privacy.html ${DEPLOYPATH}accessibility.html ${DEPLOYPATH}404.html ${DEPLOYPATH}thank-you.html
     # Private settings folder for .env, with its own lock in case the site's .htaccess is ever missing
     - /bin/mkdir -p ${DEPLOYPATH}html_private
     - /bin/cp html_private/.htaccess ${DEPLOYPATH}html_private/
