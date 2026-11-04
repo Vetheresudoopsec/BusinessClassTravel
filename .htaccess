@@ -10,6 +10,15 @@
   # /index.html is the home page, not a second copy of it.
   RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
   RewriteRule ^index\.html$ / [L,R=301]
+  # Pages have addresses without .html (/terms, not /terms.html). Old .html links move there for good;
+  # the 404 page keeps its name, since the server shows it for missing pages.
+  RewriteCond %{THE_REQUEST} \s/([A-Za-z0-9-]+)\.html[\s?] [NC]
+  RewriteCond %1 !^404$
+  RewriteRule ^ /%1 [L,R=301]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([A-Za-z0-9-]+)$ $1.html [L]
 </IfModule>
 
 ErrorDocument 404 /404.html

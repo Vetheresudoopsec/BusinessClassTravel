@@ -752,7 +752,7 @@ async function submit(e) {
         depart: lead.depart, return: lead.return, flexible: lead.flexible, adults: lead.adults, children: lead.children,
       }));
     } catch {}
-    location.href = 'thank-you.html';
+    location.href = '/thank-you';
     return;
   } catch (err) {
     $('#err-send').textContent = err.reason || `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
