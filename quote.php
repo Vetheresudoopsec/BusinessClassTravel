@@ -50,7 +50,9 @@ function too_many($limit, $window) {
     $hits[$ip] = array_values(array_filter($times, function ($t) use ($now, $window) { return $now - $t < $window; }));
     if (!$hits[$ip]) unset($hits[$ip]);
   }
-  $ip = hash('sha256', $_SERVER['REMOTE_ADDR'] ?? '');
+  // Behind Cloudflare, REMOTE_ADDR is Cloudflare's own server, shared by many visitors: count the visitor's address instead.
+  $visitor = filter_var($_SERVER['HTTP_CF_CONNECTING_IP'] ?? '', FILTER_VALIDATE_IP) ?: ($_SERVER['REMOTE_ADDR'] ?? '');
+  $ip = hash('sha256', $visitor);
   $blocked = count($hits[$ip] ?? []) >= $limit;
   if (!$blocked) $hits[$ip][] = $now;
   ftruncate($fh, 0); rewind($fh); fwrite($fh, json_encode($hits));

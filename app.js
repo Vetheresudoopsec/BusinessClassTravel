@@ -71,13 +71,13 @@ function searchAirports(q) {
 let fullList = null;
 function loadFullAirportList() {
   if (!CONFIG.airportsFile) return Promise.resolve();
-  fullList ||= fetch(CONFIG.airportsFile, { headers: { Accept: 'application/json' } })
+  fullList = fullList || fetch(CONFIG.airportsFile, { headers: { Accept: 'application/json' } })
     .then((r) => (r.ok ? r.json() : null))
     .then((json) => {
       for (const [code, name, city, cc, lat, lon] of json?.airports || []) {
         if (!code) continue;
         // Airports already in the built-in list keep their short label but become findable by name ("Heathrow").
-        if (BY_CODE[code]) { BY_CODE[code].aka ||= name; continue; }
+        if (BY_CODE[code]) { BY_CODE[code].aka = BY_CODE[code].aka || name; continue; }
         const a = { code, name, city: city || name, country: regionName(cc), lat, lon, extra: true };
         AIRPORTS.push(a);
         BY_CODE[code] = a;
@@ -137,7 +137,7 @@ function airportField(input, onPick, { search: find = searchAirports, full = tru
     input.setAttribute('aria-expanded', String(!!items.length));
     if (active >= 0) input.setAttribute('aria-activedescendant', `${list.id}-${active}`);
   };
-  const pick = (a) => { BY_CODE[a.code] ||= a; input.value = label(a); close(); onPick(a); };
+  const pick = (a) => { BY_CODE[a.code] = BY_CODE[a.code] || a; input.value = label(a); close(); onPick(a); };
 
   const search = () => {
     if (document.activeElement !== input) return close(); // only the field being used shows its list
@@ -709,7 +709,14 @@ const place = (a) => [`${a.city} (${a.code})`, a.name, a.country].filter(Boolean
 async function sendLead(lead) {
   if (!CONFIG.leadEndpoint) { console.info('[Business Class Travel] Request (stub, no endpoint set):', lead); return; }
   const res = await fetch(CONFIG.leadEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(lead) });
-  if (!res.ok) throw new Error('Request failed');
+  if (!res.ok) {
+    // quote.php explains a refusal in plain words; anything else (a security check page, a server fault) gets the general message.
+    let reason = '';
+    try { reason = (await res.json()).message || ''; } catch {}
+    const err = new Error('Request failed');
+    err.reason = reason;
+    throw err;
+  }
 }
 
 async function submit(e) {
@@ -729,7 +736,7 @@ async function submit(e) {
     adults: pax.adults, children: pax.children, passengers: pax.adults + pax.children, cabin: $('#cabin').value,
     firstName: $('#first-name').value.trim(), lastName: $('#last-name').value.trim(),
     name: `${$('#first-name').value.trim()} ${$('#last-name').value.trim()}`, email: $('#email').value.trim(),
-    phone: PN.parsePhoneNumberFromString($('#phone-e164').value || '')?.formatInternational() || $('#phone').value.trim(), phoneCountry: phone.country,
+    phone: (PN && PN.parsePhoneNumberFromString($('#phone-e164').value || '')?.formatInternational()) || $('#phone').value.trim(), phoneCountry: phone.country,
     page: location.href, at: new Date().toISOString(),
   };
   const btn = $('#send');
@@ -747,8 +754,8 @@ async function submit(e) {
     } catch {}
     location.href = 'thank-you.html';
     return;
-  } catch {
-    $('#err-send').textContent = `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
+  } catch (err) {
+    $('#err-send').textContent = err.reason || `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
   } finally {
     btn.disabled = false; btn.textContent = 'Request a Free Quote';
   }
@@ -833,7 +840,7 @@ function renderOffers(origin = offerOrigin) {
   const picks = pickOffers(origin);
   // The title names the cities the offers leave from, the visitor's own first.
   const cities = [...new Set(picks.map((r) => r.dataset.fromCity))];
-  const list = cities.length > 1 ? `${cities.slice(0, -1).join(', ')} and ${cities.at(-1)}` : cities[0];
+  const list = cities.length > 1 ? `${cities.slice(0, -1).join(', ')} and ${cities[cities.length - 1]}` : cities[0];
   if (list) $('#deals-title').textContent = `Business Class from ${list}`;
   box.innerHTML = picks.map((r, i) => {
     const d = r.dataset, cells = r.cells;
@@ -867,7 +874,7 @@ const photoCache = {};
 function photoFor(img) {
   const city = img.dataset.city;
   if (!CONFIG.photoEndpoint) return;
-  photoCache[city] ||= fetch(`${CONFIG.photoEndpoint}?q=${encodeURIComponent(city)}`)
+  photoCache[city] = photoCache[city] || fetch(`${CONFIG.photoEndpoint}?q=${encodeURIComponent(city)}`)
     .then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
   photoCache[city].then((p) => {
     if (!p.url || !img.isConnected) return;
@@ -893,7 +900,8 @@ function demoFares(body, rand) {
   for (const r of $$('tr', body)) {
     // About three in four fares show each day; our Asia Pacific departures always stay for the offers.
     if (!r.hasAttribute('data-keep') && rand() < 0.25) { r.remove(); continue; }
-    const base = Number(r.dataset.base ||= r.dataset.price);
+    if (!r.dataset.base) r.dataset.base = r.dataset.price;
+    const base = Number(r.dataset.base);
     const step = rand() < 0.5 ? 100 : 200;
     const price = Math.max(500, base + (rand() < 0.5 ? -step : step));
     r.dataset.price = price;
@@ -979,8 +987,8 @@ function smallForm(el, check, toLead) {
       const done = el.querySelector('.done');
       done.hidden = false;
       done.querySelector('h3').focus();
-    } catch {
-      sendErr.textContent = `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
+    } catch (err) {
+      sendErr.textContent = err.reason || `Your request could not be sent. Please try again, or call us on ${CONFIG.phone}.`;
     } finally {
       btn.disabled = false; btn.textContent = label;
     }
@@ -1041,7 +1049,7 @@ function init() {
   // Restore an earlier request, or start from the visitor's nearest hub.
   const saved = store.get();
   // Saved airports may come from the search service, so they are kept whole, not just as a code.
-  const restore = (v) => (typeof v === 'string' ? BY_CODE[v] : v?.code ? (BY_CODE[v.code] ||= v) : null);
+  const restore = (v) => (typeof v === 'string' ? BY_CODE[v] : v?.code ? (BY_CODE[v.code] = BY_CODE[v.code] || v) : null);
   touched.from = !!saved?.fromChosen;
   // Start from the last departure city (chosen or located) so returning visitors see no jump; the IP lookup may still refine it.
   state.from = restore(saved?.from) || detectOrigin();
