@@ -642,12 +642,12 @@ function setTrip(trip) {
 function clearErr(id) {
   const el = $(`#err-${id}`);
   if (el) el.textContent = '';
-  $(`#${id}`)?.closest('.fld, .line')?.classList.remove('has-error');
+  $(`#${id}`)?.closest('.fld, .line, .news__row')?.classList.remove('has-error');
 }
 
 function showErr(id, msg) {
   $(`#err-${id}`).textContent = msg;
-  $(`#${id}`).closest('.fld, .line').classList.add('has-error');
+  $(`#${id}`).closest('.fld, .line, .news__row')?.classList.add('has-error');
 }
 
 function sync() {
@@ -732,7 +732,7 @@ async function submit(e) {
     type: 'booking', trip: state.trip, from: state.from.code, to: state.to.code, fromLabel: place(state.from), toLabel: place(state.to),
     fromCity: state.from.city, toCity: state.to.city,
     depart: state.depart ? iso(state.depart) : null, return: state.ret ? iso(state.ret) : null,
-    flexible: $('#flex').checked, legs: state.trip === 'multi' ? $('#legs').value.trim() : '',
+    flexible: $('#flex').checked, newsletter: $('#newsletter').checked, legs: state.trip === 'multi' ? $('#legs').value.trim() : '',
     adults: pax.adults, children: pax.children, passengers: pax.adults + pax.children, cabin: $('#cabin').value,
     firstName: $('#first-name').value.trim(), lastName: $('#last-name').value.trim(),
     name: `${$('#first-name').value.trim()} ${$('#last-name').value.trim()}`, email: $('#email').value.trim(),
@@ -744,6 +744,7 @@ async function submit(e) {
   $('#err-send').textContent = '';
   try {
     await sendLead(lead);
+    if (lead.newsletter) newsPrompt.remember('subscribed');
     // The thank-you page shows this request back and takes extra details; it is kept for this tab only.
     try {
       sessionStorage.setItem('bct-last-quote', JSON.stringify({
@@ -1004,6 +1005,81 @@ function checkFields(rules) {
   return errors;
 }
 
+/* ---------- newsletter prompt ---------- */
+// Slides up in a corner once the visitor has been here a little while and has scrolled past the whole
+// booking card. It never covers the page or takes focus, and waits while someone is filling in a form
+// or has scrolled back up to the booking card.
+// Closing it keeps it away for 30 days; subscribing, here or with the quote form's box, keeps it away for good.
+const newsPrompt = {
+  el: $('#news'),
+  KEY: 'bct-news',
+  seen() { try { return JSON.parse(localStorage.getItem(this.KEY) || 'null'); } catch { return null; } },
+  remember(stateName) { try { localStorage.setItem(this.KEY, JSON.stringify({ state: stateName, at: Date.now() })); } catch {} },
+  due() {
+    const s = this.seen();
+    return !s || (s.state === 'closed' && Date.now() - s.at > 30 * DAY);
+  },
+  below: false, // the booking card is entirely above the top of the screen
+  show() {
+    if (!this.due() || !this.el.hidden || !this.below) return;
+    const busy = cal.isOpen || inField(document.activeElement);
+    if (busy) { setTimeout(() => this.show(), 4000); return; }
+    this.el.hidden = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => this.el.classList.add('is-open')));
+  },
+  hide(stateName) {
+    if (stateName) this.remember(stateName);
+    const el = this.el;
+    if (el.contains(document.activeElement)) document.activeElement.blur();
+    el.classList.remove('is-open');
+    const done = () => { if (!el.classList.contains('is-open')) el.hidden = true; };
+    el.addEventListener('transitionend', done, { once: true });
+    setTimeout(done, 600);
+  },
+  init() {
+    const el = this.el;
+    if (!el || !this.due()) return;
+    // Both must be true: 12 seconds on the page, and the booking card scrolled out of view above.
+    // Without IntersectionObserver the prompt stays away rather than risk covering the card.
+    let waited = false;
+    setTimeout(() => { waited = true; this.show(); }, 12000);
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(([entry]) => {
+      this.below = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+      if (waited) this.show();
+      if (!this.due()) io.disconnect();
+    });
+    io.observe(form);
+
+    $('#news-close').addEventListener('click', () => this.hide('closed'));
+    el.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.hide('closed'); });
+    $('#news-email').addEventListener('input', () => clearErr('news-email'));
+    const f = $('#news-form');
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (f.querySelector('[name="company_website"]').value) return;
+      const email = $('#news-email').value.trim();
+      clearErr('news-email');
+      if (!isEmail(email)) { showErr('news-email', 'Please add a valid email address.'); $('#news-email').focus(); return; }
+      const btn = f.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        await sendLead({ type: 'newsletter', email, page: location.href, at: new Date().toISOString() });
+        this.remember('subscribed');
+        f.hidden = true;
+        const thanks = $('.news__done', el);
+        thanks.hidden = false;
+        $('h2', thanks).focus({ preventScroll: true });
+        setTimeout(() => this.hide(), 5000);
+      } catch (err) {
+        showErr('news-email', err.reason || `We could not subscribe you just now. Please try again in a moment.`);
+      } finally {
+        btn.disabled = false; btn.textContent = 'Subscribe';
+      }
+    });
+  },
+};
+
 /* ---------- start ---------- */
 function init() {
   // Swap the native date inputs for the calendar.
@@ -1079,6 +1155,7 @@ function init() {
     ['e-contact', (v) => isEmail(v) || isPhone(v), 'Please add a valid email address, or a phone number with its country code.'],
     ['e-trip', (v) => v.length >= 3, 'Please tell us where and when you would like to travel.'],
   ]), () => ({ type: 'enquiry', name: $('#e-name').value.trim(), contact: $('#e-contact').value.trim(), itinerary: $('#e-trip').value.trim() }));
+  newsPrompt.init();
 }
 
 if (form) init();

@@ -2,9 +2,12 @@
 /* Business Class Travel — request handler for HostGator (PHP 7.4+).
  *
  * Handles the three forms on the home page: the booking card (type "booking"),
- * the corporate account form ("corporate") and the enquiry form ("enquiry"),
- * and emails every detail the visitor chose to the sales inbox. A quote request also
- * sends the customer a confirmation email (api/mail-confirmation.php).
+ * the corporate account form ("corporate"), the enquiry form ("enquiry") and the newsletter
+ * prompt ("newsletter"), and emails every detail the visitor chose to the sales inbox. A quote
+ * request also sends the customer a confirmation email (api/mail-confirmation.php).
+ * Newsletter sign-ups, from the prompt or the box on the quote form, go to Mailchimp
+ * (api/mailchimp.php). Until Mailchimp is set up, or if it cannot be reached, they are
+ * emailed to the sales inbox instead.
  *
  * Mail goes out through PHP's mail(), which HostGator delivers. For it to land in the inbox,
  * the domain in $FROM needs a mailbox or an SPF record in cPanel (Email Deliverability).
@@ -14,6 +17,7 @@
  */
 require __DIR__ . '/api/env.php';
 require __DIR__ . '/api/mail-confirmation.php';
+require __DIR__ . '/api/mailchimp.php';
 
 $RECIPIENT = 'sales@business-class-travel.com';
 $FROM      = 'no-reply@business-class-travel.com';
@@ -102,6 +106,16 @@ if ($type === 'corporate') {
     'Details' => $details,
   ];
   $replyTo = $validEmail;
+} elseif ($type === 'newsletter') {
+  if ($validEmail === '') reply(false, 'Please enter a valid email address.', $isJson);
+  if (mailchimp_subscribe($validEmail, '', '', 'Website prompt')) reply(true, 'You are subscribed.', $isJson);
+  $subject = "Newsletter sign-up: $validEmail";
+  $title   = 'New Newsletter Sign-up';
+  $rows = [
+    'Email'  => $validEmail,
+    'Action' => 'Please add this address to the Mailchimp audience. It could not be added automatically.',
+  ];
+  $replyTo = $validEmail;
 } elseif ($type === 'enquiry') {
   $name    = $clean($data['name'] ?? '');
   $contact = $clean($data['contact'] ?? '');
@@ -144,6 +158,10 @@ if ($type === 'corporate') {
   $flex   = !empty($data['flexible']);
   $depart = $data['depart'] ?? $data['depart_date'] ?? '';
   $return = $data['return'] ?? $data['return_date'] ?? '';
+  $first  = $clean($data['firstName'] ?? $data['first_name'] ?? '');
+  $last   = $clean($data['lastName'] ?? $data['last_name'] ?? '');
+  $news   = !empty($data['newsletter']) ? (mailchimp_subscribe($validEmail, $first, $last, 'Quote form')
+              ? 'Yes, added to Mailchimp' : 'Yes. Please add them to Mailchimp, it could not be done automatically') : 'No';
   $subject = "Quote: $from to $to, $cabin — $name";
   $title   = 'New Quote Request';
   $rows = [
@@ -159,6 +177,7 @@ if ($type === 'corporate') {
     'Flexible'   => $flex ? 'Yes, up to 3 days either way' : 'No, these dates only',
     'Cabin'      => $cabin,
     'Passengers' => $adults . ' adult' . ($adults === 1 ? '' : 's') . ($children ? ", $children child" . ($children === 1 ? '' : 'ren') : ''),
+    'Newsletter' => $news,
   ];
   $replyTo = $validEmail;
   $confirm = [

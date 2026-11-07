@@ -295,6 +295,7 @@
           </div>
         </div>
 
+        <label class="check check--box quote__news"><input type="checkbox" id="newsletter" name="newsletter" value="1"><span>Email me fare offers. Unsubscribe at any time.</span></label>
         <button class="button button--blue quote__send" id="send" type="submit">Request a Free Quote</button>
         <p class="legal-note">By requesting a quote, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
         <input type="hidden" id="flex-val" name="flexible" value="">
@@ -534,7 +535,7 @@
             <div class="hp" aria-hidden="true"><label>Company website<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="enquire__send">
               <button class="button button--blue" type="submit">Send my request</button>
-              <span>Prefer to message? WhatsApp us on [NUMBER]</span>
+              <span>Prefer to message? WhatsApp us on <a href="https://wa.me/13052446463" rel="noopener">305-244-6463</a></span>
             </div>
             <p class="legal-note legal-note--left">By sending this request, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
             <p class="err" data-send-err aria-live="polite"></p>
@@ -673,6 +674,29 @@
     </div>
   </div>
 </footer>
+
+<!-- Newsletter prompt: shown once, part way down the page (app.js). It never blocks the page. -->
+<aside class="news" id="news" role="dialog" aria-labelledby="news-title" hidden>
+  <button type="button" class="news__close" id="news-close" aria-label="Close"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  <form class="news__form" id="news-form" action="quote.php" method="post" novalidate>
+    <p class="eyebrow">Fare offers</p>
+    <h2 class="news__title" id="news-title">Be First to Hear of New Fares</h2>
+    <p class="news__text">We email negotiated Business and First Class fares as they become available.</p>
+    <input type="hidden" name="type" value="newsletter">
+    <label class="sr-only" for="news-email">Email</label>
+    <div class="news__row">
+      <input id="news-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+      <button class="button button--blue" type="submit">Subscribe</button>
+    </div>
+    <span class="err" id="err-news-email" aria-live="polite"></span>
+    <div class="hp" aria-hidden="true"><label>Company website<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label></div>
+    <p class="legal-note legal-note--left">Unsubscribe at any time. See our <a href="/privacy">Privacy Policy</a>.</p>
+  </form>
+  <div class="news__done" hidden>
+    <h2 class="news__title" tabindex="-1">Thank You for Subscribing</h2>
+    <p class="news__text">Our next fare offers will arrive in your inbox.</p>
+  </div>
+</aside>
 
 <script src="data/airports.js?v=dev" defer></script>
 <script src="vendor/libphonenumber-max.js?v=dev" defer></script>
