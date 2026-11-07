@@ -160,8 +160,11 @@ if ($type === 'corporate') {
   $return = $data['return'] ?? $data['return_date'] ?? '';
   $first  = $clean($data['firstName'] ?? $data['first_name'] ?? '');
   $last   = $clean($data['lastName'] ?? $data['last_name'] ?? '');
+  // Whether the customer ticked "Email me fare offers", and whether Mailchimp took them.
   $news   = !empty($data['newsletter']) ? (mailchimp_subscribe($validEmail, $first, $last, 'Quote form')
-              ? 'Yes, added to Mailchimp' : 'Yes. Please add them to Mailchimp, it could not be done automatically') : 'No';
+              ? 'Subscribed. Added to Mailchimp.'
+              : "Subscribed. Please add them to Mailchimp by hand: it could not be done automatically.")
+            : 'Not subscribed';
   $subject = "Quote: $from to $to, $cabin — $name";
   $title   = 'New Quote Request';
   $rows = [
