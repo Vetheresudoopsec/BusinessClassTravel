@@ -37,7 +37,13 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; } /* the page scrolls; it just shows no bar */
+/* No I-beam cursors, as on the rest of the site: an arrow over text and fields, a hand over anything that acts. */
+html, input, textarea, select { cursor: default; }
+html { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+input, textarea { -webkit-user-select: text; user-select: text; -webkit-touch-callout: default; }
+a, button, select, label { cursor: pointer; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 18px/1.55 var(--font); -webkit-font-smoothing: antialiased; }
 img, video { display: block; max-width: 100%; }
 a { color: inherit; text-underline-offset: 0.2em; transition: color 180ms ease; }
@@ -81,6 +87,7 @@ p, dd { text-wrap: pretty; }
 .request__sky video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.95) saturate(0.9); }
 .card { position: absolute; top: 60px; left: var(--m); width: min(440px, calc(100% - 2 * var(--m))); padding: 32px; background: #fff; color: var(--ink); }
 .card h2 { font-size: 40px; font-weight: 400; margin-bottom: 20px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .list { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; margin: 0 0 28px; font-size: 16px; }
 .list dt { color: var(--muted); }
 .list dd { margin: 0; font-weight: 600; }
@@ -96,6 +103,34 @@ p, dd { text-wrap: pretty; }
 .card a:not(.button) { font-size: 16px; }
 .card a:not(.button):hover { color: var(--blue); }
 .sent { font-size: 24px; outline: none; }
+
+/* editing: pencil beside the email, Edit on the request card */
+.pencil { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; margin-left: 2px; padding: 0; border: 0; background: none; color: var(--muted); vertical-align: -6px; transition: color 180ms ease; }
+.pencil:hover { color: var(--blue); }
+.pencil svg, .edit-btn svg { width: 16px; height: 16px; }
+.email { font-weight: 600; color: var(--ink); }
+.card__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; }
+.card__head h2 { margin-bottom: 0; }
+.edit-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 0; border: 0; background: none; color: var(--blue); font: 600 16px/1 var(--font); }
+.edit-btn:hover { text-decoration: underline; }
+.edit { display: grid; gap: 14px; margin: 0 0 28px; font-size: 16px; }
+.edit__row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.edit label, .email-form label { display: grid; gap: 6px; color: var(--muted); }
+.edit input, .edit select, .email-form input { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #c7d0e0; border-radius: 0; background: #fff; color: var(--ink); font: inherit; font-size: 16px; }
+.edit input:focus, .edit select:focus, .email-form input:focus { outline: none; border-color: var(--blue); }
+.edit .check { display: flex; align-items: center; gap: 10px; color: var(--ink); }
+.edit .check input { width: 18px; min-height: 18px; accent-color: var(--blue); }
+.edit__actions, .email-form__row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.card .edit__actions .button { width: auto; }
+.link-btn { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; font-size: 16px; text-decoration: underline; text-underline-offset: 0.2em; }
+.link-btn:hover { color: var(--blue); }
+.email-form { display: grid; gap: 10px; width: 100%; font-size: 16px; }
+.email-form__row input { flex: 1 1 14rem; width: auto; }
+.err { color: var(--error); font-size: 16px; }
+.note { font-size: 16px; color: var(--muted); }
+.note:empty { display: none; }
+.card .note { margin: -8px 0 16px; }
+@media (max-width: 480px) { .card .edit__row { grid-template-columns: 1fr; } .card .edit__row .edit__row { grid-template-columns: 1fr 1fr; } }
 
 /* photo credits: one small white link per photo, shown on hover */
 .credit { position: absolute; right: 14px; bottom: 12px; z-index: 2; color: #fff; font-size: 13px; line-height: 1.4; text-decoration: none; opacity: 0; transition: opacity 200ms ease; }
@@ -132,6 +167,10 @@ p, dd { text-wrap: pretty; }
 .call__num { color: var(--blue); }
 .call__num:hover, .call__side a:hover { color: var(--blue-hover); }
 .call__side p { color: var(--muted); }
+
+/* return to homepage: small, fixed bottom-right, quiet until pointed at */
+.home-link { position: fixed; right: var(--m); bottom: 20px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: rgba(255, 255, 255, 0.92); color: var(--ink); font-size: 14px; line-height: 1; text-decoration: none; opacity: 0.7; transition: opacity 180ms ease, color 180ms ease; }
+.home-link:hover, .home-link:focus-visible { opacity: 1; color: var(--blue); }
 
 /* footer: columns above, wordmark below */
 .foot { min-height: 72svh; display: grid; grid-template-rows: auto 1fr auto; padding: 40px var(--m) 24px; background: var(--surface); color: var(--ink); }
@@ -192,12 +231,22 @@ p, dd { text-wrap: pretty; }
         <nav aria-label="On this page"><a href="#request">Your request</a><a href="#next">What happens next</a><a class="keep" href="tel:+13052446463">305-244-6463</a></nav>
       </header>
       <img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&fit=crop&auto=format&q=75" width="2400" height="1300" alt="A quiet airport lounge with lit wall panels, grey armchairs and low tables">
-      <a class="credit" href="https://unsplash.com/photos/white-and-brown-living-room-MiDPt7D4WN8?utm_source=business_class_travel&amp;utm_medium=referral">Photo by mark chaves on Unsplash</a>
+      <a class="credit" href="https://unsplash.com/photos/white-and-brown-living-room-MiDPt7D4WN8?utm_source=business_class_travel&amp;utm_medium=referral">Photo by Mark Chaves on Unsplash</a>
     </div>
     <div class="hero__band grid">
       <h1 id="thanks-title" tabindex="-1" data-rise style="--i:0">Thank You for Your Request</h1>
       <div class="hero__side">
-        <p id="thanks-text" data-rise style="--i:1">A consultant is preparing Business Class fares for your journey. You will hear from us within 24 hours.</p>
+        <p id="thanks-text" data-rise style="--i:1">A consultant is preparing fares for your journey. You will hear from us within 24 hours.</p>
+        <form class="email-form" id="email-form" hidden novalidate>
+          <label for="email-input">Your email address</label>
+          <div class="email-form__row">
+            <input id="email-input" type="email" autocomplete="email" required>
+            <button type="submit" class="button">Save</button>
+            <button type="button" class="link-btn" id="email-cancel">Cancel</button>
+          </div>
+          <span class="err" id="err-email" aria-live="polite"></span>
+        </form>
+        <p class="note" id="email-note" aria-live="polite"></p>
         <a class="button" href="tel:+13052446463" data-rise style="--i:2">Call 305-244-6463</a>
       </div>
     </div>
@@ -206,7 +255,34 @@ p, dd { text-wrap: pretty; }
   <section class="request" id="request" aria-labelledby="request-title">
     <div class="request__sky"><video src="/img/clouds.webm" poster="/img/clouds-poster.webp" autoplay muted loop playsinline aria-hidden="true"></video></div>
     <div class="card" data-reveal>
-      <h2 id="request-title">Your request</h2>
+      <div class="card__head">
+        <h2 id="request-title">Your request</h2>
+        <button type="button" class="edit-btn" id="edit-request" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Edit<span class="sr-only"> your request</span></button>
+      </div>
+      <form class="edit" id="request-form" hidden novalidate>
+        <div class="edit__row">
+          <label>From<input id="ed-from" required></label>
+          <label>To<input id="ed-to" required></label>
+        </div>
+        <div class="edit__row">
+          <label>Departure<input id="ed-depart" type="date"></label>
+          <label id="ed-return-wrap">Return<input id="ed-return" type="date"></label>
+        </div>
+        <label class="check"><input id="ed-flex" type="checkbox">Flexible by 3 days</label>
+        <div class="edit__row">
+          <label>Cabin<select id="ed-cabin"><option value="business">Business Class</option><option value="first">First Class</option></select></label>
+          <div class="edit__row">
+            <label>Adults<input id="ed-adults" type="number" min="1" max="9" inputmode="numeric"></label>
+            <label>Children<input id="ed-children" type="number" min="0" max="8" inputmode="numeric"></label>
+          </div>
+        </div>
+        <span class="err" id="err-request" aria-live="polite"></span>
+        <div class="edit__actions">
+          <button type="submit" class="button">Save changes</button>
+          <button type="button" class="link-btn" id="request-cancel">Cancel</button>
+        </div>
+      </form>
+      <p class="note" id="request-note" aria-live="polite"></p>
       <div id="summary" hidden>
         <dl class="list">
           <dt>Route</dt><dd id="sum-route"></dd>
@@ -238,7 +314,7 @@ p, dd { text-wrap: pretty; }
         <button type="button" aria-expanded="true" aria-controls="p1"><span>Within 24 hours</span></button>
         <div class="pane__body" id="p1">
           <div class="pane__text"><h3>Within 24 hours</h3><p>Your consultant replies with fares from our partner airlines, by email or phone, whichever you prefer.</p></div>
-          <figure class="pane__media"><img src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=900&h=1080&fit=crop&auto=format&q=75" width="900" height="1080" loading="lazy" alt="Travellers working at tables by a tall window at dusk"><a class="credit" href="https://unsplash.com/photos/two-people-sitting-in-a-modern-cafe-at-dusk-yybJSyYg_-4?utm_source=business_class_travel&amp;utm_medium=referral">Photo by kai muro on Unsplash</a></figure>
+          <figure class="pane__media"><img src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=900&h=1080&fit=crop&auto=format&q=75" width="900" height="1080" loading="lazy" alt="Travellers working at tables by a tall window at dusk"><a class="credit" href="https://unsplash.com/photos/two-people-sitting-in-a-modern-cafe-at-dusk-yybJSyYg_-4?utm_source=business_class_travel&amp;utm_medium=referral">Photo by Kai Muro on Unsplash</a></figure>
         </div>
       </div>
       <div class="pane" style="--c:var(--t2)">
@@ -267,6 +343,8 @@ p, dd { text-wrap: pretty; }
   </section>
 </main>
 
+<a class="home-link" href="/"><span aria-hidden="true">&larr;</span> Return to homepage</a>
+
 <footer class="foot">
   <div class="foot__cols">
     <div><h2>Business Class Travel</h2><ul><li>101 6th Ave, 9th Floor</li><li>New York, NY 10013</li></ul></div>
@@ -280,5 +358,6 @@ p, dd { text-wrap: pretty; }
   </div>
 </footer>
 <script src="/thank-you.js?v=dev" defer></script>
+<script src="/scrollbar.js?v=dev" defer></script>
 </body>
 </html>

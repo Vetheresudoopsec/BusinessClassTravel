@@ -1,6 +1,6 @@
 {
- "url": "http://localhost:8765/thank-you.html",
- "at": "2026-11-23T05:52:13.288Z",
+ "url": "http://localhost:8080/thank-you",
+ "at": "2026-11-23T06:13:23.423Z",
  "allow": [],
  "viewports": [
   {
@@ -9,17 +9,17 @@
    "load": "load",
    "screens": 5,
    "filled": [
-    0.63,
+    0.64,
     0.96,
-    0.65,
+    0.66,
     0.8,
     1
    ],
    "motion": {
-    "elements": 10,
+    "elements": 12,
     "css": 4,
-    "transitions": 6,
-    "scripted": 0,
+    "transitions": 7,
+    "scripted": 1,
     "videos": 1,
     "playingVideos": 1
    },
@@ -31,11 +31,11 @@
     "page": {
      "height": 3865,
      "screens": 4.3,
-     "words": 169,
+     "words": 171,
      "img": 4,
      "video": 1,
      "canvas": 0,
-     "svg": 2,
+     "svg": 3,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -120,7 +120,7 @@
       "mono": false,
       "align": "left",
       "position": "left",
-      "widthRatio": 0.26,
+      "widthRatio": 0.14,
       "top": 992,
       "tag": "h2",
       "kind": "heading"
@@ -230,13 +230,14 @@
      "familyCount": 1,
      "sizes": [
       13,
+      14,
       16,
       18,
       19,
       40,
       58
      ],
-     "sizeCount": 6,
+     "sizeCount": 7,
      "notLoaded": [],
      "body": {
       "font": "-apple-system",
@@ -267,83 +268,83 @@
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#fffefe",
+     "bodyBg": "#fefffe",
      "bodyBgHsl": {
-      "h": 0,
+      "h": 120,
       "s": 1,
       "l": 1
      },
      "dark": false,
      "sectionBgs": [
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "top": 0,
        "hsl": {
-        "h": 0,
+        "h": 120,
         "s": 1,
         "l": 1
        }
       },
       {
-       "color": "#f3f2f3",
+       "color": "#f3f3f2",
        "top": 2122,
        "hsl": {
-        "h": 300,
+        "h": 60,
         "s": 0.04,
         "l": 0.95
        }
       },
       {
-       "color": "#eeeeef",
+       "color": "#eeefee",
        "top": 2862,
        "hsl": {
-        "h": 240,
+        "h": 120,
         "s": 0.03,
         "l": 0.94
        }
       },
       {
-       "color": "#eff3f9",
+       "color": "#eff2f8",
        "top": 3217,
        "hsl": {
-        "h": 216,
-        "s": 0.45,
-        "l": 0.96
+        "h": 220,
+        "s": 0.39,
+        "l": 0.95
        }
       }
      ],
      "textColors": [
       {
-       "color": "#15202e",
-       "share": 0.46
+       "color": "#15212f",
+       "share": 0.47
       },
       {
-       "color": "#4b5566",
-       "share": 0.39
+       "color": "#4a5567",
+       "share": 0.37
       },
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "share": 0.14
       },
       {
-       "color": "#0e2a79",
+       "color": "#0f2a78",
        "share": 0.01
       }
      ],
      "button": {
-      "bg": "#0e2a79",
+      "bg": "#0f2a78",
       "hsl": {
-       "h": 224,
-       "s": 0.79,
+       "h": 225,
+       "s": 0.78,
        "l": 0.26
       },
-      "fg": "#fffefe"
+      "fg": "#fefffe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
-     "inHero": 1,
+     "count": 2,
+     "inHero": 2,
      "radius": 0,
      "height": 52,
      "withShadow": 0,
@@ -351,7 +352,8 @@
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Call 305-244-6463"
+      "Call 305-244-6463",
+      "← Return to homepage"
      ]
     },
     "surfaces": {
@@ -406,7 +408,7 @@
       "tag": "section",
       "top": 0,
       "height": 900,
-      "words": 32,
+      "words": 30,
       "media": 1,
       "middle": 299,
       "heading": null,
@@ -551,11 +553,11 @@
     "stage": false,
     "explains": true,
     "slivers": [],
-    "voidShare": 0.13,
+    "voidShare": 0.12,
     "voidBox": {
      "x": 0,
      "y": 780,
-     "w": 1440,
+     "w": 1260,
      "h": 120
     }
    },
@@ -568,16 +570,16 @@
    "load": "load",
    "screens": 4,
    "filled": [
-    0.76,
-    0.7,
+    0.74,
+    0.64,
     0.82,
     1
    ],
    "motion": {
-    "elements": 10,
+    "elements": 12,
     "css": 4,
-    "transitions": 6,
-    "scripted": 0,
+    "transitions": 7,
+    "scripted": 1,
     "videos": 1,
     "playingVideos": 1
    },
@@ -587,13 +589,13 @@
      "h": 1024
     },
     "page": {
-     "height": 3772,
+     "height": 3744,
      "screens": 3.7,
-     "words": 164,
+     "words": 166,
      "img": 4,
      "video": 1,
      "canvas": 0,
-     "svg": 2,
+     "svg": 3,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -677,9 +679,9 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "center",
-      "widthRatio": 0.89,
-      "top": 1513,
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 1485,
       "tag": "h2",
       "kind": "heading"
      },
@@ -700,7 +702,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.95,
-      "top": 1737,
+      "top": 1709,
       "tag": "h2",
       "kind": "heading"
      },
@@ -721,7 +723,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.9,
-      "top": 1907,
+      "top": 1879,
       "tag": "h3",
       "kind": "heading"
      },
@@ -742,7 +744,7 @@
       "align": "left",
       "position": "center",
       "widthRatio": 0.95,
-      "top": 2808,
+      "top": 2780,
       "tag": "h2",
       "kind": "heading"
      },
@@ -763,7 +765,7 @@
       "align": "left",
       "position": "left",
       "widthRatio": 0.25,
-      "top": 2874,
+      "top": 2846,
       "tag": "a",
       "kind": "heading"
      }
@@ -788,6 +790,7 @@
      "familyCount": 1,
      "sizes": [
       13,
+      14,
       16,
       18,
       19,
@@ -796,7 +799,7 @@
       40,
       74
      ],
-     "sizeCount": 8,
+     "sizeCount": 9,
      "notLoaded": [],
      "body": {
       "font": "-apple-system",
@@ -827,83 +830,83 @@
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#fffefe",
+     "bodyBg": "#fefffe",
      "bodyBgHsl": {
-      "h": 0,
+      "h": 120,
       "s": 1,
       "l": 1
      },
      "dark": false,
      "sectionBgs": [
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "top": 0,
        "hsl": {
-        "h": 0,
+        "h": 120,
         "s": 1,
         "l": 1
        }
       },
       {
-       "color": "#f3f2f3",
-       "top": 1883,
+       "color": "#f3f3f2",
+       "top": 1855,
        "hsl": {
-        "h": 300,
+        "h": 60,
         "s": 0.04,
         "l": 0.95
        }
       },
       {
-       "color": "#eeeeef",
-       "top": 2728,
+       "color": "#eeefee",
+       "top": 2700,
        "hsl": {
-        "h": 240,
+        "h": 120,
         "s": 0.03,
         "l": 0.94
        }
       },
       {
-       "color": "#eff3f9",
-       "top": 3040,
+       "color": "#eff2f8",
+       "top": 3012,
        "hsl": {
-        "h": 216,
-        "s": 0.45,
-        "l": 0.96
+        "h": 220,
+        "s": 0.39,
+        "l": 0.95
        }
       }
      ],
      "textColors": [
       {
-       "color": "#15202e",
-       "share": 0.47
+       "color": "#15212f",
+       "share": 0.49
       },
       {
-       "color": "#4b5566",
-       "share": 0.4
+       "color": "#4a5567",
+       "share": 0.39
       },
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "share": 0.11
       },
       {
-       "color": "#0e2a79",
+       "color": "#0f2a78",
        "share": 0.01
       }
      ],
      "button": {
-      "bg": "#0e2a79",
+      "bg": "#0f2a78",
       "hsl": {
-       "h": 224,
-       "s": 0.79,
+       "h": 225,
+       "s": 0.78,
        "l": 0.26
       },
-      "fg": "#fffefe"
+      "fg": "#fefffe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
-     "inHero": 1,
+     "count": 2,
+     "inHero": 2,
      "radius": 0,
      "height": 52,
      "withShadow": 0,
@@ -911,7 +914,8 @@
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Call 305-244-6463"
+      "Call 305-244-6463",
+      "← Return to homepage"
      ]
     },
     "surfaces": {
@@ -942,7 +946,7 @@
      },
      {
       "type": "video",
-      "ratio": 0.17
+      "ratio": 0.2
      }
     ],
     "nav": {
@@ -959,7 +963,7 @@
      "w": 768,
      "h": 1024
     },
-    "pageH": 3772,
+    "pageH": 3744,
     "margins": {
      "left": 20,
      "right": 20
@@ -969,8 +973,8 @@
       "sel": "section.hero",
       "tag": "section",
       "top": 0,
-      "height": 852,
-      "words": 27,
+      "height": 824,
+      "words": 25,
       "media": 1,
       "middle": 0,
       "heading": {
@@ -991,7 +995,7 @@
      {
       "sel": "section#request.request",
       "tag": "section",
-      "top": 852,
+      "top": 824,
       "height": 773,
       "words": 12,
       "media": 1,
@@ -1010,7 +1014,7 @@
      {
       "sel": "section#next.next.grid",
       "tag": "section",
-      "top": 1625,
+      "top": 1597,
       "height": 992,
       "words": 48,
       "media": 1,
@@ -1033,7 +1037,7 @@
      {
       "sel": "section.call.grid",
       "tag": "section",
-      "top": 2728,
+      "top": 2700,
       "height": 311,
       "words": 17,
       "media": 0,
@@ -1056,7 +1060,7 @@
      {
       "sel": "footer.foot",
       "tag": "footer",
-      "top": 3040,
+      "top": 3012,
       "height": 732,
       "words": 42,
       "media": 1,
@@ -1114,17 +1118,17 @@
    "load": "load",
    "screens": 5,
    "filled": [
-    0.74,
-    0.67,
+    0.73,
+    0.7,
     0.82,
     1,
     1
    ],
    "motion": {
-    "elements": 10,
+    "elements": 12,
     "css": 4,
-    "transitions": 6,
-    "scripted": 0,
+    "transitions": 7,
+    "scripted": 1,
     "videos": 1,
     "playingVideos": 1
    },
@@ -1136,11 +1140,11 @@
     "page": {
      "height": 3388,
      "screens": 4,
-     "words": 164,
+     "words": 166,
      "img": 4,
      "video": 1,
      "canvas": 0,
-     "svg": 2,
+     "svg": 3,
      "sections": 4,
      "horizontalOverflow": 0,
      "overflowCulprits": [],
@@ -1224,8 +1228,8 @@
       "italic": false,
       "mono": false,
       "align": "left",
-      "position": "center",
-      "widthRatio": 0.77,
+      "position": "left",
+      "widthRatio": 0.51,
       "top": 1257,
       "tag": "h2",
       "kind": "heading"
@@ -1335,6 +1339,7 @@
      "familyCount": 1,
      "sizes": [
       13,
+      14,
       16,
       18,
       19,
@@ -1343,7 +1348,7 @@
       37,
       40
      ],
-     "sizeCount": 8,
+     "sizeCount": 9,
      "notLoaded": [],
      "body": {
       "font": "-apple-system",
@@ -1374,83 +1379,83 @@
     "eyebrows": [],
     "numbered": [],
     "color": {
-     "bodyBg": "#fffefe",
+     "bodyBg": "#fefffe",
      "bodyBgHsl": {
-      "h": 0,
+      "h": 120,
       "s": 1,
       "l": 1
      },
      "dark": false,
      "sectionBgs": [
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "top": 0,
        "hsl": {
-        "h": 0,
+        "h": 120,
         "s": 1,
         "l": 1
        }
       },
       {
-       "color": "#f3f2f3",
+       "color": "#f3f3f2",
        "top": 1682,
        "hsl": {
-        "h": 300,
+        "h": 60,
         "s": 0.04,
         "l": 0.95
        }
       },
       {
-       "color": "#eeeeef",
+       "color": "#eeefee",
        "top": 2316,
        "hsl": {
-        "h": 240,
+        "h": 120,
         "s": 0.03,
         "l": 0.94
        }
       },
       {
-       "color": "#eff3f9",
+       "color": "#eff2f8",
        "top": 2689,
        "hsl": {
-        "h": 216,
-        "s": 0.45,
-        "l": 0.96
+        "h": 220,
+        "s": 0.39,
+        "l": 0.95
        }
       }
      ],
      "textColors": [
       {
-       "color": "#15202e",
-       "share": 0.47
+       "color": "#15212f",
+       "share": 0.49
       },
       {
-       "color": "#4b5566",
-       "share": 0.4
+       "color": "#4a5567",
+       "share": 0.39
       },
       {
-       "color": "#fffefe",
+       "color": "#fefffe",
        "share": 0.11
       },
       {
-       "color": "#0e2a79",
+       "color": "#0f2a78",
        "share": 0.01
       }
      ],
      "button": {
-      "bg": "#0e2a79",
+      "bg": "#0f2a78",
       "hsl": {
-       "h": 224,
-       "s": 0.79,
+       "h": 225,
+       "s": 0.78,
        "l": 0.26
       },
-      "fg": "#fffefe"
+      "fg": "#fefffe"
      },
      "lowContrast": []
     },
     "buttons": {
-     "count": 1,
-     "inHero": 1,
+     "count": 2,
+     "inHero": 2,
      "radius": 0,
      "height": 52,
      "withShadow": 0,
@@ -1458,7 +1463,8 @@
      "mono": 0,
      "upper": 0,
      "heroLabels": [
-      "Call 305-244-6463"
+      "Call 305-244-6463",
+      "← Return to homepage"
      ]
     },
     "surfaces": {
@@ -1517,7 +1523,7 @@
       "tag": "section",
       "top": 0,
       "height": 722,
-      "words": 27,
+      "words": 25,
       "media": 1,
       "middle": 0,
       "heading": {
@@ -1670,13 +1676,6 @@
    "width": 1440,
    "message": "The sheet dealt Stack Sans Headline and Stack Sans Text, but the page renders -apple-system.",
    "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
-  },
-  {
-   "level": "WARN",
-   "id": "still-page",
-   "width": 1440,
-   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
-   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
   }
  ],
  "images": [

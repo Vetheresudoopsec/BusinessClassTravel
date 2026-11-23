@@ -29,7 +29,7 @@
 
 /* ---------- reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scrollbar-gutter: stable; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--bar-h) + 1rem); scroll-behavior: smooth; }
+html { scrollbar-width: none; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--bar-h) + 1rem); scroll-behavior: smooth; }
 body { margin: 0; background: var(--white); color: var(--ink); font: 400 1.0625rem/1.5 var(--font); -webkit-font-smoothing: antialiased; }
 h1, h2, h3, p, figure, dl, dd { margin: 0; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -41,6 +41,7 @@ a { color: inherit; }
 /* No I-beam cursors on the site: an arrow over text and fields, a hand over anything that acts.
    Page text can't be selected or copied; form fields still take typing, pasting and their text caret. */
 html, input, textarea, [contenteditable] { cursor: default; }
+html::-webkit-scrollbar { display: none; } /* the page scrolls; it just shows no bar */
 html { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 input, textarea, [contenteditable] { -webkit-user-select: text; user-select: text; -webkit-touch-callout: default; }
 a, button, select, summary, label, [role="option"], .fld--date input { cursor: pointer; }
@@ -454,6 +455,7 @@ html.cal-open { overflow: hidden; }
 
 /* ---------- newsletter: the quote form's box, and the corner prompt ---------- */
 .quote__news { min-height: 0; font-size: 0.875rem; color: var(--muted); }
+.quote__news[hidden] { display: none; }
 .news { position: fixed; z-index: 35; right: 1.5rem; bottom: calc(1.5rem + env(safe-area-inset-bottom)); width: min(24rem, calc(100vw - 2rem)); padding: 1.5rem 1.5rem 1.25rem; background: var(--white); color: var(--ink); border-top: 3px solid var(--blue); border-radius: 0; box-shadow: 0 24px 56px -16px rgba(20, 32, 47, 0.36), 0 0 0 1px var(--line); opacity: 0; transform: translateY(1.5rem); transition: opacity 240ms ease, transform 420ms var(--ease-out); }
 .news.is-open { opacity: 1; transform: none; }
 .news[hidden], .news__form[hidden], .news__done[hidden] { display: none; }

@@ -167,11 +167,28 @@ function airportField(input, onPick, { search: find = searchAirports, full = tru
   return { set(a) { input.value = label(a); } };
 }
 
+/* ---------- newsletter consent by country ---------- */
+// EU, EEA, UK, Switzerland and the Crown Dependencies need consent for marketing email, so visitors there
+// (and anyone whose country is unknown) keep the tickbox and the prompt. Elsewhere a quote request
+// subscribes them, as the note under the button says. quote.php makes the same decision on its own.
+// Keep in step with $GDPR in quote.php.
+const GDPR_COUNTRIES = new Set(['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE',
+  'IS','LI','NO','GB','CH','GG','JE','IM','GI']);
+function newsletterFor(country) {
+  const auto = !!country && !GDPR_COUNTRIES.has(String(country).toUpperCase());
+  $('.quote__news').hidden = auto;
+  if (auto) $('#newsletter').checked = false;
+  $('#news-auto').hidden = !auto;
+  newsPrompt.off = auto;
+  if (auto && !newsPrompt.el.hidden) newsPrompt.hide();
+}
+
 /* ---------- the visitor's location: departure airport and phone country from their IP ---------- */
 async function applyGeo() {
   if (!CONFIG.geoEndpoint) return;
   let g = null;
   try { const r = await fetch(CONFIG.geoEndpoint, { headers: { Accept: 'application/json' } }); if (r.ok) g = await r.json(); } catch {}
+  newsletterFor(g?.country);
   if (!g?.country) return; // keep the time zone guess
   if (!touched.country && !$('#phone').value) setCountry(g.country);
   // Only the country known: stand in its main airport (the first listed for it) for the visitor's position.
@@ -1020,8 +1037,9 @@ const newsPrompt = {
     return !s || (s.state === 'closed' && Date.now() - s.at > 30 * DAY);
   },
   below: false, // the booking card is entirely above the top of the screen
+  off: false, // true outside GDPR countries: the quote request subscribes them instead
   show() {
-    if (!this.due() || !this.el.hidden || !this.below) return;
+    if (this.off || !this.due() || !this.el.hidden || !this.below) return;
     const busy = cal.isOpen || inField(document.activeElement);
     if (busy) { setTimeout(() => this.show(), 4000); return; }
     this.el.hidden = false;

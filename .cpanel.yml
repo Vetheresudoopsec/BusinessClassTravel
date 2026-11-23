@@ -17,7 +17,7 @@ deployment:
     - /bin/test -d $DEPLOYPATH || exit 1
     # Pages, styles, scripts and server rules
     - /bin/cp index.html terms.html privacy.html accessibility.html 404.html thank-you.html $DEPLOYPATH
-    - /bin/cp styles.css app.js motion.js thank-you.js quote.php $DEPLOYPATH
+    - /bin/cp styles.css app.js motion.js thank-you.js scrollbar.js quote.php $DEPLOYPATH
     - /bin/cp .htaccess robots.txt sitemap.xml $DEPLOYPATH
     - /bin/cp favicon.ico favicon.svg apple-touch-icon.png $DEPLOYPATH
     # Folders: location and photo endpoints, airport lists, images, phone library

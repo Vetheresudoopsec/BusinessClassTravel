@@ -5,9 +5,10 @@
  * the corporate account form ("corporate"), the enquiry form ("enquiry") and the newsletter
  * prompt ("newsletter"), and emails every detail the visitor chose to the sales inbox. A quote
  * request also sends the customer a confirmation email (api/mail-confirmation.php).
- * Newsletter sign-ups, from the prompt or the box on the quote form, go to Mailchimp
- * (api/mailchimp.php). Until Mailchimp is set up, or if it cannot be reached, they are
- * emailed to the sales inbox instead.
+ * Newsletter sign-ups go to Mailchimp (api/mailchimp.php). Visitors in GDPR countries (or whose
+ * country is unknown) join only if they tick the box on the quote form or use the prompt; everyone
+ * else who requests a quote is subscribed automatically, as the form says. Until Mailchimp is set
+ * up, or if it cannot be reached, sign-ups are emailed to the sales inbox instead.
  *
  * Mail goes out through PHP's mail(), which HostGator delivers. For it to land in the inbox,
  * the domain in $FROM needs a mailbox or an SPF record in cPanel (Email Deliverability).
@@ -23,6 +24,25 @@ $RECIPIENT = 'sales@business-class-travel.com';
 $FROM      = 'no-reply@business-class-travel.com';
 $PHONE     = '305-244-6463';
 $RATE      = [6, 600];                             // at most 6 requests from one address in 10 minutes
+// EU, EEA, UK, Switzerland and the Crown Dependencies: marketing email needs the visitor's consent.
+// Keep in step with GDPR_COUNTRIES in app.js.
+$GDPR = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE',
+         'IS','LI','NO','GB','CH','GG','JE','IM','GI'];
+
+// True when the visitor must opt in: in a GDPR country, or their country is unknown.
+// The country comes from Cloudflare's header, or from the lookup api/geo.php cached for this
+// address when the page loaded. No outside request is made here.
+function needs_consent($gdpr) {
+  $cf = strtoupper(trim($_SERVER['HTTP_CF_IPCOUNTRY'] ?? ''));
+  $country = preg_match('/^[A-Z]{2}$/', $cf) && !in_array($cf, ['XX', 'T1'], true) ? $cf : null;
+  if (!$country) {
+    $ip = filter_var(trim($_SERVER['HTTP_CF_CONNECTING_IP'] ?? ''), FILTER_VALIDATE_IP) ?: ($_SERVER['REMOTE_ADDR'] ?? '');
+    $file = __DIR__ . '/cache/geo.json';
+    $all = is_readable($file) ? (json_decode(file_get_contents($file), true) ?: []) : [];
+    $country = $all[hash('sha256', $ip)]['place']['country'] ?? null;
+  }
+  return !$country || in_array(strtoupper($country), $gdpr, true);
+}
 
 $isJson = stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false;
 $data   = $isJson ? (json_decode(file_get_contents('php://input'), true) ?: []) : $_POST;
@@ -160,11 +180,14 @@ if ($type === 'corporate') {
   $return = $data['return'] ?? $data['return_date'] ?? '';
   $first  = $clean($data['firstName'] ?? $data['first_name'] ?? '');
   $last   = $clean($data['lastName'] ?? $data['last_name'] ?? '');
-  // Whether the customer ticked "Email me fare offers", and whether Mailchimp took them.
-  $news   = !empty($data['newsletter']) ? (mailchimp_subscribe($validEmail, $first, $last, 'Quote form')
-              ? 'Subscribed. Added to Mailchimp.'
-              : "Subscribed. Please add them to Mailchimp by hand: it could not be done automatically.")
-            : 'Not subscribed';
+  // GDPR countries (or unknown): only if they ticked "Email me fare offers". Elsewhere: always.
+  $consent = needs_consent($GDPR);
+  $join    = $consent ? !empty($data['newsletter']) : true;
+  $how     = $consent ? 'Ticked the box' : 'Subscribed automatically (outside GDPR countries)';
+  $news    = $join ? (mailchimp_subscribe($validEmail, $first, $last, 'Quote form')
+               ? "$how. Added to Mailchimp."
+               : "$how. Please add them to Mailchimp by hand: it could not be done automatically.")
+             : 'Not subscribed (GDPR country or unknown: did not tick the box)';
   $subject = "Quote: $from to $to, $cabin — $name";
   $title   = 'New Quote Request';
   $rows = [

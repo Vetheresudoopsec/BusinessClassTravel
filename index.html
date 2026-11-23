@@ -150,6 +150,7 @@
 }
 </script>
 <link rel="stylesheet" href="styles.css?v=dev">
+<script src="/scrollbar.js?v=dev" defer></script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -297,7 +298,7 @@
 
         <label class="check check--box quote__news"><input type="checkbox" id="newsletter" name="newsletter" value="1"><span>Email me fare offers. Unsubscribe at any time.</span></label>
         <button class="button button--blue quote__send" id="send" type="submit">Request a Free Quote</button>
-        <p class="legal-note">By requesting a quote, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
+        <p class="legal-note">By requesting a quote, you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.<span id="news-auto" hidden> We will also email you our fare offers; unsubscribe at any time.</span></p>
         <input type="hidden" id="flex-val" name="flexible" value="">
         <div class="hp" aria-hidden="true"><label for="hp">Company website</label><input id="hp" name="company_website" type="text" tabindex="-1" autocomplete="off"></div>
         <p class="err quote__senderr" id="err-send" aria-live="polite"></p>
