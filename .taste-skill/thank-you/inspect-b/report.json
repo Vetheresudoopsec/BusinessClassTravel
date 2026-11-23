@@ -1,0 +1,1748 @@
+{
+ "url": "http://localhost:8765/.taste-skill/thank-you/b.html",
+ "at": "2026-11-23T05:25:51.836Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.35,
+    0.21,
+    0.62,
+    0.42,
+    0.15,
+    0.39
+   ],
+   "motion": {
+    "elements": 19,
+    "css": 4,
+    "transitions": 15,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4912,
+     "screens": 5.5,
+     "words": 265,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 11,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1771694583915-78f9b39fd6d1?w=1100&h=1375&f",
+      "photo-1535078035266-a0fa7d3b8f65?w=1100&h=1375&f",
+      "photo-1787909239840-d94e9e71c93c?w=1100&h=1375&f",
+      "photo-1773738214145-60c47b5f317d?w=500&h=500&fit",
+      "photo-1692405245790-a9aba01a4fc3?w=700&h=700&fit",
+      "photo-1787909239840-d94e9e71c93c?w=600&h=800&fit",
+      "photo-1535078035266-a0fa7d3b8f65?w=1000&h=1250&f",
+      "photo-1771694583915-78f9b39fd6d1?w=600&h=800&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 80.6,
+     "vw": 5.6,
+     "font": "-apple-system",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 680,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 80.6,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 680,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 1100,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 2100,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 2958,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Call your consultant",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 3682,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      17,
+      19,
+      24,
+      58,
+      81
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": null
+     },
+     "measureChars": 28,
+     "max": {
+      "size": 80.6,
+      "vw": 5.6,
+      "font": "-apple-system",
+      "text": "Thank You for Your Request, Jordan"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0e2a79",
+       "top": 1960,
+       "hsl": {
+        "h": 224,
+        "s": 0.79,
+        "l": 0.26
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4b5467",
+       "share": 0.37
+      },
+      {
+       "color": "#15202e",
+       "share": 0.34
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.22
+      },
+      {
+       "color": "#dde5f5",
+       "share": 0.06
+      },
+      {
+       "color": "#0e2a79",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0e2a79",
+      "hsl": {
+       "h": 224,
+       "s": 0.79,
+       "l": 0.26
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.2
+     },
+     {
+      "type": "img",
+      "ratio": 0.2
+     },
+     {
+      "type": "img",
+      "ratio": 0.2
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4912,
+    "margins": {
+     "left": 72,
+     "right": 72
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 27,
+      "media": 2,
+      "middle": 84,
+      "heading": null,
+      "left": 72,
+      "right": 86,
+      "textLeft": 72,
+      "textRight": 86,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 900,
+      "height": 900,
+      "words": 63,
+      "media": 1,
+      "middle": 284,
+      "heading": {
+       "text": "Your request",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 182,
+      "right": 222,
+      "textLeft": 182,
+      "textRight": 252,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.next.grid",
+      "tag": "section",
+      "top": 1960,
+      "height": 837,
+      "words": 72,
+      "media": 0,
+      "middle": 248,
+      "heading": {
+       "text": "What happens next",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 72,
+      "right": 218,
+      "textLeft": 72,
+      "textRight": 218,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.ahead.grid",
+      "tag": "section",
+      "top": 2798,
+      "height": 685,
+      "words": 38,
+      "media": 4,
+      "middle": 81,
+      "heading": {
+       "text": "The journey ahead",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 72,
+      "right": 72,
+      "textLeft": 72,
+      "textRight": 80,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.close.grid",
+      "tag": "section",
+      "top": 3482,
+      "height": 530,
+      "words": 19,
+      "media": 1,
+      "middle": 410,
+      "heading": {
+       "text": "Questions? Call your consultant",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 72,
+      "right": 133,
+      "textLeft": 72,
+      "textRight": 133,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 4012,
+      "height": 900,
+      "words": 42,
+      "media": 2,
+      "middle": 0,
+      "heading": null,
+      "left": 72,
+      "right": 72,
+      "textLeft": 72,
+      "textRight": 72,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 1804,
+      "height": 288
+     },
+     {
+      "top": 2604,
+      "height": 348
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 81,
+      "top": 680,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 72,
+      "n": 6
+     },
+     {
+      "x": 768,
+      "n": 3
+     },
+     {
+      "x": 182,
+      "n": 2
+     },
+     {
+      "x": 1132,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.18,
+    "voidBox": {
+     "x": 300,
+     "y": 120,
+     "w": 420,
+     "h": 540
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.48,
+    0.28,
+    0.49,
+    0.62,
+    0.76,
+    0.19,
+    0.2
+   ],
+   "motion": {
+    "elements": 19,
+    "css": 4,
+    "transitions": 15,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 6447,
+     "screens": 6.3,
+     "words": 264,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 10,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1771694583915-78f9b39fd6d1?w=1100&h=1375&f",
+      "photo-1535078035266-a0fa7d3b8f65?w=1100&h=1375&f",
+      "photo-1787909239840-d94e9e71c93c?w=1100&h=1375&f",
+      "photo-1773738214145-60c47b5f317d?w=500&h=500&fit",
+      "photo-1692405245790-a9aba01a4fc3?w=700&h=700&fit",
+      "photo-1787909239840-d94e9e71c93c?w=600&h=800&fit",
+      "photo-1535078035266-a0fa7d3b8f65?w=1000&h=1250&f",
+      "photo-1771694583915-78f9b39fd6d1?w=600&h=800&fit"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 84.5,
+     "vw": 11,
+     "font": "-apple-system",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 808,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 84.5,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 84.5,
+      "vw": 11,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 808,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1270,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2636,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3601,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Call your consultant",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 36,
+      "vw": 4.7,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.52,
+      "top": 5208,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      17,
+      19,
+      24,
+      36,
+      85
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.6
+     },
+     "measureChars": 33,
+     "max": {
+      "size": 84.5,
+      "vw": 11,
+      "font": "-apple-system",
+      "text": "Thank You for Your Request, Jordan"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0e2a79",
+       "top": 2540,
+       "hsl": {
+        "h": 224,
+        "s": 0.79,
+        "l": 0.26
+       }
+      },
+      {
+       "color": "#fefffe",
+       "top": 2820,
+       "hsl": {
+        "h": 120,
+        "s": 1,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4b5467",
+       "share": 0.37
+      },
+      {
+       "color": "#15202e",
+       "share": 0.34
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.21
+      },
+      {
+       "color": "#dde5f5",
+       "share": 0.06
+      },
+      {
+       "color": "#0e2a79",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0e2a79",
+      "hsl": {
+       "h": 224,
+       "s": 0.79,
+       "l": 0.26
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 10,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.26
+     },
+     {
+      "type": "img",
+      "ratio": 0.26
+     },
+     {
+      "type": "img",
+      "ratio": 0.26
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 6447,
+    "margins": {
+     "left": 38,
+     "right": 38
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 1158,
+      "words": 27,
+      "media": 3,
+      "middle": 0,
+      "heading": null,
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 108,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 1158,
+      "height": 1270,
+      "words": 63,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 87,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.next.grid",
+      "tag": "section",
+      "top": 2540,
+      "height": 949,
+      "words": 72,
+      "media": 0,
+      "middle": 232,
+      "heading": {
+       "text": "What happens next",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 58,
+      "textLeft": 38,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.ahead.grid",
+      "tag": "section",
+      "top": 3489,
+      "height": 1607,
+      "words": 38,
+      "media": 4,
+      "middle": 0,
+      "heading": {
+       "text": "The journey ahead",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 164,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.close.grid",
+      "tag": "section",
+      "top": 5096,
+      "height": 449,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions? Call your consultant",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 368,
+      "textLeft": 38,
+      "textRight": 368,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 5546,
+      "height": 901,
+      "words": 42,
+      "media": 2,
+      "middle": 0,
+      "heading": null,
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 38,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 84,
+      "top": 808,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 38,
+      "n": 9
+     },
+     {
+      "x": 58,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.39,
+    0.51,
+    0.57,
+    0.53,
+    0.67,
+    0.33,
+    0.35
+   ],
+   "motion": {
+    "elements": 19,
+    "css": 4,
+    "transitions": 15,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5290,
+     "screens": 6.3,
+     "words": 264,
+     "img": 11,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1771694583915-78f9b39fd6d1?w=1100&h=1375&f",
+      "photo-1535078035266-a0fa7d3b8f65?w=1100&h=1375&f",
+      "photo-1787909239840-d94e9e71c93c?w=1100&h=1375&f",
+      "photo-1692405245790-a9aba01a4fc3?w=700&h=700&fit",
+      "photo-1535078035266-a0fa7d3b8f65?w=1000&h=1250&f",
+      "photo-1627750673336-9375448a79f5?w=2000&h=1300&f"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 42.9,
+     "vw": 11,
+     "font": "-apple-system",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.84,
+     "top": 446,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 42.9,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 42.9,
+      "vw": 11,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.84,
+      "top": 446,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 823,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Anything else we should know?",
+      "words": 5,
+      "chars": 29,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1198,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2115,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JFK to LHR",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 2327,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 9.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3155,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Call your consultant",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4185,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      17,
+      19,
+      24,
+      36,
+      43
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.6
+     },
+     "measureChars": 33,
+     "max": {
+      "size": 42.9,
+      "vw": 11,
+      "font": "-apple-system",
+      "text": "Thank You for Your Request, Jordan"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0e2a79",
+       "top": 2019,
+       "hsl": {
+        "h": 224,
+        "s": 0.79,
+        "l": 0.26
+       }
+      },
+      {
+       "color": "#fefffe",
+       "top": 2299,
+       "hsl": {
+        "h": 120,
+        "s": 1,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#4b5467",
+       "share": 0.37
+      },
+      {
+       "color": "#15202e",
+       "share": 0.34
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.21
+      },
+      {
+       "color": "#dde5f5",
+       "share": 0.06
+      },
+      {
+       "color": "#0e2a79",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0e2a79",
+      "hsl": {
+       "h": 224,
+       "s": 0.79,
+       "l": 0.26
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 6,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     },
+     {
+      "type": "img",
+      "ratio": 0.16
+     },
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5290,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 711,
+      "words": 27,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Thank You for Your Request, Jordan",
+       "size": 43,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 711,
+      "height": 1197,
+      "words": 63,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 36,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.next.grid",
+      "tag": "section",
+      "top": 2019,
+      "height": 1024,
+      "words": 72,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.ahead.grid",
+      "tag": "section",
+      "top": 3043,
+      "height": 1030,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The journey ahead",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.close.grid",
+      "tag": "section",
+      "top": 4073,
+      "height": 474,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions? Call your consultant",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 54,
+      "textLeft": 20,
+      "textRight": 54,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 4547,
+      "height": 743,
+      "words": 42,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 59,
+      "fullBleed": true,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2864,
+      "height": 284
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 43,
+      "top": 446,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 9
+     },
+     {
+      "x": 40,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Stack Sans Headline and Stack Sans Text, but the page renders -apple-system.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 768,
+   "message": "A section keeps its content on one side and leaves 368px of the width empty: \"Questions? Call your consultant\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/desktop-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/desktop-page-01.jpg",
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/tablet-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/tablet-page-01.jpg",
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/mobile-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-b/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

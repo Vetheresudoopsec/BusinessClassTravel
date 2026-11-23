@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You — Business Class Travel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root {
+  --bg: #ffffff; --surface: #eef2f9; --ink: #14202f; --muted: #4a5466; --blue: #0f2a78; --blue-hover: #1b3c9e; --blue-soft: #8fa8e0; --error: #b3261e;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --m: clamp(16px, 5vw, 80px);
+  --gap: 24px;
+  --h2: clamp(36px, 4vw, 60px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.55 var(--font); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 0.2em; transition: color 180ms ease; }
+a:hover { color: var(--blue); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--display); letter-spacing: -0.025em; line-height: 1.02; font-weight: 400; }
+p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p, dd { text-wrap: pretty; }
+[hidden] { display: none !important; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding: 0 var(--m); }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border: 0; border-radius: 0; background: var(--blue); color: #fff; font: 600 16px/1 var(--font); text-decoration: none; cursor: pointer; transition: transform 140ms var(--ease), background-color 180ms ease; }
+.button:hover { background: var(--blue-hover); color: #fff; }
+.button:active { transform: scale(0.97); }
+
+/* bar */
+.bar { position: absolute; inset: 0 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 28px var(--m); z-index: 3; }
+.logo { display: inline-flex; flex-direction: column; color: var(--blue); text-decoration: none; }
+.logo__row { display: flex; align-items: flex-end; gap: 8px; padding-left: 12px; }
+.logo__word { font-size: 19px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; padding-bottom: 5px; }
+.logo__word b { font-weight: 700; }
+.logo__line { display: block; height: 2px; background: var(--blue-soft); }
+
+/* hero: two prints on a white wall */
+.hero { position: relative; min-height: max(100svh, 760px); }
+.hero__big { position: absolute; left: 52%; top: 96px; width: 32vw; aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface); }
+.hero__big img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1600ms ease; }
+.hero__big img.on { opacity: 1; }
+.hero__small { position: absolute; left: var(--m); top: 36%; width: 14vw; aspect-ratio: 1; object-fit: cover; }
+.hero__text { position: absolute; left: var(--m); right: var(--m); bottom: 56px; display: grid; grid-template-columns: 1fr 22ch; gap: 40px; align-items: end; }
+.hero h1 { font-size: clamp(40px, 5.6vw, 84px); max-width: 7.6em; outline: none; }
+.hero__lead { font-size: 17px; color: var(--muted); max-width: 26ch; justify-self: end; }
+
+/* your request: form beside one small photograph */
+.request { padding-top: 200px; row-gap: 32px; }
+.request h2 { grid-column: 2 / 8; font-size: var(--h2); }
+.request__body { grid-column: 2 / 7; display: grid; gap: 40px; }
+.request__photo { grid-column: 9 / 12; align-self: start; margin-top: 120px; }
+.request__photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.request__photo figcaption { font-size: 16px; color: var(--muted); margin-top: 10px; }
+.list { display: grid; grid-template-columns: 8.5em 1fr; gap: 14px 24px; margin: 0; padding: 28px 32px; background: var(--surface); }
+.list dt { color: var(--muted); }
+.list dd { margin: 0; font-weight: 600; }
+.more { display: grid; gap: 10px; }
+.more h3 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+.more label { color: var(--muted); }
+.more textarea { width: 100%; min-height: 128px; padding: 12px 14px; border: 1px solid #c7d0e0; border-radius: 0; background: #fff; font: inherit; color: var(--ink); resize: vertical; }
+.more textarea:focus { outline: none; border-color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); } /* taste-skill-ignore: form field focus */
+.more .err { color: var(--error); min-height: 1em; }
+.actions { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
+.sent { font-size: 20px; font-weight: 600; outline: none; }
+
+/* what happens next: itinerary on a slip */
+.next { margin-top: 160px; padding-top: 140px; padding-bottom: 120px; background: var(--blue); color: #fff; }
+.next__intro { grid-column: 1 / 6; align-self: start; display: grid; gap: 20px; }
+.next h2 { font-size: var(--h2); color: #fff; }
+.next__intro p { max-width: 30ch; color: #dce4f5; }
+.slip { grid-column: 7 / 12; background: #fff; color: var(--ink); padding: 36px 36px 64px; font-variant-numeric: tabular-nums; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 96% 100%, 92% calc(100% - 14px), 88% 100%, 84% calc(100% - 14px), 80% 100%, 76% calc(100% - 14px), 72% 100%, 68% calc(100% - 14px), 64% 100%, 60% calc(100% - 14px), 56% 100%, 52% calc(100% - 14px), 48% 100%, 44% calc(100% - 14px), 40% 100%, 36% calc(100% - 14px), 32% 100%, 28% calc(100% - 14px), 24% 100%, 20% calc(100% - 14px), 16% 100%, 12% calc(100% - 14px), 8% 100%, 4% calc(100% - 14px), 0 100%); }
+.slip__route { display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+.slip__route > span:last-child { font-size: 16px; font-weight: 400; color: var(--muted); }
+.slip h3 { font: 600 17px/1.4 var(--font); letter-spacing: 0; margin-top: 28px; }
+.row { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; font-size: 16px; }
+.row span:first-child { flex: 0 1 auto; }
+.row i { flex: 1; min-width: 16px; overflow: hidden; white-space: nowrap; color: #8b95a8; letter-spacing: 3px; font-style: normal; }
+.row i::before { content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .'; }
+.row span:last-child { flex: 0 1 auto; color: var(--muted); text-align: right; }
+.row--end { justify-content: space-between; margin: 32px -36px 0; padding: 0 36px; min-height: 44px; align-items: center; background: var(--ink); color: #fff; font-weight: 600; }
+.row--end span:last-child { color: #fff; }
+
+/* the journey ahead: frame run, one lifted */
+.ahead { padding-top: 160px; padding-bottom: 40px; align-items: start; }
+.ahead__side { grid-column: 1 / 4; display: grid; gap: 16px; align-content: start; }
+.ahead h2 { font-size: var(--h2); }
+.ahead__side p { font-size: 17px; color: var(--muted); max-width: 28ch; }
+.run { grid-column: 4 / 13; display: flex; align-items: flex-end; justify-content: flex-end; gap: 6px; }
+.run figure { flex: none; margin: 0; }
+.run img { height: 24vh; width: auto; aspect-ratio: var(--r); object-fit: cover; transition: transform 500ms var(--ease); }
+.run figure:hover img { transform: translateY(-6px); }
+.run .lift img { height: 50vh; }
+.run figcaption { display: flex; justify-content: space-between; gap: 16px; margin-top: 10px; font-size: 16px; padding-right: 8px; }
+.run figcaption b { font-weight: 600; }
+.run figcaption span { color: var(--muted); }
+
+/* close: sentence, photograph, two links */
+.close { padding-top: 200px; padding-bottom: 160px; align-items: start; }
+.close h2 { grid-column: 1 / 7; font-size: var(--h2); max-width: 11em; }
+.close img { grid-column: 8 / 10; width: 170px; aspect-ratio: 1; object-fit: cover; }
+.close__links { grid-column: 10 / 13; display: grid; gap: 12px; font-size: 17px; }
+.close__links p:first-child { font-weight: 600; }
+.close__links small { font-size: 16px; color: var(--muted); }
+
+/* footer: name across the last photograph */
+.foot { position: relative; min-height: 100svh; color: #fff; display: grid; grid-template-rows: auto 1fr auto; padding: 32px var(--m) 32px; overflow: hidden; }
+.foot > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); z-index: -1; }
+.foot { isolation: isolate; }
+.foot__top { display: flex; justify-content: space-between; gap: 40px; font-size: 16px; }
+.foot__top ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; align-content: start; }
+.foot__top a { text-decoration: none; }
+.foot a:hover { color: var(--blue-soft); }
+.foot__word { width: 100%; height: auto; fill: #fff; margin-bottom: 16px; }
+.foot__legal { font-size: 13px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+/* motion */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-rise] { opacity: 0; transform: translateY(24px); animation: rise 1000ms var(--ease) forwards; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
+  .js [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 700ms var(--ease), transform 900ms var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
+}
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .grid:not(.close) > * { grid-column: 1 / -1 !important; }
+  .bar .wide { display: none; }
+  .list { grid-template-columns: 7em 1fr; padding: 20px; }
+  .close { grid-template-columns: 96px 1fr; column-gap: 20px; }
+  .close h2 { grid-column: 1 / -1; }
+  .close img { grid-column: 1; }
+  .close__links { grid-column: 2; }
+  .hero { min-height: 0; padding: 104px var(--m) 56px; display: grid; gap: 32px; }
+  .hero__big, .hero__small, .hero__text { position: relative; inset: auto; }
+  .hero__big { width: 58%; margin-left: auto; }
+  .hero__small { width: 34%; margin: -96px 0 0; }
+  .hero__text { grid-template-columns: 1fr; gap: 16px; }
+  .hero h1 { font-size: 11vw; }
+  .hero__lead { justify-self: start; }
+  .request { padding-top: 112px; }
+  .request__photo { margin-top: 24px; width: 60%; margin-left: auto; }
+  .next { margin-top: 112px; padding-top: 96px; padding-bottom: 112px; row-gap: 48px; }
+  .slip { padding: 28px 20px 56px; }
+  .row--end { justify-content: space-between; margin: 28px -20px 0; padding: 0 20px; }
+  .ahead { padding-top: 112px; row-gap: 32px; }
+  .run { flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; }
+  .run figure { flex: 1 1 0; min-width: 0; }
+  .run img { height: auto; width: 100%; aspect-ratio: 3 / 4; }
+  .run .lift { order: -1; flex: 1 1 100%; }
+  .run .lift img { aspect-ratio: 4 / 5; height: auto; }
+  .run figcaption { flex-direction: column; gap: 0; }
+  .close { padding-top: 112px; padding-bottom: 96px; row-gap: 28px; }
+  .close img { width: 96px; }
+  .foot { min-height: 88svh; }
+  .foot__top { flex-direction: column; gap: 24px; }
+}
+</style>
+<script src="mock.js" defer></script>
+<script src="/thank-you.js" defer></script>
+</head>
+<body>
+<header class="bar">
+  <a class="logo" href="/" aria-label="Business Class Travel home">
+    <span class="logo__row">
+      <svg viewBox="0 0 48 60" width="27" height="34" aria-hidden="true"><defs><clipPath id="fin"><path d="M2 60L22 0h20l-9 60z"/></clipPath></defs><path d="M2 60L22 0h20l-9 60z" fill="#0F2A78"/><g clip-path="url(#fin)"><rect y="20" width="48" height="5" fill="#fff"/><rect y="29" width="48" height="2.5" fill="#8FA8E0"/></g></svg>
+      <span class="logo__word"><b>BusinessClass</b> Travel</span>
+    </span>
+    <span class="logo__line" aria-hidden="true"></span>
+  </a>
+  <a class="button" href="tel:+13052446463">Call<span class="wide">&nbsp;305-244-6463</span></a>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="thanks-title">
+    <div class="hero__big" data-rise style="--i:1" id="fade">
+      <img class="on" src="https://images.unsplash.com/photo-1771694583915-78f9b39fd6d1?w=1100&h=1375&fit=crop&crop=left&auto=format&q=75" width="1100" height="1375" alt="Low sunlight through an aircraft window above the clouds">
+      <img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=1100&h=1375&fit=crop&auto=format&q=75" width="1100" height="1375" alt="" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1787909239840-d94e9e71c93c?w=1100&h=1375&fit=crop&auto=format&q=75" width="1100" height="1375" alt="" loading="lazy">
+    </div>
+    <img class="hero__small" data-rise style="--i:2" src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=500&h=500&fit=crop&auto=format&q=75" width="500" height="500" alt="Travellers at tables by a tall window at dusk">
+    <div class="hero__text">
+      <h1 id="thanks-title" tabindex="-1" data-rise style="--i:0">Thank You for Your Request</h1>
+      <p class="hero__lead" id="thanks-text" data-rise style="--i:3">A consultant is preparing Business Class fares for your journey. You will hear from us within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="request grid" id="request" aria-labelledby="request-title">
+    <h2 id="request-title" data-reveal>Your request</h2>
+    <div class="request__body">
+      <div id="summary" hidden data-reveal style="--i:1">
+        <dl class="list">
+          <dt>Route</dt><dd id="sum-route"></dd>
+          <dt>Dates</dt><dd id="sum-dates"></dd>
+          <dt>Cabin</dt><dd id="sum-cabin"></dd>
+          <dt>Passengers</dt><dd id="sum-pax"></dd>
+        </dl>
+      </div>
+      <div class="more" id="more" hidden data-reveal style="--i:2">
+        <h3>Anything else we should know?</h3>
+        <label for="more-text">Preferred airlines, seat or meal requests, frequent flyer numbers, your budget or how flexible your dates are.</label>
+        <textarea id="more-text" rows="5" maxlength="2000"></textarea>
+        <span class="err" id="err-more" aria-live="polite"></span>
+        <div class="actions">
+          <button type="button" class="button" id="more-send">Send details</button>
+          <a href="/#quote">Plan another journey</a>
+        </div>
+      </div>
+      <p class="sent" id="more-sent" tabindex="-1" hidden>Thank you. We’ve added these details to your request.</p>
+      <p id="again" hidden><a href="/#quote">Plan another journey</a></p>
+    </div>
+    <figure class="request__photo" data-reveal style="--i:3">
+      <img src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=700&h=700&fit=crop&auto=format&q=75" width="700" height="700" loading="lazy" alt="Red armchairs in a lounge beneath a domed window">
+      <figcaption>Lounge access comes with most Business Class fares.</figcaption>
+    </figure>
+  </section>
+
+  <section class="next grid" aria-labelledby="next-title">
+    <div class="next__intro">
+      <h2 id="next-title" data-reveal>What happens next</h2>
+      <p data-reveal style="--i:1">From your request today to the tickets in your hand. A single consultant looks after every step.</p>
+    </div>
+    <div class="slip" data-reveal style="--i:1">
+      <p class="slip__route"><span><span data-from>JFK</span> to <span data-to>LHR</span></span><span>Your itinerary</span></p>
+      <h3>Today</h3>
+      <p class="row"><span>Request received</span><i></i><span>Done</span></p>
+      <p class="row"><span>Consultant searches partner airlines</span><i></i><span>Now</span></p>
+      <h3>Within 24 hours</h3>
+      <p class="row"><span>Your fares arrive</span><i></i><span>Email or phone</span></p>
+      <p class="row"><span>Questions answered</span><i></i><span>Any time</span></p>
+      <h3>When you choose</h3>
+      <p class="row"><span>Your consultant books the tickets</span><i></i><span>After you confirm</span></p>
+      <p class="row"><span>Tickets issued by the airline</span><i></i><span>No booking fees</span></p>
+      <p class="row row--end"><span>Your Business Class seat</span><span>Booked</span></p>
+    </div>
+  </section>
+
+  <section class="ahead grid" aria-labelledby="ahead-title">
+    <div class="ahead__side">
+      <h2 id="ahead-title" data-reveal>The journey ahead</h2>
+      <p data-reveal style="--i:1">What a Business Class fare buys on most long-haul routes, from the lounge to the moment you land.</p>
+    </div>
+    <div class="run" data-reveal style="--i:2">
+      <figure style="--r:3/4"><img src="https://images.unsplash.com/photo-1787909239840-d94e9e71c93c?w=600&h=800&fit=crop&auto=format&q=75" width="600" height="800" loading="lazy" alt="Cabin windows beside a business class seat"><figcaption><b>Your seat</b><span>Fully flat</span></figcaption></figure>
+      <figure class="lift" style="--r:4/5"><img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=1000&h=1250&fit=crop&auto=format&q=75" width="1000" height="1250" loading="lazy" alt="A quiet airport lounge with lit wall panels"><figcaption><b>The lounge</b><span>Before you board</span></figcaption></figure>
+      <figure style="--r:3/4"><img src="https://images.unsplash.com/photo-1771694583915-78f9b39fd6d1?w=600&h=800&fit=crop&auto=format&q=75" width="600" height="800" loading="lazy" alt="Sunlight through an aircraft window"><figcaption><b>Dining</b><span>At your seat</span></figcaption></figure>
+      <figure style="--r:1/1"><img src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=700&h=700&fit=crop&auto=format&q=75" width="1000" height="625" loading="lazy" alt="Red armchairs in an airline lounge" width="700" height="700"><figcaption><b>Your bags</b><span>Full allowance</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="close grid" aria-labelledby="close-title">
+    <h2 id="close-title" data-reveal>Questions? Call your consultant</h2>
+    <img data-reveal style="--i:1" src="https://images.unsplash.com/photo-1771694583915-78f9b39fd6d1?w=400&h=400&fit=crop&crop=right&auto=format&q=75" width="400" height="400" loading="lazy" alt="A business class seat beside the cabin windows">
+    <div class="close__links" data-reveal style="--i:2">
+      <p>Call or message us</p>
+      <a href="tel:+13052446463">305-244-6463</a>
+      <a href="https://wa.me/13052446463">Message on WhatsApp</a>
+      <small>New York · replies within 24 hours</small>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="https://images.unsplash.com/photo-1627750673336-9375448a79f5?w=2000&h=1300&fit=crop&auto=format&q=70" width="2000" height="1300" loading="lazy" alt="">
+  <div class="foot__top">
+    <ul><li><a href="/#deals">Fare offers</a></li><li><a href="/#corporate">Corporate travel</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/accessibility">Accessibility</a></li></ul>
+    <ul><li>101 6th Ave, 9th Floor, New York, NY 10013</li><li><a href="tel:+13052446463">305-244-6463</a></li></ul>
+  </div>
+  <div></div>
+  <div>
+    <svg class="foot__word" viewBox="0 0 1000 96" role="img" aria-label="Business Class Travel"><text x="0" y="80" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="100" letter-spacing="-3"><tspan font-weight="700">BusinessClass</tspan><tspan font-weight="300"> Travel</tspan></text></svg>
+    <p class="foot__legal"><span>© 2026 Business Class Travel</span><span>Photographs on <a href="https://unsplash.com/?utm_source=business_class_travel&amp;utm_medium=referral">Unsplash</a> by <a href="https://unsplash.com/@abduzeedo">Fabio Sasso</a>, <a href="https://unsplash.com/@sergiofranklin">Sergio Franklin</a>, <a href="https://unsplash.com/@marklchaves">mark chaves</a>, <a href="https://unsplash.com/@kenji4861">Kenjiro Yagi</a>, <a href="https://unsplash.com/@turuturu">kai muro</a> and <a href="https://unsplash.com/@harlynkingm">Max Harlynking</a></span></p>
+  </div>
+</footer>
+<script>
+// Slow crossfade in the large hero print; pauses when hidden, off under reduced motion.
+(() => {
+  const imgs = [...document.querySelectorAll('#fade img')];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || imgs.length < 2) return;
+  let i = 0;
+  setInterval(() => { if (document.hidden) return; imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }, 6000);
+})();
+</script>
+</body>
+</html>

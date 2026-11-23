@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You — Business Class Travel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08122f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root {
+  --bg: #08122f; --surface: #0f1d45; --ink: #eef2f9; --muted: #c0cbe3; --accent: #ffffff; --accent-ink: #0f2a78;
+  --blue: #0f2a78; --blue-soft: #8fa8e0; --error: #ffb4ab;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --m: clamp(16px, 2.4vw, 32px);
+  --h2: clamp(36px, 3.6vw, 52px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 0.2em; transition: color 180ms ease; }
+a:hover { color: var(--blue-soft); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; }
+p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p, dd { text-wrap: pretty; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border: 0; border-radius: 0; background: var(--accent); color: var(--accent-ink); font: 600 16px/1 var(--font); text-decoration: none; cursor: pointer; transition: transform 140ms var(--ease), background-color 180ms ease; }
+.button:hover { color: var(--accent-ink); background: #dfe6f5; }
+.button:active { transform: scale(0.97); }
+.link { font-size: 16px; text-decoration: underline; background: none; border: 0; color: var(--ink); padding: 0; cursor: pointer; }
+
+/* bar */
+.bar { position: absolute; inset: 0 0 auto; display: flex; justify-content: space-between; align-items: center; padding: var(--m); z-index: 2; }
+.logo { display: inline-flex; align-items: flex-end; gap: 8px; color: var(--ink); text-decoration: none; }
+.logo__word { font-size: 19px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; padding-bottom: 4px; }
+.logo__word b { font-weight: 700; }
+.bar a.call { font-size: 16px; text-decoration: none; }
+
+/* hero: two doors on a dark wall */
+.hero { display: grid; justify-items: center; gap: 56px; padding: 112px var(--m) 120px; text-align: center; }
+.hero h1 { font-size: clamp(40px, 6vw, 92px); max-width: 12em; line-height: 1; outline: none; }
+.hero__lead { max-width: 36em; color: var(--muted); font-size: 17px; }
+.hero__top { display: grid; justify-items: center; gap: 20px; }
+.doors { display: flex; gap: 80px; text-align: left; }
+.door { width: 280px; text-decoration: none; transition: opacity 300ms ease; }
+.door img { width: 280px; aspect-ratio: 3 / 4; object-fit: cover; margin-bottom: 16px; transition: transform 600ms var(--ease); }
+.door:hover img { transform: scale(1.02); }
+.door strong { display: block; font-size: 22px; font-weight: 400; color: var(--ink); }
+.door span { display: block; font-size: 16px; color: var(--muted); }
+.doors:hover .door:not(:hover), .doors:focus-within .door:not(:focus) { opacity: 0.5; }
+
+/* what happens next: photographs down a diagonal */
+.next { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; padding: 200px var(--m) 160px; }
+.next h2 { grid-column: 7 / 13; grid-row: 1; font-size: var(--h2); align-self: start; }
+.stage { display: contents; }
+.next figure { margin: 0; }
+.s1 img { aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+.s1 figure { grid-column: 1 / 5; grid-row: 1 / 3; }
+.s1 p { grid-column: 6 / 10; grid-row: 2; align-self: start; }
+.s2 figure { grid-column: 6 / 9; grid-row: 3; margin-top: -140px; }
+.s2 img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+.s2 p { grid-column: 9 / 13; grid-row: 3; margin-top: -140px; padding-left: 24px; }
+.s3 figure { grid-column: 8 / 13; grid-row: 4; margin-top: 160px; }
+.s3 img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.s3 p { grid-column: 3 / 8; grid-row: 4; margin-top: 160px; padding-right: 24px; justify-self: end; }
+.next p { max-width: 36ch; font-size: 17px; padding-top: 48px; }
+.s2 p, .s3 p { padding-top: 0; }
+.next p b { display: block; font-weight: 600; font-size: 22px; margin-bottom: 6px; }
+
+/* your request: card on a photograph */
+.request { position: relative; min-height: 130svh; }
+.request__photo { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.request__photo video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55) saturate(0.8); }
+.card { position: absolute; top: 60px; left: var(--m); width: min(440px, calc(100% - 2 * var(--m))); padding: 32px; background: var(--surface); }
+.card h2 { font-size: 36px; margin-bottom: 20px; }
+.list { display: grid; grid-template-columns: auto 1fr; gap: 10px 20px; margin: 0 0 28px; font-size: 16px; }
+.list dt { color: var(--muted); }
+.list dd { margin: 0; font-weight: 600; }
+.more { display: grid; gap: 10px; }
+.more h3 { font-size: 22px; font-weight: 400; }
+.more label { font-size: 16px; color: var(--muted); }
+.more textarea { width: 100%; min-height: 120px; padding: 12px; background: var(--bg); color: var(--ink); border: 1px solid #3a4a7a; border-radius: 0; font: inherit; font-size: 16px; resize: vertical; }
+.more textarea:focus { outline: none; border-color: var(--ink); }
+.more .err { color: var(--error); font-size: 16px; min-height: 1em; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.card .button { width: 100%; }
+.sent { font-size: 18px; outline: none; }
+[hidden] { display: none !important; }
+
+/* the journey ahead: band of unequal panels */
+.ahead { padding: 200px 0 160px; }
+.ahead h2 { font-size: var(--h2); padding: 0 var(--m); margin: 0 0 16px; }
+.ahead__lead { margin: 0 0 64px; padding: 0 var(--m); max-width: 52ch; color: var(--muted); }
+.band, .band__text { display: flex; }
+.band { height: 68svh; }
+.band > *, .band__text > * { flex: var(--g) 1 0; min-width: 0; transition: flex-grow 500ms var(--ease); }
+.band figure { margin: 0; position: relative; overflow: hidden; }
+.band img { width: 100%; height: 100%; object-fit: cover; }
+.band__text { padding: 24px var(--m) 0; gap: 24px; }
+.band__text h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 6px; }
+.band__text p { font-size: 16px; color: var(--muted); max-width: 30ch; }
+@media (hover: hover) {
+  .ahead:has(.band [data-k="1"]:hover) [data-k="1"],
+  .ahead:has(.band [data-k="2"]:hover) [data-k="2"],
+  .ahead:has(.band [data-k="3"]:hover) [data-k="3"],
+  .ahead:has(.band [data-k="4"]:hover) [data-k="4"] { flex-grow: 6; }
+}
+
+/* footer: columns above, wordmark below */
+.foot { min-height: 72svh; display: grid; grid-template-rows: auto 1fr auto; padding: 40px var(--m) 24px; background: var(--ink); color: #14202f; }
+.foot a:hover { color: var(--blue); }
+.foot__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; font-size: 16px; }
+.foot__cols h2 { font: 600 16px/1.6 var(--font); letter-spacing: 0; }
+.foot__cols ul { list-style: none; margin: 0; padding: 0; color: #3a4556; }
+.foot__cols a { text-decoration: none; }
+.foot__word { width: 100%; height: auto; margin-bottom: 20px; fill: var(--blue); }
+.foot__legal { font-size: 13px; color: #3a4556; }
+
+/* motion */
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero [data-rise] { opacity: 0; transform: translateY(20px); animation: rise 900ms var(--ease) forwards; animation-delay: calc(var(--i, 0) * 90ms + 100ms); }
+  .js [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease), transform 900ms var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
+}
+@keyframes rise { to { opacity: 1; transform: none; } }
+
+@media (max-width: 760px) {
+  .hero { padding-top: 96px; gap: 32px; }
+  .hero h1 { font-size: 10vw; }
+  .doors { gap: 14px; }
+  .door, .door img { width: 168px; }
+  .door strong { font-size: 17px; }
+  .next { display: block; padding: 120px var(--m) 96px; }
+  .next h2 { margin-bottom: 40px; }
+  .next figure { margin: 0 0 16px !important; }
+  .s1 figure { width: 100%; }
+  .s2 figure { width: 62%; margin-left: auto !important; }
+  .s3 figure { width: 78%; }
+  .next p { padding: 0 !important; margin: 0 0 56px !important; }
+  .s2 p { margin-left: 38% !important; }
+  .request { min-height: 0; }
+  .request__photo { position: relative; height: 70svh; }
+  .card { position: relative; top: auto; left: auto; width: auto; margin: -80px var(--m) 0; padding: 24px; }
+  .ahead { padding: 120px 0 96px; }
+  .ahead h2, .ahead__lead { margin-left: 0; }
+  .band { height: 84svh; flex-wrap: wrap; }
+  .band > * { flex: 0 0 64%; height: 50%; }
+  .band > :nth-child(2), .band > :nth-child(3) { flex-basis: 36%; }
+  .band > :nth-child(3) { flex-basis: 36%; }
+  .band > :nth-child(4) { flex-basis: 64%; }
+  .band__text { flex-wrap: wrap; }
+  .band__text > * { flex: 1 1 40%; }
+  .foot__cols { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+  .foot { min-height: 0; row-gap: 12svh; }
+}
+</style>
+<script src="mock.js" defer></script>
+<script src="/thank-you.js" defer></script>
+</head>
+<body>
+<header class="bar">
+  <a class="logo" href="/" aria-label="Business Class Travel home">
+    <svg viewBox="0 0 48 60" width="27" height="34" aria-hidden="true"><defs><clipPath id="fin"><path d="M2 60L22 0h20l-9 60z"/></clipPath></defs><path d="M2 60L22 0h20l-9 60z" fill="#8FA8E0"/><g clip-path="url(#fin)"><rect y="20" width="48" height="5" fill="#08122f"/><rect y="29" width="48" height="2.5" fill="#fff"/></g></svg>
+    <span class="logo__word"><b>BusinessClass</b> Travel</span>
+  </a>
+  <a class="call" href="tel:+13052446463">305-244-6463</a>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="thanks-title">
+    <div class="hero__top">
+      <h1 id="thanks-title" tabindex="-1" data-rise style="--i:0">Thank You for Your Request</h1>
+      <p class="hero__lead" id="thanks-text" data-rise style="--i:1">A consultant is preparing Business Class fares for your journey. You will hear from us within 24 hours.</p>
+      <a class="button" href="tel:+13052446463" data-rise style="--i:2">Call 305-244-6463</a>
+    </div>
+    <nav class="doors" aria-label="On this page">
+      <a class="door" href="#request" data-rise style="--i:3">
+        <img src="https://images.unsplash.com/photo-1787909239840-d94e9e71c93c?w=560&h=747&fit=crop&auto=format&q=75" width="280" height="373" alt="Two cabin windows lit by daylight beside a dark business class seat">
+        <strong>Your request</strong><span>Check it, add anything we missed</span>
+      </a>
+      <a class="door" href="#ahead" data-rise style="--i:4">
+        <img src="https://images.unsplash.com/photo-1771694583915-78f9b39fd6d1?w=560&h=747&fit=crop&crop=left&auto=format&q=75" width="280" height="373" alt="Low sunlight through an aircraft window above the clouds">
+        <strong>The journey ahead</strong><span>Your seat, the lounge, the service</span>
+      </a>
+    </nav>
+  </section>
+
+  <section class="next" aria-labelledby="next-title">
+    <h2 id="next-title" data-reveal>What happens next</h2>
+    <div class="stage s1">
+      <figure data-reveal><img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=900&h=1200&fit=crop&auto=format&q=75" width="450" height="600" loading="lazy" alt="A quiet airport lounge with lit wall panels and grey armchairs"></figure>
+      <p data-reveal style="--i:1"><b>Within 24 hours</b>Your consultant replies with fares from our partner airlines, by email or phone, whichever you prefer.</p>
+    </div>
+    <div class="stage s2">
+      <figure data-reveal><img src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=800&h=800&fit=crop&auto=format&q=75" width="400" height="400" loading="lazy" alt="Travellers working at tables by a tall window at dusk"></figure>
+      <p data-reveal style="--i:1"><b>When you choose</b>Pick the fare you like and your consultant books your tickets for you. Nothing is booked until you confirm, and there are no booking fees.</p>
+    </div>
+    <div class="stage s3">
+      <figure data-reveal><img src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=1200&h=750&fit=crop&auto=format&q=75" width="600" height="375" loading="lazy" alt="A lounge with red armchairs beneath a domed window and ring lights"></figure>
+      <p data-reveal style="--i:1"><b>Until you land</b>Every ticket is issued directly by the airline, and the same consultant looks after you from your first quote to the moment you land.</p>
+    </div>
+  </section>
+
+  <section class="request" id="request" aria-labelledby="request-title">
+    <div class="request__photo"><video src="/img/clouds.webm" poster="/img/clouds-poster.webp" autoplay muted loop playsinline aria-hidden="true"></video></div>
+    <div class="card" data-reveal>
+      <h2 id="request-title">Your request</h2>
+      <div id="summary" hidden>
+        <dl class="list">
+          <dt>Route</dt><dd id="sum-route"></dd>
+          <dt>Dates</dt><dd id="sum-dates"></dd>
+          <dt>Cabin</dt><dd id="sum-cabin"></dd>
+          <dt>Passengers</dt><dd id="sum-pax"></dd>
+        </dl>
+      </div>
+      <div class="more" id="more" hidden>
+        <h3>Anything else we should know?</h3>
+        <label for="more-text">Preferred airlines, seat or meal requests, frequent flyer numbers, your budget or how flexible your dates are.</label>
+        <textarea id="more-text" rows="5" maxlength="2000"></textarea>
+        <span class="err" id="err-more" aria-live="polite"></span>
+        <button type="button" class="button" id="more-send">Send details</button>
+        <a class="link" href="/#quote">Plan another journey</a>
+      </div>
+      <p class="sent" id="more-sent" tabindex="-1" hidden>Thank you. We’ve added these details to your request.</p>
+      <p id="again" hidden><a class="link" href="/#quote">Plan another journey</a></p>
+    </div>
+  </section>
+
+  <section class="ahead" id="ahead" aria-labelledby="ahead-title">
+    <h2 id="ahead-title" data-reveal>The journey ahead</h2>
+    <p class="ahead__lead" data-reveal style="--i:1">What a Business Class fare buys you on most long-haul routes, from the lounge to the moment you land.</p>
+    <div class="band" data-reveal style="--i:2">
+      <figure style="--g:5" data-k="1"><img src="https://images.unsplash.com/photo-1787909239840-d94e9e71c93c?w=1100&h=1300&fit=crop&auto=format&q=75" width="1100" height="1300" loading="lazy" alt="Cabin windows beside a business class seat"></figure>
+      <figure style="--g:2" data-k="2"><img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=700&h=1300&fit=crop&auto=format&q=75" width="700" height="1300" loading="lazy" alt="Armchairs in an airport lounge"></figure>
+      <figure style="--g:3" data-k="3"><img src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=800&h=1300&fit=crop&auto=format&q=75" width="800" height="1300" loading="lazy" alt="Red armchairs in an airline lounge"></figure>
+      <figure style="--g:2" data-k="4"><img src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=700&h=1300&fit=crop&auto=format&q=75" width="700" height="1300" loading="lazy" alt="Tables by a window at dusk"></figure>
+    </div>
+    <div class="band__text">
+      <div style="--g:5" data-k="1" data-reveal><h3>A bed, not a seat</h3><p>A seat that turns into a fully flat bed, with a window and room to work.</p></div>
+      <div style="--g:2;--i:1" data-k="2" data-reveal><h3>The lounge</h3><p>Somewhere quiet before you board.</p></div>
+      <div style="--g:3" data-k="3" data-reveal><h3>Your bags</h3><p>A full Business Class baggage allowance.</p></div>
+      <div style="--g:2" data-k="4" data-reveal><h3>Dining</h3><p>Meals served at your seat.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__cols">
+    <div><h2>Business Class Travel</h2><ul><li>101 6th Ave, 9th Floor</li><li>New York, NY 10013</li></ul></div>
+    <div><h2>Contact</h2><ul><li><a href="tel:+13052446463">305-244-6463</a></li><li><a href="/#enquire">Send a message</a></li></ul></div>
+    <div><h2>Site</h2><ul><li><a href="/#deals">Fare offers</a></li><li><a href="/#corporate">Corporate travel</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/accessibility">Accessibility</a></li></ul></div>
+    <div><h2>Photographs</h2><ul><li>On <a href="https://unsplash.com/?utm_source=business_class_travel&amp;utm_medium=referral">Unsplash</a> by <a href="https://unsplash.com/@sergiofranklin">Sergio Franklin</a>, <a href="https://unsplash.com/@abduzeedo">Fabio Sasso</a>, <a href="https://unsplash.com/@marklchaves">mark chaves</a>, <a href="https://unsplash.com/@kenji4861">Kenjiro Yagi</a> and <a href="https://unsplash.com/@turuturu">kai muro</a></li></ul></div>
+  </div>
+  <div></div>
+  <div>
+    <svg class="foot__word" viewBox="0 0 1000 96" role="img" aria-label="Business Class Travel"><text x="0" y="80" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="100" letter-spacing="-3"><tspan font-weight="700">BusinessClass</tspan><tspan font-weight="300"> Travel</tspan></text></svg>
+    <p class="foot__legal">© 2026 Business Class Travel. Fares are per person in US dollars and subject to availability.</p>
+  </div>
+</footer>
+</body>
+</html>

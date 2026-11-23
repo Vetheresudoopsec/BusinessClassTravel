@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank You — Business Class Travel</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0f2a78">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root {
+  --bg: #ffffff; --ink: #14202f; --muted: #4a5466; --blue: #0f2a78; --blue-hover: #1b3c9e; --blue-soft: #8fa8e0; --surface: #eef2f9; --error: #b3261e;
+  --t1: #0f2a78; --t2: #2a4a9e; --t3: #c9d6f0;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  --m: clamp(20px, 1.8vw, 28px);
+  --gap: 24px;
+  --h2: clamp(34px, 4vw, 60px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 18px/1.55 var(--font); -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; text-underline-offset: 0.2em; transition: color 180ms ease; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-family: var(--display); letter-spacing: -0.03em; line-height: 1; font-weight: 600; }
+p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p, dd { text-wrap: pretty; }
+[hidden] { display: none !important; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding: 0 var(--m); }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border: 0; border-radius: 0; background: var(--blue); color: #fff; font: 600 16px/1 var(--font); text-decoration: none; cursor: pointer; transition: transform 140ms var(--ease), background-color 180ms ease, color 180ms ease; }
+.button:hover { background: var(--blue-hover); }
+.button:active { transform: scale(0.97); }
+.button--light { background: #fff; color: var(--blue); }
+.button--light:hover { background: var(--surface); }
+
+/* hero: the words under a photograph */
+.hero { min-height: 100svh; display: grid; grid-template-rows: 58svh 1fr; background: var(--blue); color: #fff; overflow: hidden; }
+.hero__photo { position: relative; overflow: hidden; }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.bar { position: absolute; inset: 0 0 auto; display: flex; justify-content: space-between; align-items: flex-start; padding: 24px var(--m); z-index: 2; }
+.logo { display: inline-flex; flex-direction: column; color: var(--blue); text-decoration: none; }
+.logo__row { display: flex; align-items: flex-end; gap: 8px; padding-left: 12px; }
+.logo__word { font-size: 19px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; padding-bottom: 5px; }
+.logo__word b { font-weight: 700; }
+.logo__line { display: block; height: 2px; background: var(--blue); }
+.bar nav { display: flex; gap: 24px; font-size: 16px; color: var(--ink); }
+.bar nav a { text-decoration: none; }
+.bar nav a:hover { color: var(--blue); }
+.hero__band { display: grid; grid-template-rows: auto 1fr; padding: 24px var(--m) 0; }
+.hero__row { display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.hero__row p { max-width: 46ch; color: #e6ecf8; font-size: 18px; }
+.hero h1 { align-self: end; font-size: clamp(96px, 20.5vw, 330px); font-weight: 700; letter-spacing: -0.055em; line-height: 0.8; white-space: nowrap; margin: 0 0 0 -0.04em; padding-bottom: 0.02em; transform-origin: 50% 100%; outline: none; }
+
+/* your request */
+.request { padding-top: 200px; padding-bottom: 40px; row-gap: 40px; align-items: start; }
+.request__head { grid-column: 1 / 6; display: grid; gap: 28px; }
+.request h2 { font-size: var(--h2); }
+.route { font-size: clamp(34px, 4vw, 60px); font-weight: 300; letter-spacing: -0.03em; line-height: 1; color: var(--blue); }
+.list { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px 20px; margin: 0; }
+.list dt { color: var(--muted); }
+.list dd { margin: 0; font-weight: 600; }
+.request__form { grid-column: 7 / 13; }
+.more { display: grid; gap: 12px; padding: 36px; background: var(--surface); }
+.more h3 { font-size: 26px; letter-spacing: -0.015em; }
+.more label { color: var(--muted); }
+.more textarea { width: 100%; min-height: 140px; padding: 12px 14px; border: 1px solid #c7d0e0; border-radius: 0; background: #fff; font: inherit; color: var(--ink); resize: vertical; }
+.more textarea:focus { outline: none; border-color: var(--blue); }
+.more .err { color: var(--error); min-height: 1em; }
+.actions { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
+.sent { font-size: 26px; font-weight: 600; outline: none; }
+
+/* what happens next: accordion of tinted panels */
+.next { padding-top: 200px; row-gap: 64px; }
+.next h2 { grid-column: 1 / 6; font-size: var(--h2); }
+.next__lead { grid-column: 7 / 12; align-self: end; }
+.acc { grid-column: 1 / 13; display: flex; height: 540px; }
+.pane { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; background: var(--c); color: var(--fg, #fff); transition: flex-grow 450ms var(--ease); }
+.pane.is-open { flex-grow: 5; }
+.pane button { position: absolute; inset: 0; width: 100%; border: 0; background: none; color: inherit; cursor: pointer; text-align: left; font: inherit; padding: 0; }
+.pane button span { position: absolute; left: 28px; bottom: 28px; font: 600 18px/1 var(--display); letter-spacing: -0.01em; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; transition: opacity 200ms ease; }
+.pane.is-open button { pointer-events: none; }
+.pane.is-open button span { opacity: 0; }
+.pane__body { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; opacity: 0; visibility: hidden; transition: opacity 300ms ease 150ms; }
+.pane.is-open .pane__body { opacity: 1; visibility: visible; }
+.pane__text { display: flex; flex-direction: column; justify-content: space-between; padding: 32px; }
+.pane__text h3 { font-size: 40px; letter-spacing: -0.025em; }
+.pane__text p { max-width: 34ch; }
+.pane__body img, .pane__body video { width: 100%; height: 100%; object-fit: cover; }
+
+/* the journey ahead: square plate, spare text */
+.ahead { margin-top: 200px; display: grid; grid-template-columns: 1fr 1fr; min-height: 88svh; background: var(--surface); }
+.plate { padding: 40px; display: grid; place-items: center; }
+.plate figure { margin: 0; width: 100%; aspect-ratio: 1; position: relative; overflow: hidden; }
+.plate img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity 600ms ease, transform 1200ms var(--ease); }
+.plate img.on { opacity: 1; transform: none; }
+.ahead__side { padding: 40px 40px 40px 0; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; }
+.ahead__side h2 { font-size: var(--h2); }
+.tabs { display: flex; gap: 28px; margin-top: 28px; }
+.tabs button { border: 0; background: none; padding: 6px 0; font: 500 18px/1.4 var(--font); color: var(--muted); cursor: pointer; transition: color 180ms ease; }
+.tabs button:hover { color: var(--ink); }
+.tabs button[aria-selected="true"] { color: var(--blue); font-weight: 700; }
+.ahead__copy h3 { font-size: 40px; letter-spacing: -0.025em; }
+.ahead__copy p { max-width: 34ch; margin-top: 24px; }
+.cells { display: grid; grid-template-columns: 1fr 1fr; }
+.cells a { display: flex; align-items: center; padding: 0 24px; min-height: 72px; font-weight: 600; text-decoration: none; transition: background-color 180ms ease; }
+.cells a:first-child { background: var(--ink); color: #fff; }
+.cells a:first-child:hover { background: var(--blue); }
+.cells a:last-child { background: #dde4f2; color: var(--ink); }
+.cells a:last-child:hover { background: #cfd8ec; }
+
+/* call: the number as display type */
+.call { min-height: 84svh; display: grid; grid-template-rows: auto 1fr auto auto; padding: 40px var(--m) 32px; background: var(--blue); color: #fff; }
+.call h2 { font-size: clamp(26px, 2.8vw, 40px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; max-width: 17em; }
+.call__num { align-self: end; display: block; color: #fff; text-decoration: none; margin-bottom: 9vh; transition: color 250ms ease; }
+.call__num svg { display: block; width: 100%; height: auto; fill: currentColor; }
+.call__num:hover { color: var(--blue-soft); }
+.call__foot { display: flex; justify-content: space-between; gap: 24px; font-size: 16px; }
+
+/* footer */
+.foot { min-height: 70svh; display: grid; grid-template-rows: auto 1fr auto; padding: 40px var(--m) 24px; background: var(--ink); color: #fff; }
+.foot__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); font-size: 16px; }
+.foot__cols h2 { font: 600 16px/1.6 var(--font); letter-spacing: 0; }
+.foot__cols ul { list-style: none; margin: 0; padding: 0; color: #c7d0e0; }
+.foot__cols a { text-decoration: none; }
+.foot a:hover { color: var(--blue-soft); }
+.foot__word { width: 100%; height: auto; fill: #fff; margin: 48px 0 20px; }
+.foot__legal { font-size: 13px; color: #c7d0e0; }
+
+/* motion */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-rise] { opacity: 0; transform: translateY(24px); animation: rise 1000ms var(--ease) forwards; animation-delay: calc(var(--i, 0) * 90ms + 80ms); }
+  .js .hero h1[data-rise] { transform: translateY(40%); animation-duration: 1200ms; }
+  .js [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity 700ms var(--ease), transform 900ms var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
+  .hero__photo img { animation: settle 2400ms var(--ease) both; }
+  @supports (animation-timeline: scroll()) {
+    .hero h1 { animation: rise 1200ms var(--ease) 80ms both, sink linear both; animation-timeline: auto, scroll(); animation-range: normal, 0 100svh; }
+  }
+}
+@keyframes rise { to { opacity: 1; transform: none; } }
+@keyframes settle { from { transform: scale(1.08); } to { transform: none; } }
+@keyframes sink { from { scale: 1; } to { scale: 0.93; } }
+
+@media (max-width: 900px) {
+  .grid > * { grid-column: 1 / -1 !important; }
+  .hero { grid-template-rows: 50svh 1fr; }
+  .bar nav a:not(.keep) { display: none; }
+  .hero__row { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .hero__row p { font-size: 18px; }
+  .hero h1 { font-size: 21.5vw; padding-top: 24px; }
+  .request { padding-top: 112px; }
+  .more { padding: 24px 20px; }
+  .next { padding-top: 112px; row-gap: 28px; }
+  .acc { flex-direction: column; height: auto; }
+  .pane { flex: none; min-height: 64px; }
+  .pane button span { writing-mode: horizontal-tb; transform: none; left: 20px; top: 21px; bottom: auto; font-size: 18px; }
+  .pane__body { position: relative; inset: auto; display: none; grid-template-columns: 1fr; }
+  .pane.is-open .pane__body { display: grid; }
+  .pane__text { gap: 16px; padding: 24px 20px; }
+  .pane__text h3 { font-size: 28px; }
+  .pane__body img, .pane__body video { height: 56vw; }
+  .ahead { margin-top: 112px; grid-template-columns: 1fr; }
+  .plate { padding: 16px; }
+  .ahead__side { padding: 8px 16px 16px; }
+  .ahead__copy h3 { font-size: 28px; }
+  .cells { grid-template-columns: 1fr; }
+  .cells a { min-height: 60px; }
+  .call { min-height: 56svh; }
+  .call__num { margin-bottom: 6vh; }
+  .call__foot { flex-direction: column; gap: 12px; }
+  .foot__cols { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+}
+</style>
+<script src="mock.js" defer></script>
+<script src="/thank-you.js" defer></script>
+</head>
+<body>
+<main>
+  <section class="hero" aria-labelledby="thanks-word">
+    <div class="hero__photo">
+      <header class="bar">
+        <a class="logo" href="/" aria-label="Business Class Travel home">
+          <span class="logo__row">
+            <svg viewBox="0 0 48 60" width="27" height="34" aria-hidden="true"><defs><clipPath id="fin"><path d="M2 60L22 0h20l-9 60z"/></clipPath></defs><path d="M2 60L22 0h20l-9 60z" fill="#0F2A78"/><g clip-path="url(#fin)"><rect y="20" width="48" height="5" fill="#fff"/><rect y="29" width="48" height="2.5" fill="#8FA8E0"/></g></svg>
+            <span class="logo__word"><b>BusinessClass</b> Travel</span>
+          </span>
+          <span class="logo__line" aria-hidden="true"></span>
+        </a>
+        <nav aria-label="On this page"><a href="#request">Your request</a><a href="#next">What happens next</a><a href="#ahead">The journey</a><a class="keep" href="tel:+13052446463">305-244-6463</a></nav>
+      </header>
+      <img src="https://images.unsplash.com/photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&fit=crop&auto=format&q=75" width="2400" height="1300" alt="A quiet airport lounge with lit wall panels, grey armchairs and low tables">
+    </div>
+    <div class="hero__band">
+      <div class="hero__row">
+        <p id="thanks-text" data-rise style="--i:1">A consultant is preparing Business Class fares for your journey. You will hear from us within 24 hours.</p>
+        <a class="button button--light" href="tel:+13052446463" data-rise style="--i:2">Call 305-244-6463</a>
+      </div>
+      <h1 id="thanks-word" tabindex="-1" data-rise style="--i:0">Thank you</h1>
+      <span id="thanks-title" hidden></span>
+    </div>
+  </section>
+
+  <section class="request grid" id="request" aria-labelledby="request-title">
+    <div class="request__head">
+      <h2 id="request-title" data-reveal>Your request</h2>
+      <p class="route" data-reveal style="--i:1" aria-hidden="true"><span data-from>JFK</span> to <span data-to>LHR</span></p>
+      <div id="summary" hidden data-reveal style="--i:2">
+        <dl class="list">
+          <dt>Route</dt><dd id="sum-route"></dd>
+          <dt>Dates</dt><dd id="sum-dates"></dd>
+          <dt>Cabin</dt><dd id="sum-cabin"></dd>
+          <dt>Passengers</dt><dd id="sum-pax"></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="request__form" data-reveal style="--i:2">
+      <div class="more" id="more" hidden>
+        <h3>Anything else we should know?</h3>
+        <label for="more-text">Preferred airlines, seat or meal requests, frequent flyer numbers, your budget or how flexible your dates are.</label>
+        <textarea id="more-text" rows="5" maxlength="2000"></textarea>
+        <span class="err" id="err-more" aria-live="polite"></span>
+        <div class="actions">
+          <button type="button" class="button" id="more-send">Send details</button>
+          <a href="/#quote">Plan another journey</a>
+        </div>
+      </div>
+      <p class="sent" id="more-sent" tabindex="-1" hidden>Thank you. We’ve added these details to your request.</p>
+      <p id="again" hidden><a class="button" href="/#quote">Plan another journey</a></p>
+    </div>
+  </section>
+
+  <section class="next grid" id="next" aria-labelledby="next-title">
+    <h2 id="next-title" data-reveal>What happens next</h2>
+    <p class="next__lead" data-reveal style="--i:1">One consultant looks after you from this request to the moment you land. Nothing is booked until you say so.</p>
+    <div class="acc" data-reveal style="--i:2">
+      <div class="pane is-open" style="--c:var(--t1)">
+        <button type="button" aria-expanded="true" aria-controls="p1"><span>Within 24 hours</span></button>
+        <div class="pane__body" id="p1">
+          <div class="pane__text"><h3>Within 24 hours</h3><p>Your consultant replies with fares from our partner airlines, by email or phone, whichever you prefer.</p></div>
+          <img src="https://images.unsplash.com/photo-1773738214145-60c47b5f317d?w=900&h=1080&fit=crop&auto=format&q=75" width="900" height="1080" loading="lazy" alt="Travellers working at tables by a tall window at dusk">
+        </div>
+      </div>
+      <div class="pane" style="--c:var(--t2)">
+        <button type="button" aria-expanded="false" aria-controls="p2"><span>When you choose</span></button>
+        <div class="pane__body" id="p2">
+          <div class="pane__text"><h3>When you choose</h3><p>Pick the fare you like and your consultant books your tickets for you. There are no booking fees.</p></div>
+          <img src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=900&h=1080&fit=crop&auto=format&q=75" width="900" height="1080" loading="lazy" alt="Red armchairs in a lounge beneath a domed window">
+        </div>
+      </div>
+      <div class="pane" style="--c:var(--t3);--fg:var(--ink)">
+        <button type="button" aria-expanded="false" aria-controls="p3"><span>Until you land</span></button>
+        <div class="pane__body" id="p3">
+          <div class="pane__text"><h3>Until you land</h3><p>Every ticket is issued directly by the airline, and the same consultant looks after you until you land.</p></div>
+          <video src="/img/clouds.webm" poster="/img/clouds-poster.webp" autoplay muted loop playsinline aria-hidden="true"></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ahead" id="ahead" aria-labelledby="ahead-title">
+    <div class="plate" data-reveal>
+      <figure>
+        <img class="on" data-tab="seat" src="https://images.unsplash.com/photo-1787909239840-d94e9e71c93c?w=1200&h=1200&fit=crop&auto=format&q=75" width="1200" height="1200" alt="Cabin windows beside a business class seat">
+        <img data-tab="lounge" src="https://images.unsplash.com/photo-1692405245790-a9aba01a4fc3?w=1200&h=1200&fit=crop&auto=format&q=75" width="1200" height="1200" loading="lazy" alt="Red armchairs in an airline lounge">
+        <img data-tab="window" src="https://images.unsplash.com/photo-1771694583915-78f9b39fd6d1?w=1200&h=1200&fit=crop&auto=format&q=75" width="1200" height="1200" loading="lazy" alt="Low sunlight through an aircraft window">
+      </figure>
+    </div>
+    <div class="ahead__side">
+      <div data-reveal style="--i:1">
+        <h2 id="ahead-title">The journey ahead</h2>
+        <div class="tabs" role="tablist" aria-label="The journey ahead">
+          <button type="button" role="tab" aria-selected="true" data-tab="seat">The seat</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="lounge">The lounge</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="window">The service</button>
+        </div>
+      </div>
+      <div class="ahead__copy" data-reveal style="--i:2" aria-live="polite">
+        <h3 id="ahead-h">A bed, not a seat</h3>
+        <p id="ahead-p">On most long-haul routes your seat turns into a fully flat bed, with a window, a table and room to work.</p>
+      </div>
+      <div class="cells" data-reveal style="--i:3">
+        <a href="tel:+13052446463">Call 305-244-6463</a>
+        <a href="/#quote">Plan another journey</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="call" aria-labelledby="call-title">
+    <h2 id="call-title" data-reveal>Questions? Your consultant is one call away.</h2>
+    <div></div>
+    <a class="call__num" href="tel:+13052446463" data-reveal style="--i:1" aria-label="Call 305-244-6463"><svg viewBox="0 0 1000 150" aria-hidden="true"><text x="0" y="128" textLength="970" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="168" font-weight="300">305-244-6463</text></svg></a>
+    <div class="call__foot"><span>101 6th Ave, 9th Floor, New York</span><a href="https://wa.me/13052446463">Message us on WhatsApp</a></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__cols">
+    <div><h2>Business Class Travel</h2><ul><li>101 6th Ave, 9th Floor</li><li>New York, NY 10013</li></ul></div>
+    <div><h2>Contact</h2><ul><li><a href="tel:+13052446463">305-244-6463</a></li><li><a href="https://wa.me/13052446463">WhatsApp</a></li></ul></div>
+    <div><h2>Site</h2><ul><li><a href="/#deals">Fare offers</a></li><li><a href="/#corporate">Corporate travel</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/accessibility">Accessibility</a></li></ul></div>
+    <div><h2>Photographs</h2><ul><li>On <a href="https://unsplash.com/?utm_source=business_class_travel&amp;utm_medium=referral">Unsplash</a> by <a href="https://unsplash.com/@marklchaves">mark chaves</a>, <a href="https://unsplash.com/@sergiofranklin">Sergio Franklin</a>, <a href="https://unsplash.com/@abduzeedo">Fabio Sasso</a>, <a href="https://unsplash.com/@kenji4861">Kenjiro Yagi</a> and <a href="https://unsplash.com/@turuturu">kai muro</a></li></ul></div>
+  </div>
+  <div></div>
+  <div>
+    <svg class="foot__word" viewBox="0 0 1000 96" role="img" aria-label="Business Class Travel"><text x="0" y="80" textLength="1000" lengthAdjust="spacingAndGlyphs" font-family="-apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif" font-size="100" letter-spacing="-3"><tspan font-weight="700">BusinessClass</tspan><tspan font-weight="300"> Travel</tspan></text></svg>
+    <p class="foot__legal">© 2026 Business Class Travel. Fares are per person in US dollars and subject to availability.</p>
+  </div>
+</footer>
+<script>
+(() => {
+  // Accordion: one stage open at a time.
+  const panes = [...document.querySelectorAll('.pane')];
+  panes.forEach((p) => p.querySelector('button').addEventListener('click', () => {
+    panes.forEach((q) => { q.classList.toggle('is-open', q === p); q.querySelector('button').setAttribute('aria-expanded', q === p); });
+  }));
+  // Journey tabs: swap the plate and its words.
+  const copy = {
+    seat: ['A bed, not a seat', 'On most long-haul routes your seat turns into a fully flat bed, with a window, a table and room to work.'],
+    lounge: ['The lounge first', 'Lounge access before you board: somewhere quiet to eat, work or rest while the airport rushes past.'],
+    window: ['Looked after', 'Meals served at your seat, a full Business Class baggage allowance, and one consultant to call if plans change.'],
+  };
+  const tabs = [...document.querySelectorAll('.tabs button')], imgs = [...document.querySelectorAll('.plate img')];
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    const k = t.dataset.tab;
+    tabs.forEach((b) => b.setAttribute('aria-selected', b === t));
+    imgs.forEach((i) => i.classList.toggle('on', i.dataset.tab === k));
+    document.getElementById('ahead-h').textContent = copy[k][0];
+    document.getElementById('ahead-p').textContent = copy[k][1];
+  }));
+})();
+</script>
+</body>
+</html>

@@ -51,3 +51,30 @@
     }
   });
 })();
+
+// Page motion and the "What happens next" steps (run whether or not a request is saved).
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video[autoplay]').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+
+  // Reveal each block once as it enters the screen; never leaves content hidden.
+  const targets = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window)) targets.forEach((el) => el.classList.add('is-in'));
+  else {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    targets.forEach((el) => io.observe(el));
+    addEventListener('load', () => setTimeout(() => targets.forEach((el) => {
+      const r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('is-in');
+    }), 2500));
+  }
+
+  // One step open at a time: hover on desktop, click or tap anywhere.
+  const panes = [...document.querySelectorAll('.pane')];
+  const open = (p) => panes.forEach((q) => { q.classList.toggle('is-open', q === p); q.querySelector('button').setAttribute('aria-expanded', q === p); });
+  const canHover = matchMedia('(hover: hover) and (min-width: 901px)');
+  panes.forEach((p) => {
+    p.querySelector('button').addEventListener('click', () => open(p));
+    p.addEventListener('mouseenter', () => { if (canHover.matches) open(p); });
+  });
+})();

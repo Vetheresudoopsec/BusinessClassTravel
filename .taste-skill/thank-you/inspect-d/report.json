@@ -1,0 +1,1741 @@
+{
+ "url": "http://localhost:8765/.taste-skill/thank-you/d.html",
+ "at": "2026-11-23T05:48:29.480Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.61,
+    0.79,
+    0.64,
+    0.8,
+    1
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 4,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4135,
+     "screens": 4.6,
+     "words": 215,
+     "img": 4,
+     "video": 1,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 57.6,
+     "vw": 4,
+     "font": "-apple-system",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.56,
+     "top": 665,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 57.6,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.56,
+      "top": 665,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.26,
+      "top": 992,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 2270,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 2424,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions before your fares arrive?",
+      "words": 5,
+      "chars": 35,
+      "lines": 2,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3252,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "305-244-6463",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.19,
+      "top": 3263,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      24,
+      40,
+      58
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "text": "Thank You for Your Request, Jordan"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefeff",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fefeff",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3f2f3",
+       "top": 2392,
+       "hsl": {
+        "h": 300,
+        "s": 0.04,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#efeeee",
+       "top": 3132,
+       "hsl": {
+        "h": 0,
+        "s": 0.03,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 3487,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15212f",
+       "share": 0.44
+      },
+      {
+       "color": "#4b5566",
+       "share": 0.43
+      },
+      {
+       "color": "#fefeff",
+       "share": 0.12
+      },
+      {
+       "color": "#0f2a78",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0f2a78",
+      "hsl": {
+       "h": 225,
+       "s": 0.78,
+       "l": 0.26
+      },
+      "fg": "#fefeff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.62
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4135,
+    "margins": {
+     "left": 26,
+     "right": 26
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 37,
+      "media": 1,
+      "middle": 505,
+      "heading": null,
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 26,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request",
+      "tag": "section",
+      "top": 900,
+      "height": 1170,
+      "words": 55,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 58,
+      "right": 1006,
+      "textLeft": 58,
+      "textRight": 1018,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": true
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 2070,
+      "height": 862,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 166,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call.grid",
+      "tag": "section",
+      "top": 3132,
+      "height": 355,
+      "words": 17,
+      "media": 0,
+      "middle": 424,
+      "heading": {
+       "text": "Questions before your fares arrive?",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 98,
+      "textLeft": 26,
+      "textRight": 98,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 3487,
+      "height": 648,
+      "words": 42,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 351,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 2932,
+      "height": 312
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 58,
+      "top": 665,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 58,
+      "n": 4
+     },
+     {
+      "x": 26,
+      "n": 3
+     },
+     {
+      "x": 732,
+      "n": 1
+     },
+     {
+      "x": 967,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 480,
+     "y": 600,
+     "w": 480,
+     "h": 300
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.82,
+    0.59,
+    0.63,
+    0.93,
+    1
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 4,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 4274,
+     "screens": 4.2,
+     "words": 210,
+     "img": 4,
+     "video": 1,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 73.7,
+     "vw": 9.6,
+     "font": "-apple-system",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.95,
+     "top": 503,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 73.7,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 73.7,
+      "vw": 9.6,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 503,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 1513,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2239,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2408,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions before your fares arrive?",
+      "words": 5,
+      "chars": 35,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 3310,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "305-244-6463",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 3376,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 6,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      24,
+      28,
+      34,
+      40,
+      74
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 81,
+     "max": {
+      "size": 73.7,
+      "vw": 9.6,
+      "font": "-apple-system",
+      "text": "Thank You for Your Request, Jordan"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefeff",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fefeff",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3f2f3",
+       "top": 2384,
+       "hsl": {
+        "h": 300,
+        "s": 0.04,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#efeeee",
+       "top": 3230,
+       "hsl": {
+        "h": 0,
+        "s": 0.03,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 3541,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15212f",
+       "share": 0.45
+      },
+      {
+       "color": "#4b5566",
+       "share": 0.45
+      },
+      {
+       "color": "#fefeff",
+       "share": 0.1
+      },
+      {
+       "color": "#0f2a78",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0f2a78",
+      "hsl": {
+       "h": 225,
+       "s": 0.78,
+       "l": 0.26
+      },
+      "fg": "#fefeff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.46
+     },
+     {
+      "type": "video",
+      "ratio": 0.17
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 4274,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 852,
+      "words": 32,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Thank You for Your Request, Jordan",
+       "size": 74,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request",
+      "tag": "section",
+      "top": 852,
+      "height": 1274,
+      "words": 55,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 44,
+      "right": 44,
+      "textLeft": 44,
+      "textRight": 56,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 2127,
+      "height": 992,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 77,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call.grid",
+      "tag": "section",
+      "top": 3230,
+      "height": 311,
+      "words": 17,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions before your fares arrive?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 256,
+      "textLeft": 20,
+      "textRight": 256,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 3541,
+      "height": 732,
+      "words": 42,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 74,
+      "top": 503,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 5
+     },
+     {
+      "x": 40,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.8,
+    0.73,
+    0.52,
+    0.84,
+    1
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 4,
+    "transitions": 6,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3960,
+     "screens": 4.7,
+     "words": 210,
+     "img": 4,
+     "video": 1,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 1,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "chars": 34,
+     "lines": 2,
+     "size": 37.4,
+     "vw": 9.6,
+     "font": "-apple-system",
+     "weight": 500,
+     "tracking": -0.03,
+     "leading": 1.04,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 420,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank You for Your Request, Jordan",
+     "words": 6,
+     "lines": 2,
+     "size": 37.4,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "words": 6,
+      "chars": 34,
+      "lines": 2,
+      "size": 37.4,
+      "vw": 9.6,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.04,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 420,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1257,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Anything else we should know?",
+      "words": 5,
+      "chars": 29,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "-apple-system",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1523,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2081,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 2278,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions before your fares arrive?",
+      "words": 5,
+      "chars": 35,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2968,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "305-244-6463",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 3068,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 7,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      24,
+      28,
+      34,
+      37,
+      40
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 40,
+      "vw": 10.3,
+      "font": "-apple-system",
+      "text": "Your request"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefeff",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#fefeff",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 1,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f3f2f3",
+       "top": 2254,
+       "hsl": {
+        "h": 300,
+        "s": 0.04,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#efeeee",
+       "top": 2888,
+       "hsl": {
+        "h": 0,
+        "s": 0.03,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 3261,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15212f",
+       "share": 0.45
+      },
+      {
+       "color": "#4b5566",
+       "share": 0.45
+      },
+      {
+       "color": "#fefeff",
+       "share": 0.1
+      },
+      {
+       "color": "#0f2a78",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#0f2a78",
+      "hsl": {
+       "h": 225,
+       "s": 0.78,
+       "l": 0.26
+      },
+      "fg": "#fefeff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 2,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.46
+     },
+     {
+      "type": "video",
+      "ratio": 0.14
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3960,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 722,
+      "words": 32,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Thank You for Your Request, Jordan",
+       "size": 37,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request",
+      "tag": "section",
+      "top": 722,
+      "height": 1247,
+      "words": 55,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 44,
+      "right": 44,
+      "textLeft": 44,
+      "textRight": 53,
+      "fullBleed": true,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 1969,
+      "height": 808,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call.grid",
+      "tag": "section",
+      "top": 2888,
+      "height": 373,
+      "words": 17,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions before your fares arrive?",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 91,
+      "textLeft": 20,
+      "textRight": 91,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 3261,
+      "height": 699,
+      "words": 42,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Thank You for Your Request, Jordan",
+      "size": 37,
+      "top": 420,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 5
+     },
+     {
+      "x": 40,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 9,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 3 picture(s) on the page (3 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Stack Sans Headline and Stack Sans Text, but the page renders -apple-system.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 10 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/desktop-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/desktop-page-01.jpg",
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/tablet-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/mobile-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-d/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

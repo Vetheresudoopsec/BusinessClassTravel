@@ -1,0 +1,62 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/b.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.821Z",
+        "reason": "Claude: inactive frames of the hero crossfade, shown in turn by script"
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/c.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.838Z",
+        "reason": "Claude: inactive frames of the Seat/Lounge/Service tab plate, shown on tab click"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/b.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.852Z",
+        "reason": "Claude: regular zigzag ticket-stub edge dealt by the itinerary-on-a-slip blueprint; geometric, not organic"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/b.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.867Z",
+        "reason": "Claude: slip end row is vertically centred in a 44px min-height bar; static scan cannot see it, render verified"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/c.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.881Z",
+        "reason": "Claude: full-bleed hero photo and accordion image halves are edge-to-edge by design; text blocks carry 20-32px padding, render verified"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/c.html"
+        ],
+        "createdAt": "2026-11-23T05:25:21.896Z",
+        "reason": "Claude: ink nav links render over the light top of the hero photo, not the blue band; static scan pairs them with the section background"
+      }
+    ]
+  }
+}

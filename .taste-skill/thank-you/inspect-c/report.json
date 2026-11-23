@@ -1,0 +1,1938 @@
+{
+ "url": "http://localhost:8765/.taste-skill/thank-you/c.html",
+ "at": "2026-11-23T05:26:16.962Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.99,
+    0.33,
+    0.71,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 17,
+    "css": 4,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4817,
+     "screens": 5.4,
+     "words": 261,
+     "img": 6,
+     "video": 1,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi",
+      "photo-1787909239840-d94e9e71c93c?w=1200&h=1200&f",
+      "photo-1692405245790-a9aba01a4fc3?w=1200&h=1200&f",
+      "photo-1771694583915-78f9b39fd6d1?w=1200&h=1200&f"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank you",
+     "words": 2,
+     "chars": 9,
+     "lines": 1,
+     "size": 295.2,
+     "vw": 20.5,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.97,
+     "top": 658,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank you",
+     "words": 2,
+     "lines": 1,
+     "size": 295.2,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank you",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 295.2,
+      "vw": 20.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 658,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 1100,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JFK to LHR",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 300,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 1186,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 1777,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1931,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 57.6,
+      "vw": 4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.47,
+      "top": 2679,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A bed, not a seat",
+      "words": 5,
+      "chars": 17,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.47,
+      "top": 2986,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Your consultant is one call away.",
+      "words": 7,
+      "chars": 44,
+      "lines": 2,
+      "size": 40,
+      "vw": 2.8,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 3471,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      26,
+      40,
+      58,
+      295
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.9
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 295.2,
+      "vw": 20.5,
+      "font": "-apple-system",
+      "text": "Thank you"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f2a78",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.78,
+        "l": 0.26
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 2639,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#15202e",
+       "top": 4187,
+       "hsl": {
+        "h": 214,
+        "s": 0.37,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15202e",
+       "share": 0.34
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.22
+      },
+      {
+       "color": "#c7d0e0",
+       "share": 0.21
+      },
+      {
+       "color": "#4a5466",
+       "share": 0.11
+      },
+      {
+       "color": "#e7ecf9",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#fefffe",
+      "hsl": {
+       "h": 120,
+       "s": 1,
+       "l": 1
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.58
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4817,
+    "margins": {
+     "left": 26,
+     "right": 26
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 33,
+      "media": 1,
+      "middle": 383,
+      "heading": null,
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 26,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 900,
+      "height": 677,
+      "words": 58,
+      "media": 0,
+      "middle": 210,
+      "heading": {
+       "text": "Your request",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 62,
+      "textLeft": 26,
+      "textRight": 116,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 1577,
+      "height": 862,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 166,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#ahead.ahead",
+      "tag": "section",
+      "top": 2639,
+      "height": 792,
+      "words": 38,
+      "media": 1,
+      "middle": 40,
+      "heading": {
+       "text": "The journey ahead",
+       "size": 58,
+       "tag": "h2"
+      },
+      "left": 40,
+      "right": 183,
+      "textLeft": 720,
+      "textRight": 183,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call",
+      "tag": "section",
+      "top": 3431,
+      "height": 756,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Questions? Your consultant is one call away.",
+       "size": 40,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 4187,
+      "height": 630,
+      "words": 57,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 54,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 3564,
+      "height": 276
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Thank you",
+      "size": 295,
+      "top": 658,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 26,
+      "n": 4
+     },
+     {
+      "x": 720,
+      "n": 3
+     },
+     {
+      "x": 58,
+      "n": 2
+     },
+     {
+      "x": 14,
+      "n": 1
+     },
+     {
+      "x": 732,
+      "n": 1
+     },
+     {
+      "x": 768,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.04,
+    "voidBox": {
+     "x": 1260,
+     "y": 600,
+     "w": 180,
+     "h": 300
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    1,
+    0.28,
+    0.74,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 17,
+    "css": 4,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5537,
+     "screens": 5.4,
+     "words": 254,
+     "img": 6,
+     "video": 1,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi",
+      "photo-1787909239840-d94e9e71c93c?w=1200&h=1200&f",
+      "photo-1692405245790-a9aba01a4fc3?w=1200&h=1200&f",
+      "photo-1771694583915-78f9b39fd6d1?w=1200&h=1200&f"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank you",
+     "words": 2,
+     "chars": 9,
+     "lines": 1,
+     "size": 165.1,
+     "vw": 21.5,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.96,
+     "top": 865,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank you",
+     "words": 2,
+     "lines": 1,
+     "size": 165.1,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank you",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 165.1,
+      "vw": 21.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 865,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1136,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JFK to LHR",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 300,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1198,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Anything else we should know?",
+      "words": 5,
+      "chars": 29,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1472,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2013,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2183,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3780,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A bed, not a seat",
+      "words": 5,
+      "chars": 17,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3928,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Your consultant is one call away.",
+      "words": 7,
+      "chars": 44,
+      "lines": 2,
+      "size": 26,
+      "vw": 3.4,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.58,
+      "top": 4287,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      26,
+      28,
+      34,
+      165
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.9
+     },
+     "measureChars": 58,
+     "max": {
+      "size": 165.1,
+      "vw": 21.5,
+      "font": "-apple-system",
+      "text": "Thank you"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f2a78",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.78,
+        "l": 0.26
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 1448,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#15202e",
+       "top": 4821,
+       "hsl": {
+        "h": 214,
+        "s": 0.37,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15202e",
+       "share": 0.33
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.23
+      },
+      {
+       "color": "#c7d0e0",
+       "share": 0.21
+      },
+      {
+       "color": "#4a5466",
+       "share": 0.11
+      },
+      {
+       "color": "#e7ecf9",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#fefffe",
+      "hsl": {
+       "h": 120,
+       "s": 1,
+       "l": 1
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.5
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5537,
+    "margins": {
+     "left": 16,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 26,
+      "media": 1,
+      "middle": 113,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 1024,
+      "height": 877,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 51,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 1901,
+      "height": 992,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 77,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#ahead.ahead",
+      "tag": "section",
+      "top": 3004,
+      "height": 1243,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 374,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call",
+      "tag": "section",
+      "top": 4247,
+      "height": 573,
+      "words": 18,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Questions? Your consultant is one call away.",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 453,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 4821,
+      "height": 717,
+      "words": 57,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 46,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Thank you",
+      "size": 165,
+      "top": 865,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 13,
+      "n": 9
+     },
+     {
+      "x": 40,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.96,
+    0.38,
+    0.66,
+    0.85,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 17,
+    "css": 4,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 1,
+    "playingVideos": 1
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 4758,
+     "screens": 5.6,
+     "words": 254,
+     "img": 6,
+     "video": 1,
+     "canvas": 0,
+     "svg": 3,
+     "sections": 5,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 5,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "photo-1535078035266-a0fa7d3b8f65?w=2400&h=1300&f",
+      "photo-1773738214145-60c47b5f317d?w=900&h=1080&fi",
+      "photo-1787909239840-d94e9e71c93c?w=1200&h=1200&f",
+      "photo-1692405245790-a9aba01a4fc3?w=1200&h=1200&f",
+      "photo-1771694583915-78f9b39fd6d1?w=1200&h=1200&f"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Thank you",
+     "words": 2,
+     "chars": 9,
+     "lines": 1,
+     "size": 83.9,
+     "vw": 21.5,
+     "font": "-apple-system",
+     "weight": 700,
+     "tracking": -0.055,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.91,
+     "top": 751,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Thank you",
+     "words": 2,
+     "lines": 1,
+     "size": 83.9,
+     "font": "-apple-system"
+    },
+    "headings": [
+     {
+      "text": "Thank you",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 83.9,
+      "vw": 21.5,
+      "font": "-apple-system",
+      "weight": 700,
+      "tracking": -0.055,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 751,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Your request",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 956,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JFK to LHR",
+      "words": 3,
+      "chars": 10,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 300,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1018,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Anything else we should know?",
+      "words": 5,
+      "chars": 29,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.015,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 1375,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "What happens next",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2022,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Within 24 hours",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 2220,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "The journey ahead",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3228,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "A bed, not a seat",
+      "words": 5,
+      "chars": 17,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "-apple-system",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 3375,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions? Your consultant is one call away.",
+      "words": 7,
+      "chars": 44,
+      "lines": 2,
+      "size": 26,
+      "vw": 6.7,
+      "font": "-apple-system",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3735,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 9,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "-apple-system",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      16,
+      18,
+      19,
+      26,
+      28,
+      34,
+      84
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "-apple-system",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.9
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 83.9,
+      "vw": 21.5,
+      "font": "-apple-system",
+      "text": "Thank you"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#fefffe",
+     "bodyBgHsl": {
+      "h": 120,
+      "s": 1,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0f2a78",
+       "top": 0,
+       "hsl": {
+        "h": 225,
+        "s": 0.78,
+        "l": 0.26
+       }
+      },
+      {
+       "color": "#eef2f9",
+       "top": 1351,
+       "hsl": {
+        "h": 218,
+        "s": 0.48,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#15202e",
+       "top": 4167,
+       "hsl": {
+        "h": 214,
+        "s": 0.37,
+        "l": 0.13
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#15202e",
+       "share": 0.33
+      },
+      {
+       "color": "#fefffe",
+       "share": 0.23
+      },
+      {
+       "color": "#c7d0e0",
+       "share": 0.21
+      },
+      {
+       "color": "#4a5466",
+       "share": 0.11
+      },
+      {
+       "color": "#e7ecf9",
+       "share": 0.09
+      }
+     ],
+     "button": {
+      "bg": "#fefffe",
+      "hsl": {
+       "h": 120,
+       "s": 1,
+       "l": 1
+      },
+      "fg": "#fefffe"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Call 305-244-6463"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 5,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.5
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": false,
+     "height": 84,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": []
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 4758,
+    "margins": {
+     "left": 16,
+     "right": 19
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 26,
+      "media": 1,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 19,
+      "textLeft": 20,
+      "textRight": 19,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#request.request.grid",
+      "tag": "section",
+      "top": 844,
+      "height": 1066,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Your request",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 40,
+      "textLeft": 20,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#next.next.grid",
+      "tag": "section",
+      "top": 1910,
+      "height": 808,
+      "words": 48,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "What happens next",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#ahead.ahead",
+      "tag": "section",
+      "top": 2830,
+      "height": 865,
+      "words": 38,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "The journey ahead",
+       "size": 34,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.call",
+      "tag": "section",
+      "top": 3695,
+      "height": 473,
+      "words": 18,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions? Your consultant is one call away.",
+       "size": 26,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 75,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot",
+      "tag": "footer",
+      "top": 4167,
+      "height": 591,
+      "words": 57,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Business Class Travel",
+       "size": 16,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Thank you",
+      "size": 84,
+      "top": 751,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 9
+     },
+     {
+      "x": 40,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Stack Sans Headline and Stack Sans Text, but the page renders -apple-system.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/desktop-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/desktop-page-01.jpg",
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/tablet-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/mobile-fold.jpg",
+   "pages": [
+    "/Users/mainprofile/Business-Class-Travel/.taste-skill/thank-you/inspect-c/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -38,6 +38,33 @@
         ],
         "createdAt": "2026-10-24T07:54:59.044Z",
         "reason": "user confirmed: the bordered field boxes inside the booking card copy the ANA booking block the user asked for"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/d.html"
+        ],
+        "createdAt": "2026-11-23T05:33:21.398Z",
+        "reason": "Claude: full-bleed hero photo, photo band and accordion image halves are edge-to-edge by design; text blocks carry 20-32px padding, render verified"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          ".taste-skill/thank-you/d.html"
+        ],
+        "createdAt": "2026-11-23T05:33:21.415Z",
+        "reason": "Claude: ink nav links render over the light top of the hero photo, not the blue band; static scan pairs them with the section background"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "thank-you.html"
+        ],
+        "createdAt": "2026-11-23T05:52:59.935Z",
+        "reason": "Claude: accordion photo halves are edge-to-edge by design (labels inset 28px, text 32px); the call section's side padding comes from the .grid class (20-28px); render verified"
       }
     ]
   }
